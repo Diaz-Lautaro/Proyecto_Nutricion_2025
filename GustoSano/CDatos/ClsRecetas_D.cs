@@ -26,6 +26,18 @@ namespace GustoSano.CDatos
             }
         }
 
+        public DataTable mostrarRecetasFMenu_D()
+        {
+            using (SqlConnection conexion = new SqlConnection(cadenaDeConexion))
+            {
+                string consulta = "SELECT idReceta, tipoComida, descripcion FROM Recetas";
+                SqlDataAdapter adaptador = new SqlDataAdapter(consulta, conexion);
+                DataTable dt = new DataTable();
+                adaptador.Fill(dt);
+                return dt;
+            }
+        }
+
         public void agregarReceta_D(ClsRecetas_L logica)
         {
             string insertarReceta = @"INSERT INTO Recetas 
@@ -128,12 +140,11 @@ namespace GustoSano.CDatos
             }
         }
 
-        public DataTable buscarReceta_D(string categoria, string patologia)
+        public DataTable buscarReceta_D(int IdReceta)
         {
             DataTable tabla = new DataTable();
             string consulta = @"SELECT * FROM Recetas 
-                     WHERE categoria LIKE @Categoria + '%' 
-                     AND patologiaAsociada LIKE @Patologia + '%'";
+                     WHERE idReceta = @IdReceta";
 
             using (SqlConnection conexion = new SqlConnection(cadenaDeConexion))
             {
@@ -142,8 +153,7 @@ namespace GustoSano.CDatos
                     conexion.Open();
                     using (SqlCommand comando = new SqlCommand(consulta, conexion))
                     {
-                        comando.Parameters.AddWithValue("@Categoria", categoria);
-                        comando.Parameters.AddWithValue("@Patologia", patologia);
+                        comando.Parameters.AddWithValue("@IdReceta", IdReceta);
                         SqlDataAdapter da = new SqlDataAdapter(comando);
                         da.Fill(tabla);
                     }

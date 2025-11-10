@@ -31,7 +31,6 @@
             this.cmbObjetivoReceta = new System.Windows.Forms.ComboBox();
             this.cmbPatologiaReceta = new System.Windows.Forms.ComboBox();
             this.dgvMenus = new System.Windows.Forms.DataGridView();
-            this.lstRecetas = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -44,6 +43,9 @@
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvRecetas = new System.Windows.Forms.DataGridView();
+            this.btnQuitarFiltros = new GustoSano.LDControles.LDButton();
+            this.btnQuitarPaciente = new GustoSano.LDControles.LDButton();
             this.txtAlergiaPaciente = new GustoSano.LDControles.LDTextBox();
             this.txtPatologiaPaciente = new GustoSano.LDControles.LDTextBox();
             this.txtObjetivo = new GustoSano.LDControles.LDTextBox();
@@ -55,6 +57,7 @@
             this.txtNombreMenu = new GustoSano.LDControles.LDTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecetasMenu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).BeginInit();
             this.SuspendLayout();
             // 
             // cmbObjetivoReceta
@@ -66,6 +69,7 @@
             this.cmbObjetivoReceta.Name = "cmbObjetivoReceta";
             this.cmbObjetivoReceta.Size = new System.Drawing.Size(132, 24);
             this.cmbObjetivoReceta.TabIndex = 2;
+            this.cmbObjetivoReceta.SelectedIndexChanged += new System.EventHandler(this.cmbObjetivoReceta_SelectedIndexChanged);
             // 
             // cmbPatologiaReceta
             // 
@@ -76,6 +80,7 @@
             this.cmbPatologiaReceta.Name = "cmbPatologiaReceta";
             this.cmbPatologiaReceta.Size = new System.Drawing.Size(132, 24);
             this.cmbPatologiaReceta.TabIndex = 3;
+            this.cmbPatologiaReceta.SelectedIndexChanged += new System.EventHandler(this.cmbPatologiaReceta_SelectedIndexChanged);
             // 
             // dgvMenus
             // 
@@ -84,14 +89,6 @@
             this.dgvMenus.Name = "dgvMenus";
             this.dgvMenus.Size = new System.Drawing.Size(1235, 364);
             this.dgvMenus.TabIndex = 8;
-            // 
-            // lstRecetas
-            // 
-            this.lstRecetas.FormattingEnabled = true;
-            this.lstRecetas.Location = new System.Drawing.Point(714, 120);
-            this.lstRecetas.Name = "lstRecetas";
-            this.lstRecetas.Size = new System.Drawing.Size(513, 199);
-            this.lstRecetas.TabIndex = 9;
             // 
             // label1
             // 
@@ -132,7 +129,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(575, 216);
+            this.label7.Location = new System.Drawing.Point(578, 266);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 13);
             this.label7.TabIndex = 18;
@@ -143,15 +140,16 @@
             this.cmbTipoComidaReceta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbTipoComidaReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoComidaReceta.FormattingEnabled = true;
-            this.cmbTipoComidaReceta.Location = new System.Drawing.Point(575, 232);
+            this.cmbTipoComidaReceta.Location = new System.Drawing.Point(575, 282);
             this.cmbTipoComidaReceta.Name = "cmbTipoComidaReceta";
             this.cmbTipoComidaReceta.Size = new System.Drawing.Size(132, 24);
             this.cmbTipoComidaReceta.TabIndex = 17;
+            this.cmbTipoComidaReceta.SelectedIndexChanged += new System.EventHandler(this.cmbTipoComidaReceta_SelectedIndexChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(575, 264);
+            this.label2.Location = new System.Drawing.Point(575, 217);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 13);
             this.label2.TabIndex = 23;
@@ -162,10 +160,11 @@
             this.cmbAlergiaReceta.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAlergiaReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAlergiaReceta.FormattingEnabled = true;
-            this.cmbAlergiaReceta.Location = new System.Drawing.Point(575, 280);
+            this.cmbAlergiaReceta.Location = new System.Drawing.Point(575, 233);
             this.cmbAlergiaReceta.Name = "cmbAlergiaReceta";
             this.cmbAlergiaReceta.Size = new System.Drawing.Size(132, 24);
             this.cmbAlergiaReceta.TabIndex = 22;
+            this.cmbAlergiaReceta.SelectedIndexChanged += new System.EventHandler(this.cmbAlergiaReceta_SelectedIndexChanged);
             // 
             // dgvRecetasMenu
             // 
@@ -194,6 +193,52 @@
             // 
             this.Column3.HeaderText = "Descripcion";
             this.Column3.Name = "Column3";
+            // 
+            // dgvRecetas
+            // 
+            this.dgvRecetas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecetas.Location = new System.Drawing.Point(719, 120);
+            this.dgvRecetas.Name = "dgvRecetas";
+            this.dgvRecetas.Size = new System.Drawing.Size(508, 197);
+            this.dgvRecetas.TabIndex = 30;
+            // 
+            // btnQuitarFiltros
+            // 
+            this.btnQuitarFiltros.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnQuitarFiltros.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnQuitarFiltros.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnQuitarFiltros.BorderRadius = 20;
+            this.btnQuitarFiltros.BorderSize = 0;
+            this.btnQuitarFiltros.FlatAppearance.BorderSize = 0;
+            this.btnQuitarFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarFiltros.ForeColor = System.Drawing.Color.White;
+            this.btnQuitarFiltros.Location = new System.Drawing.Point(581, 323);
+            this.btnQuitarFiltros.Name = "btnQuitarFiltros";
+            this.btnQuitarFiltros.Size = new System.Drawing.Size(112, 40);
+            this.btnQuitarFiltros.TabIndex = 32;
+            this.btnQuitarFiltros.Text = "Quitar filtros";
+            this.btnQuitarFiltros.TextColor = System.Drawing.Color.White;
+            this.btnQuitarFiltros.UseVisualStyleBackColor = false;
+            this.btnQuitarFiltros.Click += new System.EventHandler(this.btnQuitarFiltros_Click);
+            // 
+            // btnQuitarPaciente
+            // 
+            this.btnQuitarPaciente.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnQuitarPaciente.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnQuitarPaciente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnQuitarPaciente.BorderRadius = 20;
+            this.btnQuitarPaciente.BorderSize = 0;
+            this.btnQuitarPaciente.FlatAppearance.BorderSize = 0;
+            this.btnQuitarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnQuitarPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnQuitarPaciente.Location = new System.Drawing.Point(575, 60);
+            this.btnQuitarPaciente.Name = "btnQuitarPaciente";
+            this.btnQuitarPaciente.Size = new System.Drawing.Size(150, 40);
+            this.btnQuitarPaciente.TabIndex = 31;
+            this.btnQuitarPaciente.Text = "Quitar paciente";
+            this.btnQuitarPaciente.TextColor = System.Drawing.Color.White;
+            this.btnQuitarPaciente.UseVisualStyleBackColor = false;
             // 
             // txtAlergiaPaciente
             // 
@@ -293,13 +338,14 @@
             this.btnBuscarPaciente.FlatAppearance.BorderSize = 0;
             this.btnBuscarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPaciente.Location = new System.Drawing.Point(575, 27);
+            this.btnBuscarPaciente.Location = new System.Drawing.Point(575, 18);
             this.btnBuscarPaciente.Name = "btnBuscarPaciente";
             this.btnBuscarPaciente.Size = new System.Drawing.Size(150, 40);
             this.btnBuscarPaciente.TabIndex = 25;
             this.btnBuscarPaciente.Text = "Buscar paciente";
             this.btnBuscarPaciente.TextColor = System.Drawing.Color.White;
             this.btnBuscarPaciente.UseVisualStyleBackColor = false;
+            this.btnBuscarPaciente.Click += new System.EventHandler(this.btnBuscarPaciente_Click);
             // 
             // btnQuitarReceta
             // 
@@ -383,6 +429,9 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1259, 764);
+            this.Controls.Add(this.btnQuitarFiltros);
+            this.Controls.Add(this.btnQuitarPaciente);
+            this.Controls.Add(this.dgvRecetas);
             this.Controls.Add(this.txtAlergiaPaciente);
             this.Controls.Add(this.txtPatologiaPaciente);
             this.Controls.Add(this.txtObjetivo);
@@ -400,7 +449,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lstRecetas);
             this.Controls.Add(this.dgvMenus);
             this.Controls.Add(this.cmbPatologiaReceta);
             this.Controls.Add(this.cmbObjetivoReceta);
@@ -411,6 +459,7 @@
             this.Load += new System.EventHandler(this.FMenus_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecetasMenu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -422,7 +471,6 @@
         private System.Windows.Forms.ComboBox cmbObjetivoReceta;
         private System.Windows.Forms.ComboBox cmbPatologiaReceta;
         private System.Windows.Forms.DataGridView dgvMenus;
-        private System.Windows.Forms.ListBox lstRecetas;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
@@ -443,5 +491,8 @@
         private LDControles.LDTextBox txtObjetivo;
         private LDControles.LDTextBox txtPatologiaPaciente;
         private LDControles.LDTextBox txtAlergiaPaciente;
+        private System.Windows.Forms.DataGridView dgvRecetas;
+        private LDControles.LDButton btnQuitarPaciente;
+        private LDControles.LDButton btnQuitarFiltros;
     }
 }

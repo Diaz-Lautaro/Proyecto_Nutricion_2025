@@ -12,26 +12,23 @@ namespace GustoSano.CLogica
     {
         ClsMenus_D datos = new ClsMenus_D();
 
-        public int IdMenu { get; set; }
-        public string NombreMenu { get; set; }
-        public string Descripcion { get; set; }
-        public string Categoria { get; set; }
-        public string PatologiaAsociada { get; set; }
-        public string TipoComida { get; set; }
+        public int idMenu { get; set; }
+        public string nombreMenu { get; set; }
+        public string descripcion { get; set; }
+        public string tipoComida { get; set; }
+        public string patologiaAsociada { get; set; }
+        public string alergia { get; set; }
+        public string objetivo { get; set; }
 
-        public void agregarMenu_L(ClsMenus_L menu)
+
+        public DataTable mostrarRecetas_L()
         {
-            datos.agregarMenu_D(menu);
+            return datos.mostrarRecetas_D();
         }
 
-        public DataTable mostrarMenus_L()
+        public DataTable filtrarReceta_L(ClsMenus_L logica)
         {
-            return datos.mostrarMenus_D();
-        }
-
-        public void eliminarMenu_L(int idMenu)
-        {
-            datos.eliminarMenu_D(idMenu);
+            return datos.filtrarReceta_D(logica);
         }
     }
 }

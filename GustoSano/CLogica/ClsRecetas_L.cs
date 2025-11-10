@@ -39,9 +39,14 @@ namespace GustoSano.CLogica
             return datos.mostrarRecetas_D();
         }
 
-        public DataTable buscarReceta_L(string categoria, string patologia)
+        public DataTable mostrarRecetaFMenu_L()
         {
-            return datos.buscarReceta_D(categoria, patologia);
+            return datos.mostrarRecetasFMenu_D();
+        }
+
+        public DataTable buscarReceta_L(int idReceta)
+        {
+            return datos.buscarReceta_D(idReceta);
         }
     }
 }

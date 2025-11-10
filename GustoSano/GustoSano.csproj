@@ -73,6 +73,12 @@
     <Compile Include="CLogica\ClsMenus_L.cs" />
     <Compile Include="CLogica\ClsPacientes_L.cs" />
     <Compile Include="CLogica\ClsRecetas_L.cs" />
+    <Compile Include="CPresentacion\FBuscarPaciente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\FBuscarPaciente.Designer.cs">
+      <DependentUpon>FBuscarPaciente.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\FCrearCuenta.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CPresentacion\FBuscarPaciente.resx">
+      <DependentUpon>FBuscarPaciente.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\FCrearCuenta.resx">
       <DependentUpon>FCrearCuenta.cs</DependentUpon>
     </EmbeddedResource>

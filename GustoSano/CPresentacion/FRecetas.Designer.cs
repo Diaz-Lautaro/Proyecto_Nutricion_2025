@@ -40,12 +40,11 @@
             this.cmbAlergia = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.cmbTipoComida = new System.Windows.Forms.ComboBox();
-            this.txtBuscarPatologia = new GustoSano.LDControles.LDTextBox();
             this.btnLimpiar = new GustoSano.LDControles.LDButton();
             this.btnEliminar = new GustoSano.LDControles.LDButton();
             this.btnModificar = new GustoSano.LDControles.LDButton();
             this.btnAgregar = new GustoSano.LDControles.LDButton();
-            this.txtBuscarCategoria = new GustoSano.LDControles.LDTextBox();
+            this.txtBuscarReceta = new GustoSano.LDControles.LDTextBox();
             this.txtCalorias = new GustoSano.LDControles.LDTextBox();
             this.txtDescripcion = new GustoSano.LDControles.LDTextBox();
             this.txtNombreReceta = new GustoSano.LDControles.LDTextBox();
@@ -168,29 +167,6 @@
             this.cmbTipoComida.Size = new System.Drawing.Size(132, 24);
             this.cmbTipoComida.TabIndex = 40;
             // 
-            // txtBuscarPatologia
-            // 
-            this.txtBuscarPatologia.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBuscarPatologia.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtBuscarPatologia.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtBuscarPatologia.BorderRadius = 0;
-            this.txtBuscarPatologia.BorderSize = 2;
-            this.txtBuscarPatologia.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarPatologia.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscarPatologia.Location = new System.Drawing.Point(564, 339);
-            this.txtBuscarPatologia.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarPatologia.Multiline = false;
-            this.txtBuscarPatologia.Name = "txtBuscarPatologia";
-            this.txtBuscarPatologia.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBuscarPatologia.PasswordChar = false;
-            this.txtBuscarPatologia.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarPatologia.PlaceholderText = "Buscar patologia";
-            this.txtBuscarPatologia.Size = new System.Drawing.Size(474, 31);
-            this.txtBuscarPatologia.TabIndex = 16;
-            this.txtBuscarPatologia.Texts = "";
-            this.txtBuscarPatologia.UnderlinedStyle = false;
-            this.txtBuscarPatologia._TextChanged += new System.EventHandler(this.txtBuscarPatologia__TextChanged);
-            // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -267,28 +243,28 @@
             this.btnAgregar.UseVisualStyleBackColor = false;
             this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
-            // txtBuscarCategoria
+            // txtBuscarReceta
             // 
-            this.txtBuscarCategoria.BackColor = System.Drawing.SystemColors.Window;
-            this.txtBuscarCategoria.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtBuscarCategoria.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtBuscarCategoria.BorderRadius = 0;
-            this.txtBuscarCategoria.BorderSize = 2;
-            this.txtBuscarCategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarCategoria.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscarCategoria.Location = new System.Drawing.Point(24, 339);
-            this.txtBuscarCategoria.Margin = new System.Windows.Forms.Padding(4);
-            this.txtBuscarCategoria.Multiline = false;
-            this.txtBuscarCategoria.Name = "txtBuscarCategoria";
-            this.txtBuscarCategoria.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBuscarCategoria.PasswordChar = false;
-            this.txtBuscarCategoria.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarCategoria.PlaceholderText = "Buscar categoria";
-            this.txtBuscarCategoria.Size = new System.Drawing.Size(474, 31);
-            this.txtBuscarCategoria.TabIndex = 3;
-            this.txtBuscarCategoria.Texts = "";
-            this.txtBuscarCategoria.UnderlinedStyle = false;
-            this.txtBuscarCategoria._TextChanged += new System.EventHandler(this.txtBuscarCategoria__TextChanged);
+            this.txtBuscarReceta.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBuscarReceta.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtBuscarReceta.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtBuscarReceta.BorderRadius = 0;
+            this.txtBuscarReceta.BorderSize = 2;
+            this.txtBuscarReceta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarReceta.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBuscarReceta.Location = new System.Drawing.Point(24, 339);
+            this.txtBuscarReceta.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarReceta.Multiline = false;
+            this.txtBuscarReceta.Name = "txtBuscarReceta";
+            this.txtBuscarReceta.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBuscarReceta.PasswordChar = false;
+            this.txtBuscarReceta.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBuscarReceta.PlaceholderText = "Buscar por id";
+            this.txtBuscarReceta.Size = new System.Drawing.Size(474, 31);
+            this.txtBuscarReceta.TabIndex = 3;
+            this.txtBuscarReceta.Texts = "";
+            this.txtBuscarReceta.UnderlinedStyle = false;
+            this.txtBuscarReceta._TextChanged += new System.EventHandler(this.txtBuscarReceta__TextChanged);
             // 
             // txtCalorias
             // 
@@ -366,7 +342,6 @@
             this.Controls.Add(this.cmbTipoComida);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.cmbAlergia);
-            this.Controls.Add(this.txtBuscarPatologia);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
@@ -379,7 +354,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnModificar);
             this.Controls.Add(this.btnAgregar);
-            this.Controls.Add(this.txtBuscarCategoria);
+            this.Controls.Add(this.txtBuscarReceta);
             this.Controls.Add(this.txtCalorias);
             this.Controls.Add(this.txtDescripcion);
             this.Controls.Add(this.txtNombreReceta);
@@ -398,7 +373,7 @@
         private LDControles.LDTextBox txtNombreReceta;
         private LDControles.LDTextBox txtDescripcion;
         private LDControles.LDTextBox txtCalorias;
-        private LDControles.LDTextBox txtBuscarCategoria;
+        private LDControles.LDTextBox txtBuscarReceta;
         private LDControles.LDButton btnAgregar;
         private LDControles.LDButton btnModificar;
         private LDControles.LDButton btnEliminar;
@@ -411,7 +386,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private LDControles.LDTextBox txtBuscarPatologia;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ComboBox cmbAlergia;
         private System.Windows.Forms.Label label7;

@@ -1,4 +1,5 @@
 ﻿using GustoSano.CLogica;
+using GustoSano.CPresentacion;
 using System;
 using System.Data;
 using System.Windows.Forms;
@@ -12,130 +13,16 @@ namespace GustoSano
             InitializeComponent();
         }
 
-        //        ClsMenus_L logica = new ClsMenus_L();
-        //        ClsRecetas_L logicaRecetas = new ClsRecetas_L();
-        //        private DataTable recetasDisponibles; 
-
-        //        private void mostrarMenus()
-        //        {
-        //            dgvMenus.DataSource = logica.mostrarMenus_L();
-        //            dgvMenus.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-        //            dgvMenus.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-        //            dgvMenus.ReadOnly = true;
-        //        }
-
-        //        private void mostrarRecetasDisponibles()
-        //        {
-        //            recetasDisponibles = logicaRecetas.mostrarReceta_L();
-        //            lstRecetas.Items.Clear();
-
-        //            foreach (DataRow fila in recetasDisponibles.Rows)
-        //            {
-        //                lstRecetas.Items.Add($"{fila["idReceta"]} - {fila["NombreReceta"]}");
-        //            }
-        //        }
-
-        //        // 🔹 Agregar menú
-        //        private void btnAgregar_Click(object sender, EventArgs e)
-        //        {
-        //            if (string.IsNullOrWhiteSpace(txtNombreMenu.Texts) ||
-        //                cmbCategoria.SelectedIndex == -1 ||
-        //                cmbTipoComida.SelectedIndex == -1)
-        //            {
-        //                MessageBox.Show("Por favor, complete todos los campos obligatorios.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //                return;
-        //            }
-
-        //            logica.NombreMenu = txtNombreMenu.Texts;
-        //            logica.Descripcion = txtDescripcion.Texts;
-        //            logica.Categoria = cmbCategoria.Text;
-        //            logica.PatologiaAsociada = cmbBuscarPatologia.Text;
-        //            logica.TipoComida = cmbTipoComida.Text;
-
-        //            logica.agregarMenu_L(logica);
-        //            mostrarMenus();
-        //        }
-
-        //        // 🔹 Eliminar menú seleccionado
-        //        private void btnEliminar_Click(object sender, EventArgs e)
-        //        {
-        //            if (dgvMenus.CurrentRow == null)
-        //            {
-        //                MessageBox.Show("Seleccione un menú para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //                return;
-        //            }
-
-        //            int idMenu = Convert.ToInt32(dgvMenus.CurrentRow.Cells["id_menu"].Value);
-        //            logica.eliminarMenu_L(idMenu);
-        //            mostrarMenus();
-        //        }
-
-        //        // 🔹 Agregar receta al menú
-        //        private void btnAgregarReceta_Click(object sender, EventArgs e)
-        //        {
-        //            if (lstRecetas.SelectedItem == null)
-        //            {
-        //                MessageBox.Show("Seleccione una receta para agregar al menú.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //                return;
-        //            }
-
-        //            string recetaSeleccionada = lstRecetas.SelectedItem.ToString();
-
-        //            if (!lstMenuRecetas.Items.Contains(recetaSeleccionada))
-        //            {
-        //                lstMenuRecetas.Items.Add(recetaSeleccionada);
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("Esa receta ya está en el menú.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
-        //            }
-        //        }
-
-        //        // 🔹 Eliminar receta del menú
-        //        private void btnEliminarReceta_Click(object sender, EventArgs e)
-        //        {
-        //            if (lstMenuRecetas.SelectedItem != null)
-        //            {
-        //                lstMenuRecetas.Items.Remove(lstMenuRecetas.SelectedItem);
-        //            }
-        //            else
-        //            {
-        //                MessageBox.Show("Seleccione una receta del menú para eliminar.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-        //            }
-        //        }
-
-        //        // 🔹 Filtro en tiempo real por patología
-        //        private void cmbBuscarPatologia_SelectedIndexChanged(object sender, EventArgs e)
-        //        {
-        //            string filtro = cmbBuscarPatologia.Text;
-
-        //            DataTable recetasFiltradas = recetasDisponibles.Clone();
-
-        //            foreach (DataRow fila in recetasDisponibles.Rows)
-        //            {
-        //                string patologia = fila["PatologiaAsociada"].ToString();
-
-        //                if (filtro == "Todas" || patologia.Equals(filtro, StringComparison.OrdinalIgnoreCase))
-        //                {
-        //                    recetasFiltradas.ImportRow(fila);
-        //                }
-        //            }
-
-        //            lstRecetas.Items.Clear();
-        //            foreach (DataRow fila in recetasFiltradas.Rows)
-        //            {
-        //                lstRecetas.Items.Add($"{fila["idReceta"]} - {fila["NombreReceta"]}");
-        //            }
-        //        }
-        //    }
-        //}
+        FBuscarPaciente FBuscarPaciente = new FBuscarPaciente();
+        ClsMenus_L logica = new ClsMenus_L();
 
         private void FMenus_Load(object sender, EventArgs e)
         {
             cargarComboBox();
+            mostrarRecetas();
         }
 
-        #region --> ComboBox recetas
+        #region --> ComboBox datos
         //🔹 Cargar categorías 
         private void cargarComboBox()
         {
@@ -187,6 +74,72 @@ namespace GustoSano
         }
         #endregion
 
-        
+        #region --> Filtros comboBox
+
+        private void btnQuitarFiltros_Click(object sender, EventArgs e)
+        {
+            cmbObjetivoReceta.SelectedIndex = 0;
+            cmbPatologiaReceta.SelectedIndex = 0;
+            cmbAlergiaReceta.SelectedIndex = 0;
+            cmbTipoComidaReceta.SelectedIndex = 0;
+        }
+
+        private void mostrarRecetas()
+        {
+            dgvRecetas.DataSource = logica.mostrarRecetas_L();
+            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRecetas.ReadOnly = true;
+        }
+
+        private void cmbObjetivoReceta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FiltrarRecetas();
+        }
+
+        private void cmbPatologiaReceta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FiltrarRecetas();
+        }
+
+        private void cmbAlergiaReceta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FiltrarRecetas();
+        }
+
+        private void cmbTipoComidaReceta_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            FiltrarRecetas();
+        }
+
+        private void FiltrarRecetas()
+        {
+            logica.objetivo = cmbObjetivoReceta.Text != "-" ? cmbObjetivoReceta.Text : string.Empty;
+            logica.patologiaAsociada = cmbPatologiaReceta.Text != "-" ? cmbPatologiaReceta.Text : string.Empty;
+            logica.alergia = cmbAlergiaReceta.Text != "-" ? cmbAlergiaReceta.Text : string.Empty;
+            logica.tipoComida = cmbTipoComidaReceta.Text != "-" ? cmbTipoComidaReceta.Text : string.Empty;
+
+            if (string.IsNullOrEmpty(logica.objetivo) &&
+                string.IsNullOrEmpty(logica.patologiaAsociada) &&
+                string.IsNullOrEmpty(logica.alergia) &&
+                string.IsNullOrEmpty(logica.tipoComida))
+            {
+                dgvRecetas.DataSource = logica.mostrarRecetas_L();
+            }
+            else
+            {
+                dgvRecetas.DataSource = logica.filtrarReceta_L(logica);
+            }
+
+            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRecetas.ReadOnly = true;
+        }
+        #endregion
+
+        private void btnBuscarPaciente_Click(object sender, EventArgs e)
+        {
+            FBuscarPaciente.ShowDialog();
+        }
     }
 }

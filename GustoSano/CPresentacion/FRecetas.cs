@@ -21,10 +21,11 @@ namespace GustoSano.CPresentacion
 
         ClsRecetas_L logica = new ClsRecetas_L();
 
+
         private void FRecetas_Load(object sender, EventArgs e)
         {
             mostrarRecetas();
-            cargarComboBox();            
+            cargarComboBox();
         }
 
         #region --> Método limpiar
@@ -101,7 +102,7 @@ namespace GustoSano.CPresentacion
             logica.tipoComida = cmbTipoComida.Text;
             logica.patologiaAsociada = cmbPatologia.Text;
             logica.alergia = cmbAlergia.Text;
-            logica.objetivo= cmbObjetivo.Text;
+            logica.objetivo = cmbObjetivo.Text;
 
             logica.agregarReceta_L(logica);
             mostrarRecetas();
@@ -119,7 +120,7 @@ namespace GustoSano.CPresentacion
             logica.tipoComida = cmbTipoComida.Text;
             logica.patologiaAsociada = cmbPatologia.Text;
             logica.alergia = cmbAlergia.Text;
-            logica.objetivo= cmbObjetivo.Text;
+            logica.objetivo = cmbObjetivo.Text;
 
             logica.modificarReceta_L(logica);
             mostrarRecetas();
@@ -167,29 +168,19 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void BuscarRecetas()
+        private void txtBuscarReceta__TextChanged(object sender, EventArgs e)
         {
-            string categoria = txtBuscarCategoria.Texts.Trim();
-            string patologia = txtBuscarPatologia.Texts.Trim();
-
-            if (string.IsNullOrWhiteSpace(categoria) && string.IsNullOrWhiteSpace(patologia))
+            if (string.IsNullOrWhiteSpace(txtBuscarReceta.Texts))
             {
                 dgvRecetas.DataSource = logica.mostrarReceta_L();
             }
             else
             {
-                dgvRecetas.DataSource = logica.buscarReceta_L(categoria, patologia);
+                dgvRecetas.DataSource = logica.buscarReceta_L(Convert.ToInt32(txtBuscarReceta.Texts));
+                dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+                dgvRecetas.ReadOnly = true;
             }
-        }
-
-        private void txtBuscarCategoria__TextChanged(object sender, EventArgs e)
-        {
-            BuscarRecetas();
-        }
-
-        private void txtBuscarPatologia__TextChanged(object sender, EventArgs e)
-        {
-            BuscarRecetas();
         }
     }
 }
