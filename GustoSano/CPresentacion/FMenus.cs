@@ -141,27 +141,6 @@ namespace GustoSano
         #endregion
 
         #region --> Botones
-        private void btnQuitarFiltros_Click(object sender, EventArgs e)
-        {
-            cmbObjetivoReceta.SelectedIndex = 0;
-            cmbPatologiaReceta.SelectedIndex = 0;
-            cmbAlergiaReceta.SelectedIndex = 0;
-            cmbTipoComidaReceta.SelectedIndex = 0;
-        }
-
-        private void btnQuitarPaciente_Click(object sender, EventArgs e)
-        {
-            txtNombreYApellido.Texts = string.Empty;
-            txtObjetivoPaciente.Texts = string.Empty;
-            txtPatologiaPaciente.Texts = string.Empty;
-            txtAlergiaPaciente.Texts = string.Empty;
-            cmbTipoComidaReceta.SelectedIndex = 0;
-
-            dgvRecetas.DataSource = logica.mostrarRecetas_L();
-            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRecetas.ReadOnly = true;
-        }
 
         private void btnBuscarPaciente_Click(object sender, EventArgs e)
         {
@@ -181,6 +160,72 @@ namespace GustoSano
                 dgvRecetas.ReadOnly = true;
             }
         }
+
+        private void btnQuitarPaciente_Click(object sender, EventArgs e)
+        {
+            txtNombreYApellido.Texts = string.Empty;
+            txtObjetivoPaciente.Texts = string.Empty;
+            txtPatologiaPaciente.Texts = string.Empty;
+            txtAlergiaPaciente.Texts = string.Empty;
+            cmbTipoComidaReceta.SelectedIndex = 0;
+
+            dgvRecetas.DataSource = logica.mostrarRecetas_L();
+            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvRecetas.ReadOnly = true;
+        }
+
+        private void btnQuitarFiltros_Click(object sender, EventArgs e)
+        {
+            cmbObjetivoReceta.SelectedIndex = 0;
+            cmbPatologiaReceta.SelectedIndex = 0;
+            cmbAlergiaReceta.SelectedIndex = 0;
+            cmbTipoComidaReceta.SelectedIndex = 0;
+        }
+        private void btnAgregarAlMenu_Click(object sender, EventArgs e)
+        {
+            if (dgvRecetas.SelectedRows.Count > 0)
+            {
+                DataGridViewRow fila = dgvRecetas.SelectedRows[0];
+
+                int n = dgvRecetasMenu.Rows.Add();
+                dgvRecetasMenu.Rows[n].Cells["TipoComida"].Value = fila.Cells["tipoComida"].Value.ToString();
+                dgvRecetasMenu.Rows[n].Cells["Descripcion"].Value = fila.Cells["descripcion"].Value.ToString();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un paciente de la lista.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        private void btnQuitarReceta_Click(object sender, EventArgs e)
+        {
+            if (dgvRecetasMenu.SelectedRows.Count > 0)
+            {
+                // Pedimos confirmación al usuario
+                DialogResult resultado = MessageBox.Show(
+                    "¿Está seguro que desea quitar la receta seleccionada?",
+                    "Confirmar eliminación",
+                    MessageBoxButtons.YesNo,
+                    MessageBoxIcon.Question
+                );
+
+                if (resultado == DialogResult.Yes)
+                {
+                    dgvRecetasMenu.Rows.RemoveAt(dgvRecetasMenu.SelectedRows[0].Index);
+                }
+            }
+            else
+            {
+                MessageBox.Show(
+                    "Seleccione una receta para quitar.",
+                    "Atención",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Warning
+                );
+            }
+        }
+
         #endregion
     }
 }

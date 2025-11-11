@@ -40,14 +40,13 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbAlergiaReceta = new System.Windows.Forms.ComboBox();
             this.dgvRecetasMenu = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRecetas = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.TipoComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarFiltros = new GustoSano.LDControles.LDButton();
             this.btnQuitarPaciente = new GustoSano.LDControles.LDButton();
             this.txtAlergiaPaciente = new GustoSano.LDControles.LDTextBox();
@@ -175,28 +174,13 @@
             this.dgvRecetasMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecetasMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecetasMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Column1,
-            this.Column2,
-            this.Column3});
+            this.TipoComida,
+            this.Descripcion});
             this.dgvRecetasMenu.Location = new System.Drawing.Point(24, 120);
             this.dgvRecetasMenu.Name = "dgvRecetasMenu";
+            this.dgvRecetasMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRecetasMenu.Size = new System.Drawing.Size(508, 197);
             this.dgvRecetasMenu.TabIndex = 24;
-            // 
-            // Column1
-            // 
-            this.Column1.HeaderText = "Id";
-            this.Column1.Name = "Column1";
-            // 
-            // Column2
-            // 
-            this.Column2.HeaderText = "Tipo comida";
-            this.Column2.Name = "Column2";
-            // 
-            // Column3
-            // 
-            this.Column3.HeaderText = "Descripcion";
-            this.Column3.Name = "Column3";
             // 
             // dgvRecetas
             // 
@@ -242,6 +226,16 @@
             this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 36;
             this.label10.Text = "Patologia";
+            // 
+            // TipoComida
+            // 
+            this.TipoComida.HeaderText = "Tipo comida";
+            this.TipoComida.Name = "TipoComida";
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
             // 
             // btnQuitarFiltros
             // 
@@ -405,6 +399,7 @@
             this.btnQuitarReceta.Text = "Quitar receta";
             this.btnQuitarReceta.TextColor = System.Drawing.Color.White;
             this.btnQuitarReceta.UseVisualStyleBackColor = false;
+            this.btnQuitarReceta.Click += new System.EventHandler(this.btnQuitarReceta_Click);
             // 
             // btnGuardarMenu
             // 
@@ -441,6 +436,7 @@
             this.btnAgregarAlMenu.Text = "Agregar al menú";
             this.btnAgregarAlMenu.TextColor = System.Drawing.Color.White;
             this.btnAgregarAlMenu.UseVisualStyleBackColor = false;
+            this.btnAgregarAlMenu.Click += new System.EventHandler(this.btnAgregarAlMenu_Click);
             // 
             // txtNombreMenu
             // 
@@ -528,9 +524,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cmbAlergiaReceta;
         private System.Windows.Forms.DataGridView dgvRecetasMenu;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private LDControles.LDButton btnBuscarPaciente;
         private LDControles.LDTextBox txtNombreYApellido;
         private LDControles.LDTextBox txtObjetivoPaciente;
@@ -543,5 +536,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TipoComida;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }
 }
