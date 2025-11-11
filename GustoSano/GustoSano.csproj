@@ -61,12 +61,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CDatos\ClsBuscarPaciente_D.cs" />
     <Compile Include="CDatos\ClsCrearCuenta_D.cs" />
     <Compile Include="CDatos\ClsHisClinica_D.cs" />
     <Compile Include="CDatos\ClsIniciarSesion_D.cs" />
     <Compile Include="CDatos\ClsMenus_D.cs" />
     <Compile Include="CDatos\ClsPacientes_D.cs" />
     <Compile Include="CDatos\ClsRecetas_D.cs" />
+    <Compile Include="CLogica\ClsBuscarPaciente_L.cs" />
     <Compile Include="CLogica\ClsCrearCuenta_L.cs" />
     <Compile Include="CLogica\ClsHisClinica_L.cs" />
     <Compile Include="CLogica\ClsIniciarSesion_L.cs" />

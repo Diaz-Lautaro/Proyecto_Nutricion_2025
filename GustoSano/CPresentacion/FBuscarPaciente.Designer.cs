@@ -59,6 +59,7 @@
             this.btnCargarPaciente.Text = "Cargar ";
             this.btnCargarPaciente.TextColor = System.Drawing.Color.White;
             this.btnCargarPaciente.UseVisualStyleBackColor = false;
+            this.btnCargarPaciente.Click += new System.EventHandler(this.btnCargarPaciente_Click);
             // 
             // btnCancelar
             // 

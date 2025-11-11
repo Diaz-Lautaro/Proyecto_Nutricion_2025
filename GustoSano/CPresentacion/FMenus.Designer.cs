@@ -44,11 +44,15 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRecetas = new System.Windows.Forms.DataGridView();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
             this.btnQuitarFiltros = new GustoSano.LDControles.LDButton();
             this.btnQuitarPaciente = new GustoSano.LDControles.LDButton();
             this.txtAlergiaPaciente = new GustoSano.LDControles.LDTextBox();
             this.txtPatologiaPaciente = new GustoSano.LDControles.LDTextBox();
-            this.txtObjetivo = new GustoSano.LDControles.LDTextBox();
+            this.txtObjetivoPaciente = new GustoSano.LDControles.LDTextBox();
             this.txtNombreYApellido = new GustoSano.LDControles.LDTextBox();
             this.btnBuscarPaciente = new GustoSano.LDControles.LDButton();
             this.btnQuitarReceta = new GustoSano.LDControles.LDButton();
@@ -203,6 +207,42 @@
             this.dgvRecetas.Size = new System.Drawing.Size(508, 197);
             this.dgvRecetas.TabIndex = 30;
             // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(763, 10);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Nombre del paciente";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(1040, 9);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Objetivo";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(1040, 64);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Alergia";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(763, 64);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Patologia";
+            // 
             // btnQuitarFiltros
             // 
             this.btnQuitarFiltros.BackColor = System.Drawing.Color.MediumSlateBlue;
@@ -239,6 +279,7 @@
             this.btnQuitarPaciente.Text = "Quitar paciente";
             this.btnQuitarPaciente.TextColor = System.Drawing.Color.White;
             this.btnQuitarPaciente.UseVisualStyleBackColor = false;
+            this.btnQuitarPaciente.Click += new System.EventHandler(this.btnQuitarPaciente_Click);
             // 
             // txtAlergiaPaciente
             // 
@@ -249,7 +290,7 @@
             this.txtAlergiaPaciente.BorderSize = 2;
             this.txtAlergiaPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlergiaPaciente.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAlergiaPaciente.Location = new System.Drawing.Point(1043, 60);
+            this.txtAlergiaPaciente.Location = new System.Drawing.Point(1043, 81);
             this.txtAlergiaPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlergiaPaciente.Multiline = false;
             this.txtAlergiaPaciente.Name = "txtAlergiaPaciente";
@@ -271,7 +312,7 @@
             this.txtPatologiaPaciente.BorderSize = 2;
             this.txtPatologiaPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatologiaPaciente.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPatologiaPaciente.Location = new System.Drawing.Point(766, 60);
+            this.txtPatologiaPaciente.Location = new System.Drawing.Point(766, 81);
             this.txtPatologiaPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtPatologiaPaciente.Multiline = false;
             this.txtPatologiaPaciente.Name = "txtPatologiaPaciente";
@@ -284,27 +325,27 @@
             this.txtPatologiaPaciente.Texts = "";
             this.txtPatologiaPaciente.UnderlinedStyle = false;
             // 
-            // txtObjetivo
+            // txtObjetivoPaciente
             // 
-            this.txtObjetivo.BackColor = System.Drawing.SystemColors.Window;
-            this.txtObjetivo.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.txtObjetivo.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.txtObjetivo.BorderRadius = 0;
-            this.txtObjetivo.BorderSize = 2;
-            this.txtObjetivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtObjetivo.ForeColor = System.Drawing.Color.DimGray;
-            this.txtObjetivo.Location = new System.Drawing.Point(1043, 27);
-            this.txtObjetivo.Margin = new System.Windows.Forms.Padding(4);
-            this.txtObjetivo.Multiline = false;
-            this.txtObjetivo.Name = "txtObjetivo";
-            this.txtObjetivo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtObjetivo.PasswordChar = false;
-            this.txtObjetivo.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtObjetivo.PlaceholderText = "";
-            this.txtObjetivo.Size = new System.Drawing.Size(184, 31);
-            this.txtObjetivo.TabIndex = 27;
-            this.txtObjetivo.Texts = "";
-            this.txtObjetivo.UnderlinedStyle = false;
+            this.txtObjetivoPaciente.BackColor = System.Drawing.SystemColors.Window;
+            this.txtObjetivoPaciente.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtObjetivoPaciente.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtObjetivoPaciente.BorderRadius = 0;
+            this.txtObjetivoPaciente.BorderSize = 2;
+            this.txtObjetivoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtObjetivoPaciente.ForeColor = System.Drawing.Color.DimGray;
+            this.txtObjetivoPaciente.Location = new System.Drawing.Point(1043, 27);
+            this.txtObjetivoPaciente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtObjetivoPaciente.Multiline = false;
+            this.txtObjetivoPaciente.Name = "txtObjetivoPaciente";
+            this.txtObjetivoPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtObjetivoPaciente.PasswordChar = false;
+            this.txtObjetivoPaciente.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtObjetivoPaciente.PlaceholderText = "";
+            this.txtObjetivoPaciente.Size = new System.Drawing.Size(184, 31);
+            this.txtObjetivoPaciente.TabIndex = 27;
+            this.txtObjetivoPaciente.Texts = "";
+            this.txtObjetivoPaciente.UnderlinedStyle = false;
             // 
             // txtNombreYApellido
             // 
@@ -429,12 +470,16 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.ClientSize = new System.Drawing.Size(1259, 764);
+            this.Controls.Add(this.label10);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label5);
             this.Controls.Add(this.btnQuitarFiltros);
             this.Controls.Add(this.btnQuitarPaciente);
             this.Controls.Add(this.dgvRecetas);
             this.Controls.Add(this.txtAlergiaPaciente);
             this.Controls.Add(this.txtPatologiaPaciente);
-            this.Controls.Add(this.txtObjetivo);
+            this.Controls.Add(this.txtObjetivoPaciente);
             this.Controls.Add(this.txtNombreYApellido);
             this.Controls.Add(this.btnBuscarPaciente);
             this.Controls.Add(this.label2);
@@ -488,11 +533,15 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
         private LDControles.LDButton btnBuscarPaciente;
         private LDControles.LDTextBox txtNombreYApellido;
-        private LDControles.LDTextBox txtObjetivo;
+        private LDControles.LDTextBox txtObjetivoPaciente;
         private LDControles.LDTextBox txtPatologiaPaciente;
         private LDControles.LDTextBox txtAlergiaPaciente;
         private System.Windows.Forms.DataGridView dgvRecetas;
         private LDControles.LDButton btnQuitarPaciente;
         private LDControles.LDButton btnQuitarFiltros;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
     }
 }
