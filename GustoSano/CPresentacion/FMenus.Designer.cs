@@ -45,6 +45,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TipoComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarFiltros = new GustoSano.LDControles.LDButton();
@@ -174,6 +175,7 @@
             this.dgvRecetasMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRecetasMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecetasMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.id,
             this.TipoComida,
             this.Descripcion});
             this.dgvRecetasMenu.Location = new System.Drawing.Point(24, 120);
@@ -226,6 +228,11 @@
             this.label10.Size = new System.Drawing.Size(51, 13);
             this.label10.TabIndex = 36;
             this.label10.Text = "Patologia";
+            // 
+            // id
+            // 
+            this.id.HeaderText = "Id";
+            this.id.Name = "id";
             // 
             // TipoComida
             // 
@@ -418,6 +425,7 @@
             this.btnGuardarMenu.Text = "Guardar menú";
             this.btnGuardarMenu.TextColor = System.Drawing.Color.White;
             this.btnGuardarMenu.UseVisualStyleBackColor = false;
+            this.btnGuardarMenu.Click += new System.EventHandler(this.btnGuardarMenu_Click);
             // 
             // btnAgregarAlMenu
             // 
@@ -536,6 +544,7 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoComida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
     }

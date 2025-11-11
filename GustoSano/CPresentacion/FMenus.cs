@@ -25,6 +25,7 @@ namespace GustoSano
         {
             cargarComboBox();
             mostrarRecetas();
+            mostrarMenus();
         }
 
         #region --> ComboBox datos
@@ -87,6 +88,14 @@ namespace GustoSano
             dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvRecetas.ReadOnly = true;
+        }
+
+        private void mostrarMenus()
+        {
+            dgvMenus.DataSource = logica.mostrarMenus_L();
+            dgvMenus.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvMenus.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvMenus.ReadOnly = true;
         }
 
         private void cmbObjetivoReceta_SelectedIndexChanged(object sender, EventArgs e)
@@ -189,6 +198,7 @@ namespace GustoSano
                 DataGridViewRow fila = dgvRecetas.SelectedRows[0];
 
                 int n = dgvRecetasMenu.Rows.Add();
+                dgvRecetasMenu.Rows[n].Cells["id"].Value = logica.obtenerUltimoIdMenu();
                 dgvRecetasMenu.Rows[n].Cells["TipoComida"].Value = fila.Cells["tipoComida"].Value.ToString();
                 dgvRecetasMenu.Rows[n].Cells["Descripcion"].Value = fila.Cells["descripcion"].Value.ToString();
             }
@@ -226,6 +236,22 @@ namespace GustoSano
             }
         }
 
+        private void btnGuardarMenu_Click(object sender, EventArgs e)
+        {
+            if (dgvRecetas.SelectedRows.Count > 0)
+            {
+                logica.nombreMenu = txtNombreMenu.Texts;
+                logica.cargarMenu_L(dgvRecetasMenu, logica);
+
+                mostrarMenus();
+                logica.actualizarId();
+                dgvRecetasMenu.Rows.Clear();
+            }
+            else
+            {
+                MessageBox.Show("Seleccione un paciente de la lista.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
         #endregion
     }
 }

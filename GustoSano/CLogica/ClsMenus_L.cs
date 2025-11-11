@@ -5,6 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace GustoSano.CLogica
 {
@@ -25,10 +26,30 @@ namespace GustoSano.CLogica
         {
             return datos.mostrarRecetas_D();
         }
+        
+        public DataTable mostrarMenus_L()
+        {
+            return datos.mostrarMenus_D();
+        }
 
         public DataTable filtrarReceta_L(ClsMenus_L logica)
         {
             return datos.filtrarReceta_D(logica);
+        }
+
+        public void cargarMenu_L(DataGridView tabla, ClsMenus_L logica)
+        {
+            datos.cargarMenu_D(tabla, logica);
+        }
+
+        public int obtenerUltimoIdMenu()
+        {
+            return datos.obtenerUltimoIdMenu();
+        }
+
+        public void actualizarId()
+        {
+            datos.actualizarId();
         }
     }
 }
