@@ -153,7 +153,7 @@ namespace GustoSano
 
         private void btnBuscarPaciente_Click(object sender, EventArgs e)
         {
-            FBuscarPaciente FBuscarPaciente = new FBuscarPaciente(this);
+            FBuscarPaciente FBuscarPaciente = new FBuscarPaciente(this, "fmenu");
 
             if (FBuscarPaciente.ShowDialog() == DialogResult.OK)
             {

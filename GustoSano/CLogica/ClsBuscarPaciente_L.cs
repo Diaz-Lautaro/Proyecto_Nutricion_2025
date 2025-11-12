@@ -12,9 +12,14 @@ namespace GustoSano.CLogica
     {
         ClsBuscarPaciente_D datos = new ClsBuscarPaciente_D();
 
-        public DataTable mostrarPacientes_L()
+        public DataTable mostrarPacientesMenus_L()
         {
-            return datos.mostrarPacientes_D();
+            return datos.mostrarPacientesMenus_D();
+        }
+
+        public DataTable mostrarPacientesAgenda_L()
+        {
+            return datos.mostrarPacientesAgenda_D();
         }
     }
 }

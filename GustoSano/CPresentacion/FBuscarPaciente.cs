@@ -13,12 +13,22 @@ namespace GustoSano.CPresentacion
 {
     public partial class FBuscarPaciente : Form
     {
-        private FMenus _formPrincipal;
+        private FMenus _formMenus;
+        private FAgenda _formAgendas;
+        private string _funcionBtn;
 
-        public FBuscarPaciente(FMenus fMenus)
+        public FBuscarPaciente(FMenus fMenus, string funcionBtn)
         {
             InitializeComponent();
-            _formPrincipal = fMenus;
+            _formMenus = fMenus;
+            _funcionBtn = funcionBtn;
+        }
+
+        public FBuscarPaciente(FAgenda fAgenda, string funcionBtn)
+        {
+            InitializeComponent();
+            _formAgendas = fAgenda;
+            _funcionBtn = funcionBtn;
         }
 
         ClsBuscarPaciente_L logica = new ClsBuscarPaciente_L();
@@ -30,7 +40,15 @@ namespace GustoSano.CPresentacion
 
         private void mostrarPacientes()
         {
-            dgvBuscarPaciente.DataSource = logica.mostrarPacientes_L();
+            if (_funcionBtn == "fagenda")
+            {
+                dgvBuscarPaciente.DataSource = logica.mostrarPacientesAgenda_L();
+            }
+            else
+            {
+                dgvBuscarPaciente.DataSource = logica.mostrarPacientesMenus_L();
+            }
+
             dgvBuscarPaciente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvBuscarPaciente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvBuscarPaciente.ReadOnly = true;
@@ -41,17 +59,25 @@ namespace GustoSano.CPresentacion
             this.Close();
         }
 
-        private void btnCargarPaciente_Click(object sender, EventArgs e)
+        private void btnCargarPacienteMenus_Click(object sender, EventArgs e)
         {
             if (dgvBuscarPaciente.SelectedRows.Count > 0)
             {
                 DataGridViewRow fila = dgvBuscarPaciente.SelectedRows[0];
 
-                _formPrincipal.fNombrePaciente = fila.Cells["Nombre"].Value.ToString();
-                _formPrincipal.fApellidoPaciente = fila.Cells["Apellido"].Value.ToString();
-                _formPrincipal.fObjetivo = fila.Cells["Objetivo"].Value.ToString();
-                _formPrincipal.fPatologia = fila.Cells["Patologia"].Value.ToString();
-                _formPrincipal.fAlergia = fila.Cells["Alergia"].Value.ToString();
+                if (_funcionBtn == "fmenu")
+                {
+                    _formMenus.fNombrePaciente = fila.Cells["Nombre"].Value.ToString();
+                    _formMenus.fApellidoPaciente = fila.Cells["Apellido"].Value.ToString();
+                    _formMenus.fObjetivo = fila.Cells["Objetivo"].Value.ToString();
+                    _formMenus.fPatologia = fila.Cells["Patologia"].Value.ToString();
+                    _formMenus.fAlergia = fila.Cells["Alergia"].Value.ToString();
+                }
+                else
+                {
+                    _formAgendas.nombrePaciente = fila.Cells["nombrePaciente"].Value.ToString();
+                    _formAgendas.apellidoPaciente = fila.Cells["apellidoPaciente"].Value.ToString();
+                }
 
                 this.DialogResult = DialogResult.OK;
                 this.Close();
