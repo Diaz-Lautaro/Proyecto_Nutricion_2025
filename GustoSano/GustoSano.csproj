@@ -93,6 +93,12 @@
     <Compile Include="CPresentacion\FCrearCuenta.Designer.cs">
       <DependentUpon>FCrearCuenta.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\FGrafico.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\FGrafico.Designer.cs">
+      <DependentUpon>FGrafico.cs</DependentUpon>
+    </Compile>
     <Compile Include="CPresentacion\FHistClinica.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +157,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\FCrearCuenta.resx">
       <DependentUpon>FCrearCuenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\FGrafico.resx">
+      <DependentUpon>FGrafico.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\FHistClinica.resx">
       <DependentUpon>FHistClinica.cs</DependentUpon>
