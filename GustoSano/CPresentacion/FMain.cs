@@ -122,6 +122,8 @@ namespace GustoSano
         private void btnAgenda_Click(object sender, EventArgs e)
         {
             CambiarColorBtn(btnAgenda);
+            FAgenda fAgenda = new FAgenda();
+            abrirFormularioEnPanel(fAgenda);
         }
 
         private void btnGrafico_Click(object sender, EventArgs e)
