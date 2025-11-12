@@ -28,187 +28,188 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.monthCalendar1 = new System.Windows.Forms.MonthCalendar();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ldButton1 = new GustoSano.LDControles.LDButton();
-            this.ldButton2 = new GustoSano.LDControles.LDButton();
-            this.ldButton3 = new GustoSano.LDControles.LDButton();
-            this.ldButton4 = new GustoSano.LDControles.LDButton();
-            this.ldTextBox1 = new GustoSano.LDControles.LDTextBox();
-            this.ldTextBox2 = new GustoSano.LDControles.LDTextBox();
-            this.ldTextBox3 = new GustoSano.LDControles.LDTextBox();
+            this.Calendario = new System.Windows.Forms.MonthCalendar();
+            this.dtHora = new System.Windows.Forms.DateTimePicker();
+            this.dgvAgenda = new System.Windows.Forms.DataGridView();
+            this.btnGuardar = new GustoSano.LDControles.LDButton();
+            this.btnEditar = new GustoSano.LDControles.LDButton();
+            this.btnEliminar = new GustoSano.LDControles.LDButton();
+            this.btnBuscarPaciente = new GustoSano.LDControles.LDButton();
+            this.txtBuscarAgenda = new GustoSano.LDControles.LDTextBox();
+            this.txtNombreYApellido = new GustoSano.LDControles.LDTextBox();
+            this.txtFecha = new GustoSano.LDControles.LDTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.cmbMotivo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.ldButton5 = new GustoSano.LDControles.LDButton();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.btnLimpiar = new GustoSano.LDControles.LDButton();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).BeginInit();
             this.SuspendLayout();
             // 
-            // monthCalendar1
+            // Calendario
             // 
-            this.monthCalendar1.CalendarDimensions = new System.Drawing.Size(2, 2);
-            this.monthCalendar1.FirstDayOfWeek = System.Windows.Forms.Day.Sunday;
-            this.monthCalendar1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.monthCalendar1.Location = new System.Drawing.Point(164, 79);
-            this.monthCalendar1.Name = "monthCalendar1";
-            this.monthCalendar1.TabIndex = 0;
+            this.Calendario.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.Calendario.FirstDayOfWeek = System.Windows.Forms.Day.Sunday;
+            this.Calendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendario.Location = new System.Drawing.Point(164, 79);
+            this.Calendario.Name = "Calendario";
+            this.Calendario.TabIndex = 0;
             // 
-            // dateTimePicker1
+            // dtHora
             // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dateTimePicker1.Location = new System.Drawing.Point(798, 212);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(87, 26);
-            this.dateTimePicker1.TabIndex = 1;
+            this.dtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dtHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
+            this.dtHora.Location = new System.Drawing.Point(798, 212);
+            this.dtHora.Name = "dtHora";
+            this.dtHora.Size = new System.Drawing.Size(87, 26);
+            this.dtHora.TabIndex = 1;
             // 
-            // dataGridView1
+            // dgvAgenda
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(12, 488);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(1235, 264);
-            this.dataGridView1.TabIndex = 2;
+            this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvAgenda.Location = new System.Drawing.Point(12, 488);
+            this.dgvAgenda.Name = "dgvAgenda";
+            this.dgvAgenda.Size = new System.Drawing.Size(1235, 264);
+            this.dgvAgenda.TabIndex = 2;
             // 
-            // ldButton1
+            // btnGuardar
             // 
-            this.ldButton1.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton1.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton1.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.ldButton1.BorderRadius = 20;
-            this.ldButton1.BorderSize = 0;
-            this.ldButton1.FlatAppearance.BorderSize = 0;
-            this.ldButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ldButton1.ForeColor = System.Drawing.Color.White;
-            this.ldButton1.Location = new System.Drawing.Point(738, 292);
-            this.ldButton1.Name = "ldButton1";
-            this.ldButton1.Size = new System.Drawing.Size(150, 40);
-            this.ldButton1.TabIndex = 3;
-            this.ldButton1.Text = "Guardar";
-            this.ldButton1.TextColor = System.Drawing.Color.White;
-            this.ldButton1.UseVisualStyleBackColor = false;
+            this.btnGuardar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardar.BorderRadius = 20;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(738, 292);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(150, 40);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Guardar";
+            this.btnGuardar.TextColor = System.Drawing.Color.White;
+            this.btnGuardar.UseVisualStyleBackColor = false;
             // 
-            // ldButton2
+            // btnEditar
             // 
-            this.ldButton2.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton2.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton2.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.ldButton2.BorderRadius = 20;
-            this.ldButton2.BorderSize = 0;
-            this.ldButton2.FlatAppearance.BorderSize = 0;
-            this.ldButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ldButton2.ForeColor = System.Drawing.Color.White;
-            this.ldButton2.Location = new System.Drawing.Point(894, 292);
-            this.ldButton2.Name = "ldButton2";
-            this.ldButton2.Size = new System.Drawing.Size(150, 40);
-            this.ldButton2.TabIndex = 4;
-            this.ldButton2.Text = "Editar";
-            this.ldButton2.TextColor = System.Drawing.Color.White;
-            this.ldButton2.UseVisualStyleBackColor = false;
+            this.btnEditar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEditar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEditar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEditar.BorderRadius = 20;
+            this.btnEditar.BorderSize = 0;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(894, 292);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(150, 40);
+            this.btnEditar.TabIndex = 4;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.TextColor = System.Drawing.Color.White;
+            this.btnEditar.UseVisualStyleBackColor = false;
             // 
-            // ldButton3
+            // btnEliminar
             // 
-            this.ldButton3.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton3.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton3.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.ldButton3.BorderRadius = 20;
-            this.ldButton3.BorderSize = 0;
-            this.ldButton3.FlatAppearance.BorderSize = 0;
-            this.ldButton3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ldButton3.ForeColor = System.Drawing.Color.White;
-            this.ldButton3.Location = new System.Drawing.Point(738, 340);
-            this.ldButton3.Name = "ldButton3";
-            this.ldButton3.Size = new System.Drawing.Size(150, 40);
-            this.ldButton3.TabIndex = 5;
-            this.ldButton3.Text = "Eliminar";
-            this.ldButton3.TextColor = System.Drawing.Color.White;
-            this.ldButton3.UseVisualStyleBackColor = false;
+            this.btnEliminar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEliminar.BorderRadius = 20;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(738, 340);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(150, 40);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
             // 
-            // ldButton4
+            // btnBuscarPaciente
             // 
-            this.ldButton4.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton4.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton4.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.ldButton4.BorderRadius = 20;
-            this.ldButton4.BorderSize = 0;
-            this.ldButton4.FlatAppearance.BorderSize = 0;
-            this.ldButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ldButton4.ForeColor = System.Drawing.Color.White;
-            this.ldButton4.Location = new System.Drawing.Point(738, 76);
-            this.ldButton4.Name = "ldButton4";
-            this.ldButton4.Size = new System.Drawing.Size(150, 40);
-            this.ldButton4.TabIndex = 6;
-            this.ldButton4.Text = "Buscar paciente";
-            this.ldButton4.TextColor = System.Drawing.Color.White;
-            this.ldButton4.UseVisualStyleBackColor = false;
+            this.btnBuscarPaciente.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnBuscarPaciente.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnBuscarPaciente.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnBuscarPaciente.BorderRadius = 20;
+            this.btnBuscarPaciente.BorderSize = 0;
+            this.btnBuscarPaciente.FlatAppearance.BorderSize = 0;
+            this.btnBuscarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBuscarPaciente.ForeColor = System.Drawing.Color.White;
+            this.btnBuscarPaciente.Location = new System.Drawing.Point(738, 76);
+            this.btnBuscarPaciente.Name = "btnBuscarPaciente";
+            this.btnBuscarPaciente.Size = new System.Drawing.Size(150, 40);
+            this.btnBuscarPaciente.TabIndex = 6;
+            this.btnBuscarPaciente.Text = "Buscar paciente";
+            this.btnBuscarPaciente.TextColor = System.Drawing.Color.White;
+            this.btnBuscarPaciente.UseVisualStyleBackColor = false;
+            this.btnBuscarPaciente.Click += new System.EventHandler(this.btnBuscarPaciente_Click);
             // 
-            // ldTextBox1
+            // txtBuscarAgenda
             // 
-            this.ldTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.ldTextBox1.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldTextBox1.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.ldTextBox1.BorderRadius = 0;
-            this.ldTextBox1.BorderSize = 2;
-            this.ldTextBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ldTextBox1.ForeColor = System.Drawing.Color.DimGray;
-            this.ldTextBox1.Location = new System.Drawing.Point(13, 450);
-            this.ldTextBox1.Margin = new System.Windows.Forms.Padding(4);
-            this.ldTextBox1.Multiline = false;
-            this.ldTextBox1.Name = "ldTextBox1";
-            this.ldTextBox1.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.ldTextBox1.PasswordChar = false;
-            this.ldTextBox1.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.ldTextBox1.PlaceholderText = "Buscar turno por id";
-            this.ldTextBox1.Size = new System.Drawing.Size(406, 31);
-            this.ldTextBox1.TabIndex = 7;
-            this.ldTextBox1.Texts = "";
-            this.ldTextBox1.UnderlinedStyle = false;
+            this.txtBuscarAgenda.BackColor = System.Drawing.SystemColors.Window;
+            this.txtBuscarAgenda.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtBuscarAgenda.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtBuscarAgenda.BorderRadius = 0;
+            this.txtBuscarAgenda.BorderSize = 2;
+            this.txtBuscarAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarAgenda.ForeColor = System.Drawing.Color.DimGray;
+            this.txtBuscarAgenda.Location = new System.Drawing.Point(13, 450);
+            this.txtBuscarAgenda.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarAgenda.Multiline = false;
+            this.txtBuscarAgenda.Name = "txtBuscarAgenda";
+            this.txtBuscarAgenda.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBuscarAgenda.PasswordChar = false;
+            this.txtBuscarAgenda.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBuscarAgenda.PlaceholderText = "Buscar turno por id";
+            this.txtBuscarAgenda.Size = new System.Drawing.Size(406, 31);
+            this.txtBuscarAgenda.TabIndex = 7;
+            this.txtBuscarAgenda.Texts = "";
+            this.txtBuscarAgenda.UnderlinedStyle = false;
             // 
-            // ldTextBox2
+            // txtNombreYApellido
             // 
-            this.ldTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.ldTextBox2.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldTextBox2.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.ldTextBox2.BorderRadius = 0;
-            this.ldTextBox2.BorderSize = 2;
-            this.ldTextBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ldTextBox2.ForeColor = System.Drawing.Color.DimGray;
-            this.ldTextBox2.Location = new System.Drawing.Point(738, 123);
-            this.ldTextBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.ldTextBox2.Multiline = false;
-            this.ldTextBox2.Name = "ldTextBox2";
-            this.ldTextBox2.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.ldTextBox2.PasswordChar = false;
-            this.ldTextBox2.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.ldTextBox2.PlaceholderText = "";
-            this.ldTextBox2.Size = new System.Drawing.Size(343, 31);
-            this.ldTextBox2.TabIndex = 8;
-            this.ldTextBox2.Texts = "";
-            this.ldTextBox2.UnderlinedStyle = false;
+            this.txtNombreYApellido.BackColor = System.Drawing.SystemColors.Window;
+            this.txtNombreYApellido.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtNombreYApellido.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtNombreYApellido.BorderRadius = 0;
+            this.txtNombreYApellido.BorderSize = 2;
+            this.txtNombreYApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombreYApellido.ForeColor = System.Drawing.Color.DimGray;
+            this.txtNombreYApellido.Location = new System.Drawing.Point(738, 123);
+            this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombreYApellido.Multiline = false;
+            this.txtNombreYApellido.Name = "txtNombreYApellido";
+            this.txtNombreYApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombreYApellido.PasswordChar = false;
+            this.txtNombreYApellido.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNombreYApellido.PlaceholderText = "";
+            this.txtNombreYApellido.Size = new System.Drawing.Size(343, 31);
+            this.txtNombreYApellido.TabIndex = 8;
+            this.txtNombreYApellido.Texts = "";
+            this.txtNombreYApellido.UnderlinedStyle = false;
             // 
-            // ldTextBox3
+            // txtFecha
             // 
-            this.ldTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.ldTextBox3.BorderColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldTextBox3.BorderFocusColor = System.Drawing.Color.HotPink;
-            this.ldTextBox3.BorderRadius = 0;
-            this.ldTextBox3.BorderSize = 2;
-            this.ldTextBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ldTextBox3.ForeColor = System.Drawing.Color.DimGray;
-            this.ldTextBox3.Location = new System.Drawing.Point(798, 165);
-            this.ldTextBox3.Margin = new System.Windows.Forms.Padding(4);
-            this.ldTextBox3.Multiline = false;
-            this.ldTextBox3.Name = "ldTextBox3";
-            this.ldTextBox3.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.ldTextBox3.PasswordChar = false;
-            this.ldTextBox3.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.ldTextBox3.PlaceholderText = "";
-            this.ldTextBox3.Size = new System.Drawing.Size(283, 31);
-            this.ldTextBox3.TabIndex = 9;
-            this.ldTextBox3.Texts = "";
-            this.ldTextBox3.UnderlinedStyle = false;
+            this.txtFecha.BackColor = System.Drawing.SystemColors.Window;
+            this.txtFecha.BorderColor = System.Drawing.Color.MediumSlateBlue;
+            this.txtFecha.BorderFocusColor = System.Drawing.Color.HotPink;
+            this.txtFecha.BorderRadius = 0;
+            this.txtFecha.BorderSize = 2;
+            this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtFecha.ForeColor = System.Drawing.Color.DimGray;
+            this.txtFecha.Location = new System.Drawing.Point(798, 165);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFecha.Multiline = false;
+            this.txtFecha.Name = "txtFecha";
+            this.txtFecha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtFecha.PasswordChar = false;
+            this.txtFecha.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtFecha.PlaceholderText = "";
+            this.txtFecha.Size = new System.Drawing.Size(283, 31);
+            this.txtFecha.TabIndex = 9;
+            this.txtFecha.Texts = "";
+            this.txtFecha.UnderlinedStyle = false;
             // 
             // label1
             // 
@@ -230,14 +231,14 @@
             this.label2.TabIndex = 12;
             this.label2.Text = "Hora";
             // 
-            // comboBox1
+            // cmbMotivo
             // 
-            this.comboBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(798, 249);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(121, 23);
-            this.comboBox1.TabIndex = 13;
+            this.cmbMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cmbMotivo.FormattingEnabled = true;
+            this.cmbMotivo.Location = new System.Drawing.Point(798, 249);
+            this.cmbMotivo.Name = "cmbMotivo";
+            this.cmbMotivo.Size = new System.Drawing.Size(121, 23);
+            this.cmbMotivo.TabIndex = 13;
             // 
             // label3
             // 
@@ -249,48 +250,48 @@
             this.label3.TabIndex = 14;
             this.label3.Text = "Motivo";
             // 
-            // ldButton5
+            // btnLimpiar
             // 
-            this.ldButton5.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton5.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
-            this.ldButton5.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.ldButton5.BorderRadius = 20;
-            this.ldButton5.BorderSize = 0;
-            this.ldButton5.FlatAppearance.BorderSize = 0;
-            this.ldButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ldButton5.ForeColor = System.Drawing.Color.White;
-            this.ldButton5.Location = new System.Drawing.Point(894, 338);
-            this.ldButton5.Name = "ldButton5";
-            this.ldButton5.Size = new System.Drawing.Size(150, 40);
-            this.ldButton5.TabIndex = 15;
-            this.ldButton5.Text = "Limpiar";
-            this.ldButton5.TextColor = System.Drawing.Color.White;
-            this.ldButton5.UseVisualStyleBackColor = false;
+            this.btnLimpiar.BackColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLimpiar.BorderRadius = 20;
+            this.btnLimpiar.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(894, 338);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
+            this.btnLimpiar.TabIndex = 15;
+            this.btnLimpiar.Text = "Limpiar";
+            this.btnLimpiar.TextColor = System.Drawing.Color.White;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
             // 
             // FAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1259, 764);
-            this.Controls.Add(this.ldButton5);
+            this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.cmbMotivo);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.ldTextBox3);
-            this.Controls.Add(this.ldTextBox2);
-            this.Controls.Add(this.ldTextBox1);
-            this.Controls.Add(this.ldButton4);
-            this.Controls.Add(this.ldButton3);
-            this.Controls.Add(this.ldButton2);
-            this.Controls.Add(this.ldButton1);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.monthCalendar1);
+            this.Controls.Add(this.txtFecha);
+            this.Controls.Add(this.txtNombreYApellido);
+            this.Controls.Add(this.txtBuscarAgenda);
+            this.Controls.Add(this.btnBuscarPaciente);
+            this.Controls.Add(this.btnEliminar);
+            this.Controls.Add(this.btnEditar);
+            this.Controls.Add(this.btnGuardar);
+            this.Controls.Add(this.dgvAgenda);
+            this.Controls.Add(this.dtHora);
+            this.Controls.Add(this.Calendario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FAgenda";
             this.Text = "FAgenda";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,20 +299,20 @@
 
         #endregion
 
-        private System.Windows.Forms.MonthCalendar monthCalendar1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private LDControles.LDButton ldButton1;
-        private LDControles.LDButton ldButton2;
-        private LDControles.LDButton ldButton3;
-        private LDControles.LDButton ldButton4;
-        private LDControles.LDTextBox ldTextBox1;
-        private LDControles.LDTextBox ldTextBox2;
-        private LDControles.LDTextBox ldTextBox3;
+        private System.Windows.Forms.MonthCalendar Calendario;
+        private System.Windows.Forms.DateTimePicker dtHora;
+        private System.Windows.Forms.DataGridView dgvAgenda;
+        private LDControles.LDButton btnGuardar;
+        private LDControles.LDButton btnEditar;
+        private LDControles.LDButton btnEliminar;
+        private LDControles.LDButton btnBuscarPaciente;
+        private LDControles.LDTextBox txtBuscarAgenda;
+        private LDControles.LDTextBox txtNombreYApellido;
+        private LDControles.LDTextBox txtFecha;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox cmbMotivo;
         private System.Windows.Forms.Label label3;
-        private LDControles.LDButton ldButton5;
+        private LDControles.LDButton btnLimpiar;
     }
 }

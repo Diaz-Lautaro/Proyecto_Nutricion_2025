@@ -16,5 +16,18 @@ namespace GustoSano.CPresentacion
         {
             InitializeComponent();
         }
+
+        public string nombrePaciente { get; set; }
+        public string apellidoPaciente { get; set; }
+
+        private void btnBuscarPaciente_Click(object sender, EventArgs e)
+        {
+            FBuscarPaciente fBuscarPaciente = new FBuscarPaciente(this, "fagenda");
+
+            if (fBuscarPaciente.ShowDialog() == DialogResult.OK)
+            {
+                txtNombreYApellido.Texts = nombrePaciente + " " + apellidoPaciente;
+            }
+        }
     }
 }
