@@ -129,6 +129,8 @@ namespace GustoSano
         private void btnGrafico_Click(object sender, EventArgs e)
         {
             CambiarColorBtn(btnGrafico);
+            FGraficos fGraficos = new FGraficos();
+            abrirFormularioEnPanel(fGraficos);
         }
 
         private void btnReporte_Click(object sender, EventArgs e)
