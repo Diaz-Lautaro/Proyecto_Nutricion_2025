@@ -12,7 +12,7 @@ namespace GustoSano.CDatos
 {
     internal class ClsPacientes_D
     {
-        string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
+        string cadenaDeConexion = ClsConexionBD.cadenaDeConexion;
 
         public void agregarPaciente_D(ClsPacientes_L logica)
         {

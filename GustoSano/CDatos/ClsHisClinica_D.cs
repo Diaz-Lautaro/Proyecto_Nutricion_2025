@@ -13,8 +13,7 @@ namespace GustoSano.CDatos
 {
     internal class ClsHisClinica_D
     {
-
-        string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
+        string cadenaDeConexion = ClsConexionBD.cadenaDeConexion;
 
         public void agregarHistoriaClinica_D(ClsHisClinica_L logica)
         {

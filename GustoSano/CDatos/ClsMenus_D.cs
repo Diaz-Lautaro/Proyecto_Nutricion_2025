@@ -12,7 +12,7 @@ namespace GustoSano.CDatos
 {
     internal class ClsMenus_D
     {
-        string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
+        string cadenaDeConexion = ClsConexionBD.cadenaDeConexion;
 
         public DataTable mostrarRecetas_D()
         {
@@ -91,9 +91,7 @@ namespace GustoSano.CDatos
 
         public void cargarMenu_D(DataGridView tabla, ClsMenus_L logica)
         {
-            string cadenaConexion = "Server=.;Database=BD_NUTRICION;integrated security= true;";
-
-            using (SqlConnection conexion = new SqlConnection(cadenaConexion))
+            using (SqlConnection conexion = new SqlConnection(cadenaDeConexion))
             {
                 conexion.Open();
 
