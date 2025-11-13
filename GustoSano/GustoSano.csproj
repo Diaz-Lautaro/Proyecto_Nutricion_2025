@@ -72,6 +72,7 @@
     <Compile Include="CDatos\ClsMenus_D.cs" />
     <Compile Include="CDatos\ClsPacientes_D.cs" />
     <Compile Include="CDatos\ClsRecetas_D.cs" />
+    <Compile Include="CDatos\ClsReporte_D.cs" />
     <Compile Include="CLogica\ClsAgenda_L.cs" />
     <Compile Include="CLogica\ClsBuscarPaciente_L.cs" />
     <Compile Include="CLogica\ClsCrearCuenta_L.cs" />
@@ -81,6 +82,7 @@
     <Compile Include="CLogica\ClsMenus_L.cs" />
     <Compile Include="CLogica\ClsPacientes_L.cs" />
     <Compile Include="CLogica\ClsRecetas_L.cs" />
+    <Compile Include="CLogica\ClsReporte_L.cs" />
     <Compile Include="CPresentacion\FAgenda.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -141,6 +143,12 @@
     <Compile Include="CPresentacion\FMenus.Designer.cs">
       <DependentUpon>FMenus.cs</DependentUpon>
     </Compile>
+    <Compile Include="CPresentacion\FReportes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CPresentacion\FReportes.Designer.cs">
+      <DependentUpon>FReportes.cs</DependentUpon>
+    </Compile>
     <Compile Include="LDControles\LDButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -184,6 +192,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CPresentacion\FMenus.resx">
       <DependentUpon>FMenus.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CPresentacion\FReportes.resx">
+      <DependentUpon>FReportes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LDControles\LDTextBox.resx">
       <DependentUpon>LDTextBox.cs</DependentUpon>

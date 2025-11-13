@@ -37,7 +37,6 @@ namespace GustoSano
         {
             foreach (Button btn in botonesMenu)
             {
-                // Si es el botón presionado
                 if (btn == btnActivo)
                 {
                     btn.BackColor = Color.FromArgb(62, 39, 66);
@@ -136,12 +135,15 @@ namespace GustoSano
         private void btnReporte_Click(object sender, EventArgs e)
         {
             CambiarColorBtn(btnReporte);
+            FReportes fReportes = new FReportes();
+            abrirFormularioEnPanel(fReportes);
         }
 
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             CambiarColorBtn(btnConfiguracion);
         }
+
         private void btnSalir_Click(object sender, EventArgs e)
         {
             FIniciarSesion fIniciarSesion = new FIniciarSesion();
@@ -151,16 +153,13 @@ namespace GustoSano
 
         private void abrirFormularioEnPanel(Form formHijo)
         {
-            // Limpia el panel si ya hay otro formulario cargado
             if (pnlContenedor.Controls.Count > 0)
                 pnlContenedor.Controls.RemoveAt(0);
 
-            // Configura el formulario hijo
-            formHijo.TopLevel = false;        // No será una ventana independiente
-            formHijo.FormBorderStyle = FormBorderStyle.None; // Sin borde ni barra de título
-            formHijo.Dock = DockStyle.Fill;   // Ocupará todo el panel
+            formHijo.TopLevel = false;        
+            formHijo.FormBorderStyle = FormBorderStyle.None; 
+            formHijo.Dock = DockStyle.Fill;   
 
-            // Agrega el formulario al panel
             pnlContenedor.Controls.Add(formHijo);
             pnlContenedor.Tag = formHijo;
 
