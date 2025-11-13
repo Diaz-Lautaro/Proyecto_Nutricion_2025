@@ -12,7 +12,7 @@ namespace GustoSano.CDatos
 {
     internal class ClsRecetas_D
     {
-        string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
+        string cadenaDeConexion = ClsConexionBD.cadenaDeConexion;
 
         public DataTable mostrarRecetas_D()
         {

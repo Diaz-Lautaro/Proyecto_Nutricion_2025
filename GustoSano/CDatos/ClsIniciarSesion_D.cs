@@ -12,11 +12,11 @@ namespace GustoSano.CDatos
 {
     internal class ClsIniciarSesion_D
     {
+        string cadenaDeConexion = ClsConexionBD.cadenaDeConexion;
+
         public bool IniciarSesion_D(ClsIniciarSesion_L logica)
         {
             string consulta = "SELECT nombreUsuario, contraseñaUsuario FROM GestionUsuarios WHERE nombreUsuario = @nombreUsuario COLLATE Latin1_General_CS_AS and contraseñaUsuario = @contraseñaUsuario";
-
-            string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
 
             try
             {

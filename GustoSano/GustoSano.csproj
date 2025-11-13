@@ -63,6 +63,7 @@
   <ItemGroup>
     <Compile Include="CDatos\ClsAgenda_D.cs" />
     <Compile Include="CDatos\ClsBuscarPaciente_D.cs" />
+    <Compile Include="CDatos\ClsConexionBD.cs" />
     <Compile Include="CDatos\ClsCrearCuenta_D.cs" />
     <Compile Include="CDatos\ClsHisClinica_D.cs" />
     <Compile Include="CDatos\ClsIniciarSesion_D.cs" />

@@ -12,7 +12,7 @@ namespace GustoSano.CDatos
 {
     internal class ClsAgenda_D
     {
-        string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
+        string cadenaDeConexion = ClsConexionBD.cadenaDeConexion;
 
         public void guardarTurno_D(ClsAgenda_L logica)
         {

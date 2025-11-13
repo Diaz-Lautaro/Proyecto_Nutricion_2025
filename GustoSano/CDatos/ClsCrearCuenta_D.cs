@@ -13,14 +13,15 @@ namespace GustoSano.CDatos
 {
     internal class ClsCrearCuenta_D
     {
+
+        string cadenaDeConexion = ClsConexionBD.cadenaDeConexion;
+
         public void CrearCuenta_D(ClsCrearCuenta_L logica)
         {
             string consultarNombreUsuario = "SELECT nombreUsuario FROM GestionUsuarios WHERE nombreUsuario = @nombre_usuario COLLATE Latin1_General_CS_AS";
             string consultarCorreoUsuario = "SELECT gmailUsuario FROM GestionUsuarios WHERE gmailUsuario = @gmail_usuario";
             string añadirUsuario = "INSERT INTO GestionUsuarios (nombreUsuario, gmailUsuario, contraseñaUsuario) " +
                 "VALUES (@nombre_usuario, @gmail_usuario, @contraseña_usuario)";
-
-            string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
 
             try
             {
