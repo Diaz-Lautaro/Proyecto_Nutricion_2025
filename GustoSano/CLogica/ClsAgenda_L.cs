@@ -10,7 +10,7 @@ namespace GustoSano.CLogica
 {
     internal class ClsAgenda_L
     {
-        public int prueba2 { get; set; }
+        public int prueba23 { get; set; }
 
 
         public int idAgenda { get; set; }
