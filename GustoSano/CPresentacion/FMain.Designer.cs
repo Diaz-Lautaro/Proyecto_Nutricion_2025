@@ -52,7 +52,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlContenedor.Location = new System.Drawing.Point(92, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1259, 764);
+            this.pnlContenedor.Size = new System.Drawing.Size(1181, 698);
             this.pnlContenedor.TabIndex = 14;
             // 
             // pnlMenu
@@ -107,7 +107,7 @@
             this.pnlFunciones.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.pnlFunciones.Location = new System.Drawing.Point(12, 82);
             this.pnlFunciones.Name = "pnlFunciones";
-            this.pnlFunciones.Size = new System.Drawing.Size(74, 669);
+            this.pnlFunciones.Size = new System.Drawing.Size(74, 608);
             this.pnlFunciones.TabIndex = 2;
             // 
             // btnReporte
@@ -273,7 +273,7 @@
             this.btnSalir.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnSalir.ForeColor = System.Drawing.Color.White;
             this.btnSalir.Image = ((System.Drawing.Image)(resources.GetObject("btnSalir.Image")));
-            this.btnSalir.Location = new System.Drawing.Point(13, 601);
+            this.btnSalir.Location = new System.Drawing.Point(13, 547);
             this.btnSalir.Name = "btnSalir";
             this.btnSalir.Size = new System.Drawing.Size(49, 47);
             this.btnSalir.TabIndex = 11;
@@ -286,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1351, 764);
+            this.ClientSize = new System.Drawing.Size(1273, 698);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlFunciones);

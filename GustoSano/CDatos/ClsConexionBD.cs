@@ -10,5 +10,6 @@ namespace GustoSano.CDatos
     {
         public static string cadenaDeConexion = "server= .; database= BD_NUTRICION; integrated security= true;";
 
+        //public static string cadenaDeConexion = "server= MALENA\\SQLEXPRESS; database= BD_NUTRICION; integrated security= true;";
     }
 }
