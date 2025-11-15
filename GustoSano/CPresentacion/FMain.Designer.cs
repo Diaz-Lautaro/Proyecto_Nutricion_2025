@@ -52,7 +52,7 @@
             this.pnlContenedor.Dock = System.Windows.Forms.DockStyle.Right;
             this.pnlContenedor.Location = new System.Drawing.Point(88, 0);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(1075, 650);
+            this.pnlContenedor.Size = new System.Drawing.Size(1112, 660);
             this.pnlContenedor.TabIndex = 14;
             // 
             // pnlMenu
@@ -64,7 +64,7 @@
             this.pnlMenu.GradientAngle = 90F;
             this.pnlMenu.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.pnlMenu.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.pnlMenu.Location = new System.Drawing.Point(8, 6);
+            this.pnlMenu.Location = new System.Drawing.Point(8, 5);
             this.pnlMenu.Name = "pnlMenu";
             this.pnlMenu.Size = new System.Drawing.Size(74, 67);
             this.pnlMenu.TabIndex = 13;
@@ -105,9 +105,9 @@
             this.pnlFunciones.GradientAngle = 90F;
             this.pnlFunciones.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.pnlFunciones.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.pnlFunciones.Location = new System.Drawing.Point(8, 77);
+            this.pnlFunciones.Location = new System.Drawing.Point(8, 76);
             this.pnlFunciones.Name = "pnlFunciones";
-            this.pnlFunciones.Size = new System.Drawing.Size(74, 568);
+            this.pnlFunciones.Size = new System.Drawing.Size(74, 578);
             this.pnlFunciones.TabIndex = 2;
             // 
             // btnReporte
@@ -286,7 +286,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1163, 650);
+            this.ClientSize = new System.Drawing.Size(1200, 660);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.pnlMenu);
             this.Controls.Add(this.pnlFunciones);
