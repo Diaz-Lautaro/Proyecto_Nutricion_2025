@@ -546,7 +546,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1075, 650);
+            this.ClientSize = new System.Drawing.Size(1112, 660);
             this.Controls.Add(this.btnLimipiar);
             this.Controls.Add(this.cmbDiagnostico);
             this.Controls.Add(this.txtBuscarHistoria);

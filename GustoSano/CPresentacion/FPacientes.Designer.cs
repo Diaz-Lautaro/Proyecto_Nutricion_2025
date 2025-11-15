@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.dgvPacientes = new System.Windows.Forms.DataGridView();
-            this.btnLimpiar = new GustoSano.LDControles.LDButton();
-            this.btnEliminar = new GustoSano.LDControles.LDButton();
-            this.btnCargar = new GustoSano.LDControles.LDButton();
-            this.btnModificar = new GustoSano.LDControles.LDButton();
-            this.txtBuscarPaciente = new GustoSano.LDControles.LDTextBox();
-            this.txtEdad = new GustoSano.LDControles.LDTextBox();
-            this.txtNombre = new GustoSano.LDControles.LDTextBox();
-            this.txtApellido = new GustoSano.LDControles.LDTextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
+            this.btnEliminar = new GustoSano.LDControles.LDButton();
+            this.txtEdad = new GustoSano.LDControles.LDTextBox();
+            this.txtNombre = new GustoSano.LDControles.LDTextBox();
+            this.btnModificar = new GustoSano.LDControles.LDButton();
+            this.txtApellido = new GustoSano.LDControles.LDTextBox();
             this.txtTelefono = new GustoSano.LDControles.LDTextBox();
             this.txtSexo = new GustoSano.LDControles.LDTextBox();
             this.txtFechaNac = new GustoSano.LDControles.LDTextBox();
+            this.txtBuscarPaciente = new GustoSano.LDControles.LDTextBox();
             this.ldPanel1 = new GustoSano.LDControles.LDPanel();
+            this.btnLimpiar = new GustoSano.LDControles.LDButton();
+            this.btnCargar = new GustoSano.LDControles.LDButton();
             ((System.ComponentModel.ISupportInitialize)(this.dgvPacientes)).BeginInit();
             this.ldPanel1.SuspendLayout();
             this.SuspendLayout();
@@ -60,175 +60,6 @@
             this.dgvPacientes.Size = new System.Drawing.Size(1051, 298);
             this.dgvPacientes.TabIndex = 0;
             this.dgvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellClick);
-            // 
-            // btnLimpiar
-            // 
-            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnLimpiar.BorderRadius = 20;
-            this.btnLimpiar.BorderSize = 0;
-            this.btnLimpiar.FlatAppearance.BorderSize = 0;
-            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(492, 33);
-            this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
-            this.btnLimpiar.TabIndex = 11;
-            this.btnLimpiar.Text = "Limpiar Datos";
-            this.btnLimpiar.TextColor = System.Drawing.Color.White;
-            this.btnLimpiar.UseVisualStyleBackColor = false;
-            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
-            // 
-            // btnEliminar
-            // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEliminar.BorderRadius = 20;
-            this.btnEliminar.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(260, 552);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(150, 40);
-            this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "Eliminar";
-            this.btnEliminar.TextColor = System.Drawing.Color.White;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
-            // 
-            // btnCargar
-            // 
-            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnCargar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnCargar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnCargar.BorderRadius = 20;
-            this.btnCargar.BorderSize = 0;
-            this.btnCargar.FlatAppearance.BorderSize = 0;
-            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnCargar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnCargar.ForeColor = System.Drawing.Color.White;
-            this.btnCargar.Location = new System.Drawing.Point(672, 46);
-            this.btnCargar.Name = "btnCargar";
-            this.btnCargar.Size = new System.Drawing.Size(150, 40);
-            this.btnCargar.TabIndex = 8;
-            this.btnCargar.Text = "Cargar Datos";
-            this.btnCargar.TextColor = System.Drawing.Color.White;
-            this.btnCargar.UseVisualStyleBackColor = false;
-            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
-            // 
-            // btnModificar
-            // 
-            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnModificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnModificar.BorderRadius = 20;
-            this.btnModificar.BorderSize = 0;
-            this.btnModificar.FlatAppearance.BorderSize = 0;
-            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnModificar.ForeColor = System.Drawing.Color.White;
-            this.btnModificar.Location = new System.Drawing.Point(58, 552);
-            this.btnModificar.Name = "btnModificar";
-            this.btnModificar.Size = new System.Drawing.Size(150, 40);
-            this.btnModificar.TabIndex = 9;
-            this.btnModificar.Text = "Modificar";
-            this.btnModificar.TextColor = System.Drawing.Color.White;
-            this.btnModificar.UseVisualStyleBackColor = false;
-            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
-            // 
-            // txtBuscarPaciente
-            // 
-            this.txtBuscarPaciente.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtBuscarPaciente.BorderColor = System.Drawing.Color.Gray;
-            this.txtBuscarPaciente.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.txtBuscarPaciente.BorderRadius = 9;
-            this.txtBuscarPaciente.BorderSize = 2;
-            this.txtBuscarPaciente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarPaciente.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscarPaciente.Location = new System.Drawing.Point(13, 17);
-            this.txtBuscarPaciente.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtBuscarPaciente.Multiline = false;
-            this.txtBuscarPaciente.Name = "txtBuscarPaciente";
-            this.txtBuscarPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtBuscarPaciente.PasswordChar = false;
-            this.txtBuscarPaciente.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarPaciente.PlaceholderText = "ID Paciente";
-            this.txtBuscarPaciente.Size = new System.Drawing.Size(434, 35);
-            this.txtBuscarPaciente.TabIndex = 1;
-            this.txtBuscarPaciente.Texts = "";
-            this.txtBuscarPaciente.UnderlinedStyle = false;
-            this.txtBuscarPaciente._TextChanged += new System.EventHandler(this.txtBuscarPaciente__TextChanged);
-            // 
-            // txtEdad
-            // 
-            this.txtEdad.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtEdad.BorderColor = System.Drawing.Color.Gray;
-            this.txtEdad.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.txtEdad.BorderRadius = 9;
-            this.txtEdad.BorderSize = 2;
-            this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtEdad.ForeColor = System.Drawing.Color.Black;
-            this.txtEdad.Location = new System.Drawing.Point(175, 473);
-            this.txtEdad.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtEdad.Multiline = false;
-            this.txtEdad.Name = "txtEdad";
-            this.txtEdad.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtEdad.PasswordChar = false;
-            this.txtEdad.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtEdad.PlaceholderText = "";
-            this.txtEdad.Size = new System.Drawing.Size(250, 35);
-            this.txtEdad.TabIndex = 22;
-            this.txtEdad.Texts = "";
-            this.txtEdad.UnderlinedStyle = false;
-            // 
-            // txtNombre
-            // 
-            this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNombre.BorderColor = System.Drawing.Color.Gray;
-            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.txtNombre.BorderRadius = 9;
-            this.txtNombre.BorderSize = 2;
-            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtNombre.ForeColor = System.Drawing.Color.Black;
-            this.txtNombre.Location = new System.Drawing.Point(175, 389);
-            this.txtNombre.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtNombre.Multiline = false;
-            this.txtNombre.Name = "txtNombre";
-            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtNombre.PasswordChar = false;
-            this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtNombre.PlaceholderText = "";
-            this.txtNombre.Size = new System.Drawing.Size(250, 35);
-            this.txtNombre.TabIndex = 20;
-            this.txtNombre.Texts = "";
-            this.txtNombre.UnderlinedStyle = false;
-            // 
-            // txtApellido
-            // 
-            this.txtApellido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtApellido.BorderColor = System.Drawing.Color.Gray;
-            this.txtApellido.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.txtApellido.BorderRadius = 9;
-            this.txtApellido.BorderSize = 2;
-            this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtApellido.ForeColor = System.Drawing.Color.Black;
-            this.txtApellido.Location = new System.Drawing.Point(175, 431);
-            this.txtApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtApellido.Multiline = false;
-            this.txtApellido.Name = "txtApellido";
-            this.txtApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
-            this.txtApellido.PasswordChar = false;
-            this.txtApellido.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtApellido.PlaceholderText = "";
-            this.txtApellido.Size = new System.Drawing.Size(250, 35);
-            this.txtApellido.TabIndex = 21;
-            this.txtApellido.Texts = "";
-            this.txtApellido.UnderlinedStyle = false;
             // 
             // label6
             // 
@@ -302,6 +133,112 @@
             this.label3.Text = "Edad:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEliminar.BorderRadius = 20;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(260, 552);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(150, 40);
+            this.btnEliminar.TabIndex = 10;
+            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.TextColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // txtEdad
+            // 
+            this.txtEdad.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtEdad.BorderColor = System.Drawing.Color.Gray;
+            this.txtEdad.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.txtEdad.BorderRadius = 9;
+            this.txtEdad.BorderSize = 2;
+            this.txtEdad.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEdad.ForeColor = System.Drawing.Color.Black;
+            this.txtEdad.Location = new System.Drawing.Point(175, 473);
+            this.txtEdad.Margin = new System.Windows.Forms.Padding(4);
+            this.txtEdad.Multiline = false;
+            this.txtEdad.Name = "txtEdad";
+            this.txtEdad.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtEdad.PasswordChar = false;
+            this.txtEdad.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtEdad.PlaceholderText = "";
+            this.txtEdad.Size = new System.Drawing.Size(250, 35);
+            this.txtEdad.TabIndex = 22;
+            this.txtEdad.Texts = "";
+            this.txtEdad.UnderlinedStyle = false;
+            // 
+            // txtNombre
+            // 
+            this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtNombre.BorderColor = System.Drawing.Color.Gray;
+            this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.txtNombre.BorderRadius = 9;
+            this.txtNombre.BorderSize = 2;
+            this.txtNombre.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtNombre.ForeColor = System.Drawing.Color.Black;
+            this.txtNombre.Location = new System.Drawing.Point(175, 389);
+            this.txtNombre.Margin = new System.Windows.Forms.Padding(4);
+            this.txtNombre.Multiline = false;
+            this.txtNombre.Name = "txtNombre";
+            this.txtNombre.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtNombre.PasswordChar = false;
+            this.txtNombre.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtNombre.PlaceholderText = "";
+            this.txtNombre.Size = new System.Drawing.Size(250, 35);
+            this.txtNombre.TabIndex = 20;
+            this.txtNombre.Texts = "";
+            this.txtNombre.UnderlinedStyle = false;
+            // 
+            // btnModificar
+            // 
+            this.btnModificar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnModificar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnModificar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnModificar.BorderRadius = 20;
+            this.btnModificar.BorderSize = 0;
+            this.btnModificar.FlatAppearance.BorderSize = 0;
+            this.btnModificar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnModificar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnModificar.ForeColor = System.Drawing.Color.White;
+            this.btnModificar.Location = new System.Drawing.Point(58, 552);
+            this.btnModificar.Name = "btnModificar";
+            this.btnModificar.Size = new System.Drawing.Size(150, 40);
+            this.btnModificar.TabIndex = 9;
+            this.btnModificar.Text = "Modificar";
+            this.btnModificar.TextColor = System.Drawing.Color.White;
+            this.btnModificar.UseVisualStyleBackColor = false;
+            this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
+            // 
+            // txtApellido
+            // 
+            this.txtApellido.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtApellido.BorderColor = System.Drawing.Color.Gray;
+            this.txtApellido.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.txtApellido.BorderRadius = 9;
+            this.txtApellido.BorderSize = 2;
+            this.txtApellido.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtApellido.ForeColor = System.Drawing.Color.Black;
+            this.txtApellido.Location = new System.Drawing.Point(175, 431);
+            this.txtApellido.Margin = new System.Windows.Forms.Padding(4);
+            this.txtApellido.Multiline = false;
+            this.txtApellido.Name = "txtApellido";
+            this.txtApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtApellido.PasswordChar = false;
+            this.txtApellido.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtApellido.PlaceholderText = "";
+            this.txtApellido.Size = new System.Drawing.Size(250, 35);
+            this.txtApellido.TabIndex = 21;
+            this.txtApellido.Texts = "";
+            this.txtApellido.UnderlinedStyle = false;
+            // 
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -312,7 +249,7 @@
             this.txtTelefono.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTelefono.ForeColor = System.Drawing.Color.Black;
             this.txtTelefono.Location = new System.Drawing.Point(627, 476);
-            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtTelefono.Margin = new System.Windows.Forms.Padding(4);
             this.txtTelefono.Multiline = false;
             this.txtTelefono.Name = "txtTelefono";
             this.txtTelefono.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -334,7 +271,7 @@
             this.txtSexo.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSexo.ForeColor = System.Drawing.Color.Black;
             this.txtSexo.Location = new System.Drawing.Point(627, 392);
-            this.txtSexo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtSexo.Margin = new System.Windows.Forms.Padding(4);
             this.txtSexo.Multiline = false;
             this.txtSexo.Name = "txtSexo";
             this.txtSexo.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -356,7 +293,7 @@
             this.txtFechaNac.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFechaNac.ForeColor = System.Drawing.Color.Black;
             this.txtFechaNac.Location = new System.Drawing.Point(627, 434);
-            this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFechaNac.Margin = new System.Windows.Forms.Padding(4);
             this.txtFechaNac.Multiline = false;
             this.txtFechaNac.Name = "txtFechaNac";
             this.txtFechaNac.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -367,6 +304,29 @@
             this.txtFechaNac.TabIndex = 24;
             this.txtFechaNac.Texts = "";
             this.txtFechaNac.UnderlinedStyle = false;
+            // 
+            // txtBuscarPaciente
+            // 
+            this.txtBuscarPaciente.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.txtBuscarPaciente.BorderColor = System.Drawing.Color.Gray;
+            this.txtBuscarPaciente.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.txtBuscarPaciente.BorderRadius = 9;
+            this.txtBuscarPaciente.BorderSize = 2;
+            this.txtBuscarPaciente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscarPaciente.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscarPaciente.Location = new System.Drawing.Point(13, 17);
+            this.txtBuscarPaciente.Margin = new System.Windows.Forms.Padding(4);
+            this.txtBuscarPaciente.Multiline = false;
+            this.txtBuscarPaciente.Name = "txtBuscarPaciente";
+            this.txtBuscarPaciente.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtBuscarPaciente.PasswordChar = false;
+            this.txtBuscarPaciente.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtBuscarPaciente.PlaceholderText = "ID Paciente";
+            this.txtBuscarPaciente.Size = new System.Drawing.Size(434, 35);
+            this.txtBuscarPaciente.TabIndex = 1;
+            this.txtBuscarPaciente.Texts = "";
+            this.txtBuscarPaciente.UnderlinedStyle = false;
+            this.txtBuscarPaciente._TextChanged += new System.EventHandler(this.txtBuscarPaciente__TextChanged);
             // 
             // ldPanel1
             // 
@@ -383,12 +343,52 @@
             this.ldPanel1.Size = new System.Drawing.Size(1042, 108);
             this.ldPanel1.TabIndex = 32;
             // 
+            // btnLimpiar
+            // 
+            this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnLimpiar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnLimpiar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnLimpiar.BorderRadius = 20;
+            this.btnLimpiar.BorderSize = 0;
+            this.btnLimpiar.FlatAppearance.BorderSize = 0;
+            this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnLimpiar.ForeColor = System.Drawing.Color.White;
+            this.btnLimpiar.Location = new System.Drawing.Point(492, 33);
+            this.btnLimpiar.Name = "btnLimpiar";
+            this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
+            this.btnLimpiar.TabIndex = 11;
+            this.btnLimpiar.Text = "Limpiar Datos";
+            this.btnLimpiar.TextColor = System.Drawing.Color.White;
+            this.btnLimpiar.UseVisualStyleBackColor = false;
+            this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnCargar
+            // 
+            this.btnCargar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnCargar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnCargar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnCargar.BorderRadius = 20;
+            this.btnCargar.BorderSize = 0;
+            this.btnCargar.FlatAppearance.BorderSize = 0;
+            this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnCargar.ForeColor = System.Drawing.Color.White;
+            this.btnCargar.Location = new System.Drawing.Point(672, 46);
+            this.btnCargar.Name = "btnCargar";
+            this.btnCargar.Size = new System.Drawing.Size(150, 40);
+            this.btnCargar.TabIndex = 8;
+            this.btnCargar.Text = "Cargar Datos";
+            this.btnCargar.TextColor = System.Drawing.Color.White;
+            this.btnCargar.UseVisualStyleBackColor = false;
+            this.btnCargar.Click += new System.EventHandler(this.btnCargar_Click);
+            // 
             // FPacientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1075, 650);
+            this.ClientSize = new System.Drawing.Size(1112, 660);
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.txtEdad);
             this.Controls.Add(this.txtNombre);
