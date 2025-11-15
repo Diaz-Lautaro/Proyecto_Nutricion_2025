@@ -51,7 +51,7 @@
             this.Calendario.CalendarDimensions = new System.Drawing.Size(2, 2);
             this.Calendario.FirstDayOfWeek = System.Windows.Forms.Day.Sunday;
             this.Calendario.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario.Location = new System.Drawing.Point(164, 79);
+            this.Calendario.Location = new System.Drawing.Point(109, 39);
             this.Calendario.Name = "Calendario";
             this.Calendario.TabIndex = 0;
             this.Calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateChanged);
@@ -60,7 +60,7 @@
             // 
             this.dtHora.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtHora.Location = new System.Drawing.Point(798, 212);
+            this.dtHora.Location = new System.Drawing.Point(677, 173);
             this.dtHora.Name = "dtHora";
             this.dtHora.Size = new System.Drawing.Size(87, 26);
             this.dtHora.TabIndex = 1;
@@ -68,9 +68,9 @@
             // dgvAgenda
             // 
             this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgenda.Location = new System.Drawing.Point(12, 488);
+            this.dgvAgenda.Location = new System.Drawing.Point(12, 438);
             this.dgvAgenda.Name = "dgvAgenda";
-            this.dgvAgenda.Size = new System.Drawing.Size(1235, 264);
+            this.dgvAgenda.Size = new System.Drawing.Size(1051, 200);
             this.dgvAgenda.TabIndex = 2;
             this.dgvAgenda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgenda_CellClick);
             // 
@@ -78,7 +78,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(735, 179);
+            this.label1.Location = new System.Drawing.Point(614, 140);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(47, 17);
             this.label1.TabIndex = 10;
@@ -88,7 +88,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(735, 221);
+            this.label2.Location = new System.Drawing.Point(614, 182);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(39, 17);
             this.label2.TabIndex = 12;
@@ -99,7 +99,7 @@
             this.cmbMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMotivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMotivo.FormattingEnabled = true;
-            this.cmbMotivo.Location = new System.Drawing.Point(798, 249);
+            this.cmbMotivo.Location = new System.Drawing.Point(677, 210);
             this.cmbMotivo.Name = "cmbMotivo";
             this.cmbMotivo.Size = new System.Drawing.Size(283, 24);
             this.cmbMotivo.TabIndex = 13;
@@ -108,7 +108,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(735, 255);
+            this.label3.Location = new System.Drawing.Point(614, 216);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(49, 17);
             this.label3.TabIndex = 14;
@@ -124,7 +124,7 @@
             this.btnLimpiar.FlatAppearance.BorderSize = 0;
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(894, 338);
+            this.btnLimpiar.Location = new System.Drawing.Point(773, 299);
             this.btnLimpiar.Name = "btnLimpiar";
             this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
             this.btnLimpiar.TabIndex = 15;
@@ -142,7 +142,7 @@
             this.txtFecha.BorderSize = 2;
             this.txtFecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFecha.ForeColor = System.Drawing.Color.DimGray;
-            this.txtFecha.Location = new System.Drawing.Point(798, 165);
+            this.txtFecha.Location = new System.Drawing.Point(677, 126);
             this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.Multiline = false;
             this.txtFecha.Name = "txtFecha";
@@ -164,7 +164,7 @@
             this.txtNombreYApellido.BorderSize = 2;
             this.txtNombreYApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreYApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombreYApellido.Location = new System.Drawing.Point(738, 123);
+            this.txtNombreYApellido.Location = new System.Drawing.Point(617, 84);
             this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreYApellido.Multiline = false;
             this.txtNombreYApellido.Name = "txtNombreYApellido";
@@ -186,7 +186,7 @@
             this.txtBuscarAgenda.BorderSize = 2;
             this.txtBuscarAgenda.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarAgenda.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscarAgenda.Location = new System.Drawing.Point(13, 450);
+            this.txtBuscarAgenda.Location = new System.Drawing.Point(13, 400);
             this.txtBuscarAgenda.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarAgenda.Multiline = false;
             this.txtBuscarAgenda.Name = "txtBuscarAgenda";
@@ -210,7 +210,7 @@
             this.btnBuscarPaciente.FlatAppearance.BorderSize = 0;
             this.btnBuscarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPaciente.Location = new System.Drawing.Point(738, 76);
+            this.btnBuscarPaciente.Location = new System.Drawing.Point(617, 37);
             this.btnBuscarPaciente.Name = "btnBuscarPaciente";
             this.btnBuscarPaciente.Size = new System.Drawing.Size(150, 40);
             this.btnBuscarPaciente.TabIndex = 6;
@@ -229,7 +229,7 @@
             this.btnEliminar.FlatAppearance.BorderSize = 0;
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(738, 340);
+            this.btnEliminar.Location = new System.Drawing.Point(617, 301);
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(150, 40);
             this.btnEliminar.TabIndex = 5;
@@ -248,7 +248,7 @@
             this.btnEditar.FlatAppearance.BorderSize = 0;
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(894, 292);
+            this.btnEditar.Location = new System.Drawing.Point(773, 253);
             this.btnEditar.Name = "btnEditar";
             this.btnEditar.Size = new System.Drawing.Size(150, 40);
             this.btnEditar.TabIndex = 4;
@@ -267,7 +267,7 @@
             this.btnGuardar.FlatAppearance.BorderSize = 0;
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(738, 292);
+            this.btnGuardar.Location = new System.Drawing.Point(617, 253);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Size = new System.Drawing.Size(150, 40);
             this.btnGuardar.TabIndex = 3;
@@ -280,7 +280,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 764);
+            this.ClientSize = new System.Drawing.Size(1075, 650);
             this.Controls.Add(this.btnLimpiar);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.cmbMotivo);
