@@ -70,7 +70,7 @@
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvPacientes.Location = new System.Drawing.Point(13, 51);
             this.dgvPacientes.Name = "dgvPacientes";
-            this.dgvPacientes.Size = new System.Drawing.Size(1234, 181);
+            this.dgvPacientes.Size = new System.Drawing.Size(1050, 181);
             this.dgvPacientes.TabIndex = 18;
             this.dgvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellClick);
             // 
@@ -79,7 +79,7 @@
             this.cmbObjetivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbObjetivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbObjetivo.FormattingEnabled = true;
-            this.cmbObjetivo.Location = new System.Drawing.Point(750, 267);
+            this.cmbObjetivo.Location = new System.Drawing.Point(575, 267);
             this.cmbObjetivo.Name = "cmbObjetivo";
             this.cmbObjetivo.Size = new System.Drawing.Size(132, 24);
             this.cmbObjetivo.TabIndex = 30;
@@ -89,7 +89,7 @@
             this.cmbPatologia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbPatologia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPatologia.FormattingEnabled = true;
-            this.cmbPatologia.Location = new System.Drawing.Point(895, 267);
+            this.cmbPatologia.Location = new System.Drawing.Point(725, 267);
             this.cmbPatologia.Name = "cmbPatologia";
             this.cmbPatologia.Size = new System.Drawing.Size(132, 24);
             this.cmbPatologia.TabIndex = 31;
@@ -99,7 +99,7 @@
             this.cmbAlergia.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbAlergia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAlergia.FormattingEnabled = true;
-            this.cmbAlergia.Location = new System.Drawing.Point(1041, 267);
+            this.cmbAlergia.Location = new System.Drawing.Point(871, 267);
             this.cmbAlergia.Name = "cmbAlergia";
             this.cmbAlergia.Size = new System.Drawing.Size(132, 24);
             this.cmbAlergia.TabIndex = 32;
@@ -107,7 +107,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(471, 240);
+            this.label1.Location = new System.Drawing.Point(382, 240);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(34, 13);
             this.label1.TabIndex = 33;
@@ -134,7 +134,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(471, 302);
+            this.label4.Location = new System.Drawing.Point(382, 302);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(63, 13);
             this.label4.TabIndex = 36;
@@ -143,7 +143,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(1038, 249);
+            this.label5.Location = new System.Drawing.Point(868, 249);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(39, 13);
             this.label5.TabIndex = 37;
@@ -152,7 +152,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(892, 251);
+            this.label6.Location = new System.Drawing.Point(722, 251);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 13);
             this.label6.TabIndex = 38;
@@ -161,7 +161,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(747, 249);
+            this.label7.Location = new System.Drawing.Point(572, 249);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(46, 13);
             this.label7.TabIndex = 39;
@@ -179,7 +179,7 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(735, 361);
+            this.label10.Location = new System.Drawing.Point(560, 361);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(80, 13);
             this.label10.TabIndex = 42;
@@ -188,7 +188,7 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.Location = new System.Drawing.Point(735, 302);
+            this.label11.Location = new System.Drawing.Point(560, 302);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(76, 13);
             this.label11.TabIndex = 43;
@@ -197,7 +197,7 @@
             // label12
             // 
             this.label12.AutoSize = true;
-            this.label12.Location = new System.Drawing.Point(993, 302);
+            this.label12.Location = new System.Drawing.Point(823, 302);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(46, 13);
             this.label12.TabIndex = 44;
@@ -206,7 +206,7 @@
             // label13
             // 
             this.label13.AutoSize = true;
-            this.label13.Location = new System.Drawing.Point(993, 361);
+            this.label13.Location = new System.Drawing.Point(823, 361);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(93, 13);
             this.label13.TabIndex = 45;
@@ -215,7 +215,7 @@
             // label14
             // 
             this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(471, 361);
+            this.label14.Location = new System.Drawing.Point(382, 361);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(69, 13);
             this.label14.TabIndex = 47;
@@ -226,7 +226,7 @@
             this.dgvHisClinica.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvHisClinica.Location = new System.Drawing.Point(13, 468);
             this.dgvHisClinica.Name = "dgvHisClinica";
-            this.dgvHisClinica.Size = new System.Drawing.Size(1234, 284);
+            this.dgvHisClinica.Size = new System.Drawing.Size(1050, 170);
             this.dgvHisClinica.TabIndex = 51;
             this.dgvHisClinica.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvHisClinica_CellClick);
             // 
@@ -235,9 +235,9 @@
             this.cmbDiagnostico.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbDiagnostico.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbDiagnostico.FormattingEnabled = true;
-            this.cmbDiagnostico.Location = new System.Drawing.Point(473, 319);
+            this.cmbDiagnostico.Location = new System.Drawing.Point(384, 319);
             this.cmbDiagnostico.Name = "cmbDiagnostico";
-            this.cmbDiagnostico.Size = new System.Drawing.Size(250, 24);
+            this.cmbDiagnostico.Size = new System.Drawing.Size(151, 24);
             this.cmbDiagnostico.TabIndex = 53;
             // 
             // btnLimipiar
@@ -276,7 +276,7 @@
             this.txtBuscarHistoria.PasswordChar = false;
             this.txtBuscarHistoria.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBuscarHistoria.PlaceholderText = "ID Paciente";
-            this.txtBuscarHistoria.Size = new System.Drawing.Size(434, 31);
+            this.txtBuscarHistoria.Size = new System.Drawing.Size(150, 31);
             this.txtBuscarHistoria.TabIndex = 52;
             this.txtBuscarHistoria.Texts = "";
             this.txtBuscarHistoria.UnderlinedStyle = false;
@@ -299,7 +299,7 @@
             this.txtBuscarPaciente.PasswordChar = false;
             this.txtBuscarPaciente.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBuscarPaciente.PlaceholderText = "ID Paciente";
-            this.txtBuscarPaciente.Size = new System.Drawing.Size(434, 31);
+            this.txtBuscarPaciente.Size = new System.Drawing.Size(150, 31);
             this.txtBuscarPaciente.TabIndex = 1;
             this.txtBuscarPaciente.Texts = "";
             this.txtBuscarPaciente.UnderlinedStyle = false;
@@ -333,7 +333,7 @@
             this.txtTipoDieta.BorderSize = 2;
             this.txtTipoDieta.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtTipoDieta.ForeColor = System.Drawing.Color.DimGray;
-            this.txtTipoDieta.Location = new System.Drawing.Point(474, 378);
+            this.txtTipoDieta.Location = new System.Drawing.Point(385, 378);
             this.txtTipoDieta.Margin = new System.Windows.Forms.Padding(4);
             this.txtTipoDieta.Multiline = false;
             this.txtTipoDieta.Name = "txtTipoDieta";
@@ -341,7 +341,7 @@
             this.txtTipoDieta.PasswordChar = false;
             this.txtTipoDieta.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtTipoDieta.PlaceholderText = "";
-            this.txtTipoDieta.Size = new System.Drawing.Size(250, 31);
+            this.txtTipoDieta.Size = new System.Drawing.Size(150, 31);
             this.txtTipoDieta.TabIndex = 49;
             this.txtTipoDieta.Texts = "";
             this.txtTipoDieta.UnderlinedStyle = false;
@@ -382,7 +382,7 @@
             this.txtActividad.PasswordChar = false;
             this.txtActividad.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtActividad.PlaceholderText = "";
-            this.txtActividad.Size = new System.Drawing.Size(250, 31);
+            this.txtActividad.Size = new System.Drawing.Size(150, 31);
             this.txtActividad.TabIndex = 29;
             this.txtActividad.Texts = "";
             this.txtActividad.UnderlinedStyle = false;
@@ -396,7 +396,7 @@
             this.txtAgua.BorderSize = 2;
             this.txtAgua.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAgua.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAgua.Location = new System.Drawing.Point(996, 378);
+            this.txtAgua.Location = new System.Drawing.Point(826, 378);
             this.txtAgua.Margin = new System.Windows.Forms.Padding(4);
             this.txtAgua.Multiline = false;
             this.txtAgua.Name = "txtAgua";
@@ -404,7 +404,7 @@
             this.txtAgua.PasswordChar = false;
             this.txtAgua.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAgua.PlaceholderText = "";
-            this.txtAgua.Size = new System.Drawing.Size(250, 31);
+            this.txtAgua.Size = new System.Drawing.Size(150, 31);
             this.txtAgua.TabIndex = 28;
             this.txtAgua.Texts = "";
             this.txtAgua.UnderlinedStyle = false;
@@ -418,7 +418,7 @@
             this.txtHorarios.BorderSize = 2;
             this.txtHorarios.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtHorarios.ForeColor = System.Drawing.Color.DimGray;
-            this.txtHorarios.Location = new System.Drawing.Point(996, 319);
+            this.txtHorarios.Location = new System.Drawing.Point(826, 319);
             this.txtHorarios.Margin = new System.Windows.Forms.Padding(4);
             this.txtHorarios.Multiline = false;
             this.txtHorarios.Name = "txtHorarios";
@@ -426,7 +426,7 @@
             this.txtHorarios.PasswordChar = false;
             this.txtHorarios.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtHorarios.PlaceholderText = "";
-            this.txtHorarios.Size = new System.Drawing.Size(250, 31);
+            this.txtHorarios.Size = new System.Drawing.Size(150, 31);
             this.txtHorarios.TabIndex = 27;
             this.txtHorarios.Texts = "";
             this.txtHorarios.UnderlinedStyle = false;
@@ -440,7 +440,7 @@
             this.txtComidas.BorderSize = 2;
             this.txtComidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtComidas.ForeColor = System.Drawing.Color.DimGray;
-            this.txtComidas.Location = new System.Drawing.Point(738, 378);
+            this.txtComidas.Location = new System.Drawing.Point(563, 378);
             this.txtComidas.Margin = new System.Windows.Forms.Padding(4);
             this.txtComidas.Multiline = false;
             this.txtComidas.Name = "txtComidas";
@@ -448,7 +448,7 @@
             this.txtComidas.PasswordChar = false;
             this.txtComidas.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtComidas.PlaceholderText = "";
-            this.txtComidas.Size = new System.Drawing.Size(250, 31);
+            this.txtComidas.Size = new System.Drawing.Size(150, 31);
             this.txtComidas.TabIndex = 26;
             this.txtComidas.Texts = "";
             this.txtComidas.UnderlinedStyle = false;
@@ -462,7 +462,7 @@
             this.txtMedicamentos.BorderSize = 2;
             this.txtMedicamentos.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtMedicamentos.ForeColor = System.Drawing.Color.DimGray;
-            this.txtMedicamentos.Location = new System.Drawing.Point(738, 319);
+            this.txtMedicamentos.Location = new System.Drawing.Point(563, 319);
             this.txtMedicamentos.Margin = new System.Windows.Forms.Padding(4);
             this.txtMedicamentos.Multiline = false;
             this.txtMedicamentos.Name = "txtMedicamentos";
@@ -470,7 +470,7 @@
             this.txtMedicamentos.PasswordChar = false;
             this.txtMedicamentos.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtMedicamentos.PlaceholderText = "";
-            this.txtMedicamentos.Size = new System.Drawing.Size(250, 31);
+            this.txtMedicamentos.Size = new System.Drawing.Size(150, 31);
             this.txtMedicamentos.TabIndex = 25;
             this.txtMedicamentos.Texts = "";
             this.txtMedicamentos.UnderlinedStyle = false;
@@ -484,7 +484,7 @@
             this.txtAltura.BorderSize = 2;
             this.txtAltura.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAltura.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAltura.Location = new System.Drawing.Point(474, 257);
+            this.txtAltura.Location = new System.Drawing.Point(385, 257);
             this.txtAltura.Margin = new System.Windows.Forms.Padding(4);
             this.txtAltura.Multiline = false;
             this.txtAltura.Name = "txtAltura";
@@ -492,7 +492,7 @@
             this.txtAltura.PasswordChar = false;
             this.txtAltura.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtAltura.PlaceholderText = "";
-            this.txtAltura.Size = new System.Drawing.Size(250, 31);
+            this.txtAltura.Size = new System.Drawing.Size(150, 31);
             this.txtAltura.TabIndex = 22;
             this.txtAltura.Texts = "";
             this.txtAltura.UnderlinedStyle = false;
@@ -514,7 +514,7 @@
             this.txtPeso.PasswordChar = false;
             this.txtPeso.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtPeso.PlaceholderText = "";
-            this.txtPeso.Size = new System.Drawing.Size(250, 31);
+            this.txtPeso.Size = new System.Drawing.Size(150, 31);
             this.txtPeso.TabIndex = 21;
             this.txtPeso.Texts = "";
             this.txtPeso.UnderlinedStyle = false;
@@ -536,7 +536,7 @@
             this.txtIdPaciente.PasswordChar = false;
             this.txtIdPaciente.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtIdPaciente.PlaceholderText = "";
-            this.txtIdPaciente.Size = new System.Drawing.Size(250, 31);
+            this.txtIdPaciente.Size = new System.Drawing.Size(150, 31);
             this.txtIdPaciente.TabIndex = 20;
             this.txtIdPaciente.Texts = "";
             this.txtIdPaciente.UnderlinedStyle = false;
@@ -546,7 +546,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1259, 764);
+            this.ClientSize = new System.Drawing.Size(1075, 650);
             this.Controls.Add(this.btnLimipiar);
             this.Controls.Add(this.cmbDiagnostico);
             this.Controls.Add(this.txtBuscarHistoria);

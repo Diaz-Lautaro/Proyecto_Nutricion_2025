@@ -28,7 +28,7 @@ namespace GustoSano
             btnPacientes.Image = Properties.Resources.Paciente2;
             cambiarbtn = 1;
             FPacientes fPacientes = new FPacientes();
-            //abrirFormularioEnPanel(fPacientes);
+            abrirFormularioEnPanel(fPacientes);
 
             botonesMenu = new List<Button> { btnAbrirMenu, btnPacientes, btnHisClinica, btnReceta, btnComida, btnAgenda, btnGrafico, btnReporte, btnConfiguracion, btnSalir };
         }

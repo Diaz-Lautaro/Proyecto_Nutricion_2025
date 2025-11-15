@@ -57,7 +57,7 @@
             this.cmbObjetivo.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbObjetivo.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbObjetivo.FormattingEnabled = true;
-            this.cmbObjetivo.Location = new System.Drawing.Point(742, 96);
+            this.cmbObjetivo.Location = new System.Drawing.Point(637, 84);
             this.cmbObjetivo.Name = "cmbObjetivo";
             this.cmbObjetivo.Size = new System.Drawing.Size(132, 24);
             this.cmbObjetivo.TabIndex = 8;
@@ -68,7 +68,7 @@
             this.cmbPatologia.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbPatologia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPatologia.FormattingEnabled = true;
-            this.cmbPatologia.Location = new System.Drawing.Point(742, 144);
+            this.cmbPatologia.Location = new System.Drawing.Point(637, 132);
             this.cmbPatologia.Name = "cmbPatologia";
             this.cmbPatologia.Size = new System.Drawing.Size(132, 24);
             this.cmbPatologia.TabIndex = 9;
@@ -78,7 +78,7 @@
             this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecetas.Location = new System.Drawing.Point(12, 377);
             this.dgvRecetas.Name = "dgvRecetas";
-            this.dgvRecetas.Size = new System.Drawing.Size(1235, 375);
+            this.dgvRecetas.Size = new System.Drawing.Size(1051, 261);
             this.dgvRecetas.TabIndex = 10;
             this.dgvRecetas.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvRecetas_CellClick);
             // 
@@ -112,7 +112,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(671, 99);
+            this.label4.Location = new System.Drawing.Point(566, 87);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(46, 13);
             this.label4.TabIndex = 14;
@@ -121,7 +121,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(671, 147);
+            this.label5.Location = new System.Drawing.Point(566, 135);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(51, 13);
             this.label5.TabIndex = 15;
@@ -130,7 +130,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(926, 98);
+            this.label6.Location = new System.Drawing.Point(821, 86);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(39, 13);
             this.label6.TabIndex = 39;
@@ -142,7 +142,7 @@
             this.cmbAlergia.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbAlergia.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAlergia.FormattingEnabled = true;
-            this.cmbAlergia.Location = new System.Drawing.Point(997, 96);
+            this.cmbAlergia.Location = new System.Drawing.Point(892, 84);
             this.cmbAlergia.Name = "cmbAlergia";
             this.cmbAlergia.Size = new System.Drawing.Size(132, 24);
             this.cmbAlergia.TabIndex = 38;
@@ -150,7 +150,7 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(926, 146);
+            this.label7.Location = new System.Drawing.Point(821, 134);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 13);
             this.label7.TabIndex = 41;
@@ -162,7 +162,7 @@
             this.cmbTipoComida.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.cmbTipoComida.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoComida.FormattingEnabled = true;
-            this.cmbTipoComida.Location = new System.Drawing.Point(997, 144);
+            this.cmbTipoComida.Location = new System.Drawing.Point(892, 132);
             this.cmbTipoComida.Name = "cmbTipoComida";
             this.cmbTipoComida.Size = new System.Drawing.Size(132, 24);
             this.cmbTipoComida.TabIndex = 40;
@@ -337,7 +337,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1259, 764);
+            this.ClientSize = new System.Drawing.Size(1075, 650);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.cmbTipoComida);
             this.Controls.Add(this.label6);

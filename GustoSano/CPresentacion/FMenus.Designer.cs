@@ -40,14 +40,14 @@
             this.label2 = new System.Windows.Forms.Label();
             this.cmbAlergiaReceta = new System.Windows.Forms.ComboBox();
             this.dgvRecetasMenu = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRecetas = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnQuitarFiltros = new GustoSano.LDControles.LDButton();
             this.btnQuitarPaciente = new GustoSano.LDControles.LDButton();
             this.txtAlergiaPaciente = new GustoSano.LDControles.LDTextBox();
@@ -91,7 +91,7 @@
             this.dgvMenus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvMenus.Location = new System.Drawing.Point(12, 388);
             this.dgvMenus.Name = "dgvMenus";
-            this.dgvMenus.Size = new System.Drawing.Size(1235, 364);
+            this.dgvMenus.Size = new System.Drawing.Size(1051, 250);
             this.dgvMenus.TabIndex = 8;
             // 
             // label1
@@ -184,51 +184,6 @@
             this.dgvRecetasMenu.Size = new System.Drawing.Size(508, 197);
             this.dgvRecetasMenu.TabIndex = 24;
             // 
-            // dgvRecetas
-            // 
-            this.dgvRecetas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecetas.Location = new System.Drawing.Point(719, 120);
-            this.dgvRecetas.Name = "dgvRecetas";
-            this.dgvRecetas.Size = new System.Drawing.Size(508, 197);
-            this.dgvRecetas.TabIndex = 30;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(763, 10);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(105, 13);
-            this.label5.TabIndex = 33;
-            this.label5.Text = "Nombre del paciente";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(1040, 9);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(46, 13);
-            this.label8.TabIndex = 34;
-            this.label8.Text = "Objetivo";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(1040, 64);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(39, 13);
-            this.label9.TabIndex = 35;
-            this.label9.Text = "Alergia";
-            // 
-            // label10
-            // 
-            this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(763, 64);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(51, 13);
-            this.label10.TabIndex = 36;
-            this.label10.Text = "Patologia";
-            // 
             // id
             // 
             this.id.HeaderText = "Id";
@@ -243,6 +198,51 @@
             // 
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.Name = "Descripcion";
+            // 
+            // dgvRecetas
+            // 
+            this.dgvRecetas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvRecetas.Location = new System.Drawing.Point(719, 120);
+            this.dgvRecetas.Name = "dgvRecetas";
+            this.dgvRecetas.Size = new System.Drawing.Size(329, 197);
+            this.dgvRecetas.TabIndex = 30;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(584, 11);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(105, 13);
+            this.label5.TabIndex = 33;
+            this.label5.Text = "Nombre del paciente";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(861, 10);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(46, 13);
+            this.label8.TabIndex = 34;
+            this.label8.Text = "Objetivo";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(861, 65);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(39, 13);
+            this.label9.TabIndex = 35;
+            this.label9.Text = "Alergia";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(584, 65);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(51, 13);
+            this.label10.TabIndex = 36;
+            this.label10.Text = "Patologia";
             // 
             // btnQuitarFiltros
             // 
@@ -273,7 +273,7 @@
             this.btnQuitarPaciente.FlatAppearance.BorderSize = 0;
             this.btnQuitarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitarPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnQuitarPaciente.Location = new System.Drawing.Point(575, 60);
+            this.btnQuitarPaciente.Location = new System.Drawing.Point(424, 61);
             this.btnQuitarPaciente.Name = "btnQuitarPaciente";
             this.btnQuitarPaciente.Size = new System.Drawing.Size(150, 40);
             this.btnQuitarPaciente.TabIndex = 31;
@@ -291,7 +291,7 @@
             this.txtAlergiaPaciente.BorderSize = 2;
             this.txtAlergiaPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAlergiaPaciente.ForeColor = System.Drawing.Color.DimGray;
-            this.txtAlergiaPaciente.Location = new System.Drawing.Point(1043, 81);
+            this.txtAlergiaPaciente.Location = new System.Drawing.Point(864, 82);
             this.txtAlergiaPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlergiaPaciente.Multiline = false;
             this.txtAlergiaPaciente.Name = "txtAlergiaPaciente";
@@ -313,7 +313,7 @@
             this.txtPatologiaPaciente.BorderSize = 2;
             this.txtPatologiaPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatologiaPaciente.ForeColor = System.Drawing.Color.DimGray;
-            this.txtPatologiaPaciente.Location = new System.Drawing.Point(766, 81);
+            this.txtPatologiaPaciente.Location = new System.Drawing.Point(587, 82);
             this.txtPatologiaPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtPatologiaPaciente.Multiline = false;
             this.txtPatologiaPaciente.Name = "txtPatologiaPaciente";
@@ -335,7 +335,7 @@
             this.txtObjetivoPaciente.BorderSize = 2;
             this.txtObjetivoPaciente.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObjetivoPaciente.ForeColor = System.Drawing.Color.DimGray;
-            this.txtObjetivoPaciente.Location = new System.Drawing.Point(1043, 27);
+            this.txtObjetivoPaciente.Location = new System.Drawing.Point(864, 28);
             this.txtObjetivoPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtObjetivoPaciente.Multiline = false;
             this.txtObjetivoPaciente.Name = "txtObjetivoPaciente";
@@ -357,7 +357,7 @@
             this.txtNombreYApellido.BorderSize = 2;
             this.txtNombreYApellido.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreYApellido.ForeColor = System.Drawing.Color.DimGray;
-            this.txtNombreYApellido.Location = new System.Drawing.Point(766, 27);
+            this.txtNombreYApellido.Location = new System.Drawing.Point(587, 28);
             this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreYApellido.Multiline = false;
             this.txtNombreYApellido.Name = "txtNombreYApellido";
@@ -380,7 +380,7 @@
             this.btnBuscarPaciente.FlatAppearance.BorderSize = 0;
             this.btnBuscarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPaciente.Location = new System.Drawing.Point(575, 18);
+            this.btnBuscarPaciente.Location = new System.Drawing.Point(424, 19);
             this.btnBuscarPaciente.Name = "btnBuscarPaciente";
             this.btnBuscarPaciente.Size = new System.Drawing.Size(150, 40);
             this.btnBuscarPaciente.TabIndex = 25;
@@ -473,7 +473,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1259, 764);
+            this.ClientSize = new System.Drawing.Size(1075, 650);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label8);

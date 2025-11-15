@@ -74,7 +74,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(166, 388);
+            this.label3.Location = new System.Drawing.Point(169, 323);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(239, 17);
             this.label3.TabIndex = 2;
@@ -84,7 +84,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(710, 388);
+            this.label4.Location = new System.Drawing.Point(597, 323);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(108, 17);
             this.label4.TabIndex = 3;
@@ -102,7 +102,7 @@
             series1.Legend = "Legend1";
             series1.Name = "Series1";
             this.chGraficoSexos.Series.Add(series1);
-            this.chGraficoSexos.Size = new System.Drawing.Size(571, 300);
+            this.chGraficoSexos.Size = new System.Drawing.Size(418, 250);
             this.chGraficoSexos.TabIndex = 4;
             this.chGraficoSexos.Text = "chart1";
             // 
@@ -112,13 +112,13 @@
             this.chGraficoMotivos.ChartAreas.Add(chartArea2);
             legend2.Name = "Legend1";
             this.chGraficoMotivos.Legends.Add(legend2);
-            this.chGraficoMotivos.Location = new System.Drawing.Point(33, 422);
+            this.chGraficoMotivos.Location = new System.Drawing.Point(36, 357);
             this.chGraficoMotivos.Name = "chGraficoMotivos";
             series2.ChartArea = "ChartArea1";
             series2.Legend = "Legend1";
             series2.Name = "Series1";
             this.chGraficoMotivos.Series.Add(series2);
-            this.chGraficoMotivos.Size = new System.Drawing.Size(571, 300);
+            this.chGraficoMotivos.Size = new System.Drawing.Size(418, 250);
             this.chGraficoMotivos.TabIndex = 5;
             this.chGraficoMotivos.Text = "chart1";
             // 
@@ -128,13 +128,13 @@
             this.chGraficoTurnos.ChartAreas.Add(chartArea3);
             legend3.Name = "Legend1";
             this.chGraficoTurnos.Legends.Add(legend3);
-            this.chGraficoTurnos.Location = new System.Drawing.Point(647, 422);
+            this.chGraficoTurnos.Location = new System.Drawing.Point(534, 357);
             this.chGraficoTurnos.Name = "chGraficoTurnos";
             series3.ChartArea = "ChartArea1";
             series3.Legend = "Legend1";
             series3.Name = "Series1";
             this.chGraficoTurnos.Series.Add(series3);
-            this.chGraficoTurnos.Size = new System.Drawing.Size(571, 300);
+            this.chGraficoTurnos.Size = new System.Drawing.Size(418, 250);
             this.chGraficoTurnos.TabIndex = 6;
             this.chGraficoTurnos.Text = "chart1";
             // 
@@ -143,7 +143,7 @@
             this.cmbMes.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMes.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMes.FormattingEnabled = true;
-            this.cmbMes.Location = new System.Drawing.Point(847, 385);
+            this.cmbMes.Location = new System.Drawing.Point(734, 320);
             this.cmbMes.Name = "cmbMes";
             this.cmbMes.Size = new System.Drawing.Size(188, 24);
             this.cmbMes.TabIndex = 7;
@@ -153,7 +153,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1259, 764);
+            this.ClientSize = new System.Drawing.Size(1075, 650);
             this.Controls.Add(this.cmbMes);
             this.Controls.Add(this.chGraficoTurnos);
             this.Controls.Add(this.chGraficoMotivos);
