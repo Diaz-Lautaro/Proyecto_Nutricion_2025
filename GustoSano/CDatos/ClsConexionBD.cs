@@ -14,5 +14,7 @@ namespace GustoSano.CDatos
 
         // Color morado 62; 39; 66
         // Color de fondo gris 220; 226; 224
+
+        //Codigo de ejemplo
     }
 }
