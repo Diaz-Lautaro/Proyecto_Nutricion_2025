@@ -282,5 +282,10 @@ namespace GustoSano.CPresentacion
         {
 
         }
+
+        private void txtAgua__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

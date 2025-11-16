@@ -205,5 +205,10 @@ namespace GustoSano.CPresentacion
                 mostrarTurnos();
             }            
         }
+
+        private void ldPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

@@ -253,5 +253,30 @@ namespace GustoSano
             }
         }
         #endregion
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ldPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void txtPatologiaPaciente__TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

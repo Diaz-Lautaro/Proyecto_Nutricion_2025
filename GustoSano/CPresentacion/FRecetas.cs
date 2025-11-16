@@ -202,6 +202,11 @@ namespace GustoSano.CPresentacion
         {
 
         }
+
+        private void cmbObjetivo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 
