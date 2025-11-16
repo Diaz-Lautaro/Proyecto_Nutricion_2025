@@ -243,6 +243,44 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void cmbObjetivo_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ldPanel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void dgvHisClinica_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void cmbPatologia_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
