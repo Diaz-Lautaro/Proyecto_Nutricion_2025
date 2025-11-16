@@ -182,6 +182,26 @@ namespace GustoSano.CPresentacion
                 dgvRecetas.ReadOnly = true;
             }
         }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txtDescripcion__TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ldPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
