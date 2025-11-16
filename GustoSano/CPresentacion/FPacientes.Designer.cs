@@ -57,11 +57,11 @@
             // dgvPacientes
             // 
             this.dgvPacientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvPacientes.Location = new System.Drawing.Point(25, 162);
+            this.dgvPacientes.Location = new System.Drawing.Point(27, 162);
             this.dgvPacientes.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvPacientes.Name = "dgvPacientes";
             this.dgvPacientes.RowHeadersWidth = 62;
-            this.dgvPacientes.Size = new System.Drawing.Size(1576, 458);
+            this.dgvPacientes.Size = new System.Drawing.Size(1614, 458);
             this.dgvPacientes.TabIndex = 0;
             this.dgvPacientes.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvPacientes_CellClick);
             // 
@@ -70,7 +70,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(732, 793);
+            this.label6.Location = new System.Drawing.Point(730, 793);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 32);
@@ -83,7 +83,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(59, 659);
+            this.label1.Location = new System.Drawing.Point(57, 659);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(107, 32);
@@ -96,7 +96,7 @@
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.DimGray;
-            this.label5.Location = new System.Drawing.Point(600, 730);
+            this.label5.Location = new System.Drawing.Point(597, 730);
             this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(245, 32);
@@ -109,7 +109,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(59, 724);
+            this.label2.Location = new System.Drawing.Point(57, 724);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(107, 32);
@@ -122,7 +122,7 @@
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.DimGray;
-            this.label4.Location = new System.Drawing.Point(774, 665);
+            this.label4.Location = new System.Drawing.Point(772, 665);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(70, 32);
@@ -135,7 +135,7 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(95, 788);
+            this.label3.Location = new System.Drawing.Point(93, 788);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(71, 32);
@@ -159,7 +159,7 @@
             // 
             // ldPanel2
             // 
-            this.ldPanel2.BackColor = System.Drawing.Color.White;
+            this.ldPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ldPanel2.BorderRadius = 30;
             this.ldPanel2.Controls.Add(this.btnEliminar);
             this.ldPanel2.Controls.Add(this.btnModificar);
@@ -167,7 +167,7 @@
             this.ldPanel2.GradientAngle = 90F;
             this.ldPanel2.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel2.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel2.Location = new System.Drawing.Point(25, 880);
+            this.ldPanel2.Location = new System.Drawing.Point(49, 889);
             this.ldPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ldPanel2.Name = "ldPanel2";
             this.ldPanel2.Size = new System.Drawing.Size(593, 86);
@@ -189,7 +189,7 @@
             this.btnEliminar.Name = "btnEliminar";
             this.btnEliminar.Size = new System.Drawing.Size(225, 62);
             this.btnEliminar.TabIndex = 10;
-            this.btnEliminar.Text = "Eliminar";
+            this.btnEliminar.Text = "Eliminar Datos";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
             this.btnEliminar.UseVisualStyleBackColor = false;
             this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
@@ -210,7 +210,7 @@
             this.btnModificar.Name = "btnModificar";
             this.btnModificar.Size = new System.Drawing.Size(225, 62);
             this.btnModificar.TabIndex = 9;
-            this.btnModificar.Text = "Modificar";
+            this.btnModificar.Text = "Modificar Datos";
             this.btnModificar.TextColor = System.Drawing.Color.White;
             this.btnModificar.UseVisualStyleBackColor = false;
             this.btnModificar.Click += new System.EventHandler(this.btnModificar_Click);
@@ -218,7 +218,7 @@
             // txtEdad
             // 
             this.txtEdad.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtEdad.BorderColor = System.Drawing.Color.Gray;
+            this.txtEdad.BorderColor = System.Drawing.Color.DimGray;
             this.txtEdad.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtEdad.BorderRadius = 9;
             this.txtEdad.BorderSize = 2;
@@ -240,7 +240,7 @@
             // txtNombre
             // 
             this.txtNombre.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtNombre.BorderColor = System.Drawing.Color.Gray;
+            this.txtNombre.BorderColor = System.Drawing.Color.DimGray;
             this.txtNombre.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtNombre.BorderRadius = 9;
             this.txtNombre.BorderSize = 2;
@@ -262,7 +262,7 @@
             // txtApellido
             // 
             this.txtApellido.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtApellido.BorderColor = System.Drawing.Color.Gray;
+            this.txtApellido.BorderColor = System.Drawing.Color.DimGray;
             this.txtApellido.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtApellido.BorderRadius = 9;
             this.txtApellido.BorderSize = 2;
@@ -284,7 +284,7 @@
             // txtTelefono
             // 
             this.txtTelefono.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtTelefono.BorderColor = System.Drawing.Color.Gray;
+            this.txtTelefono.BorderColor = System.Drawing.Color.DimGray;
             this.txtTelefono.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtTelefono.BorderRadius = 9;
             this.txtTelefono.BorderSize = 2;
@@ -306,7 +306,7 @@
             // txtSexo
             // 
             this.txtSexo.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtSexo.BorderColor = System.Drawing.Color.Gray;
+            this.txtSexo.BorderColor = System.Drawing.Color.DimGray;
             this.txtSexo.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtSexo.BorderRadius = 9;
             this.txtSexo.BorderSize = 2;
@@ -328,7 +328,7 @@
             // txtFechaNac
             // 
             this.txtFechaNac.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtFechaNac.BorderColor = System.Drawing.Color.Gray;
+            this.txtFechaNac.BorderColor = System.Drawing.Color.DimGray;
             this.txtFechaNac.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtFechaNac.BorderRadius = 9;
             this.txtFechaNac.BorderSize = 2;
@@ -350,20 +350,20 @@
             // txtBuscarPaciente
             // 
             this.txtBuscarPaciente.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.txtBuscarPaciente.BorderColor = System.Drawing.Color.Gray;
+            this.txtBuscarPaciente.BorderColor = System.Drawing.Color.DimGray;
             this.txtBuscarPaciente.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtBuscarPaciente.BorderRadius = 9;
             this.txtBuscarPaciente.BorderSize = 2;
             this.txtBuscarPaciente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscarPaciente.ForeColor = System.Drawing.Color.DimGray;
-            this.txtBuscarPaciente.Location = new System.Drawing.Point(25, 98);
+            this.txtBuscarPaciente.ForeColor = System.Drawing.Color.Black;
+            this.txtBuscarPaciente.Location = new System.Drawing.Point(27, 98);
             this.txtBuscarPaciente.Margin = new System.Windows.Forms.Padding(6);
             this.txtBuscarPaciente.Multiline = false;
             this.txtBuscarPaciente.Name = "txtBuscarPaciente";
             this.txtBuscarPaciente.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.txtBuscarPaciente.PasswordChar = false;
             this.txtBuscarPaciente.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtBuscarPaciente.PlaceholderText = "ID Paciente";
+            this.txtBuscarPaciente.PlaceholderText = "ID de Paciente";
             this.txtBuscarPaciente.Size = new System.Drawing.Size(651, 53);
             this.txtBuscarPaciente.TabIndex = 1;
             this.txtBuscarPaciente.Texts = "";
@@ -372,7 +372,7 @@
             // 
             // ldPanel1
             // 
-            this.ldPanel1.BackColor = System.Drawing.Color.White;
+            this.ldPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ldPanel1.BorderRadius = 30;
             this.ldPanel1.Controls.Add(this.btnLimpiar);
             this.ldPanel1.Controls.Add(this.btnCargar);
@@ -418,7 +418,7 @@
             this.btnCargar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCargar.ForeColor = System.Drawing.Color.White;
-            this.btnCargar.Location = new System.Drawing.Point(44, 12);
+            this.btnCargar.Location = new System.Drawing.Point(45, 12);
             this.btnCargar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCargar.Name = "btnCargar";
             this.btnCargar.Size = new System.Drawing.Size(225, 62);
