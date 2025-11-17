@@ -28,44 +28,30 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.Calendario = new System.Windows.Forms.MonthCalendar();
             this.dtHora = new System.Windows.Forms.DateTimePicker();
             this.dgvAgenda = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.cmbMotivo = new System.Windows.Forms.ComboBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.ldPanel2 = new GustoSano.LDControles.LDPanel();
             this.btnLimpiar = new GustoSano.LDControles.LDButton();
+            this.btnEliminar = new GustoSano.LDControles.LDButton();
+            this.ldPanel1 = new GustoSano.LDControles.LDPanel();
+            this.btnEditar = new GustoSano.LDControles.LDButton();
+            this.btnGuardar = new GustoSano.LDControles.LDButton();
             this.txtFecha = new GustoSano.LDControles.LDTextBox();
             this.txtNombreYApellido = new GustoSano.LDControles.LDTextBox();
             this.txtBuscarAgenda = new GustoSano.LDControles.LDTextBox();
             this.btnBuscarPaciente = new GustoSano.LDControles.LDButton();
-            this.btnEliminar = new GustoSano.LDControles.LDButton();
-            this.btnEditar = new GustoSano.LDControles.LDButton();
-            this.btnGuardar = new GustoSano.LDControles.LDButton();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ldPanel1 = new GustoSano.LDControles.LDPanel();
-            this.ldPanel2 = new GustoSano.LDControles.LDPanel();
+            this.ldPanel3 = new GustoSano.LDControles.LDPanel();
+            this.Calendario = new System.Windows.Forms.MonthCalendar();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).BeginInit();
-            this.ldPanel1.SuspendLayout();
             this.ldPanel2.SuspendLayout();
+            this.ldPanel1.SuspendLayout();
+            this.ldPanel3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // Calendario
-            // 
-            this.Calendario.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.Calendario.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
-            this.Calendario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Calendario.ForeColor = System.Drawing.Color.Black;
-            this.Calendario.Location = new System.Drawing.Point(1029, 137);
-            this.Calendario.Margin = new System.Windows.Forms.Padding(14);
-            this.Calendario.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
-            this.Calendario.Name = "Calendario";
-            this.Calendario.TabIndex = 0;
-            this.Calendario.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.Calendario.TitleForeColor = System.Drawing.Color.Black;
-            this.Calendario.TrailingForeColor = System.Drawing.Color.Purple;
-            this.Calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateChanged);
             // 
             // dtHora
             // 
@@ -143,6 +129,35 @@
             this.label3.Text = "Motivo:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.Location = new System.Drawing.Point(13, 9);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(208, 70);
+            this.label11.TabIndex = 44;
+            this.label11.Text = "Agenda";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // ldPanel2
+            // 
+            this.ldPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ldPanel2.BorderRadius = 30;
+            this.ldPanel2.Controls.Add(this.btnLimpiar);
+            this.ldPanel2.Controls.Add(this.btnEliminar);
+            this.ldPanel2.ForeColor = System.Drawing.Color.Black;
+            this.ldPanel2.GradientAngle = 90F;
+            this.ldPanel2.GradientBottomColor = System.Drawing.Color.White;
+            this.ldPanel2.GradientTopColor = System.Drawing.Color.White;
+            this.ldPanel2.Location = new System.Drawing.Point(44, 542);
+            this.ldPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel2.Name = "ldPanel2";
+            this.ldPanel2.Size = new System.Drawing.Size(508, 89);
+            this.ldPanel2.TabIndex = 47;
+            // 
             // btnLimpiar
             // 
             this.btnLimpiar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
@@ -163,6 +178,86 @@
             this.btnLimpiar.TextColor = System.Drawing.Color.White;
             this.btnLimpiar.UseVisualStyleBackColor = false;
             this.btnLimpiar.Click += new System.EventHandler(this.btnLimpiar_Click);
+            // 
+            // btnEliminar
+            // 
+            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEliminar.BorderRadius = 20;
+            this.btnEliminar.BorderSize = 0;
+            this.btnEliminar.FlatAppearance.BorderSize = 0;
+            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminar.ForeColor = System.Drawing.Color.White;
+            this.btnEliminar.Location = new System.Drawing.Point(18, 14);
+            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Name = "btnEliminar";
+            this.btnEliminar.Size = new System.Drawing.Size(225, 62);
+            this.btnEliminar.TabIndex = 5;
+            this.btnEliminar.Text = "Eliminar Turno";
+            this.btnEliminar.TextColor = System.Drawing.Color.White;
+            this.btnEliminar.UseVisualStyleBackColor = false;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            // 
+            // ldPanel1
+            // 
+            this.ldPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ldPanel1.BorderRadius = 30;
+            this.ldPanel1.Controls.Add(this.btnEditar);
+            this.ldPanel1.Controls.Add(this.btnGuardar);
+            this.ldPanel1.ForeColor = System.Drawing.Color.Black;
+            this.ldPanel1.GradientAngle = 90F;
+            this.ldPanel1.GradientBottomColor = System.Drawing.Color.White;
+            this.ldPanel1.GradientTopColor = System.Drawing.Color.White;
+            this.ldPanel1.Location = new System.Drawing.Point(44, 431);
+            this.ldPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel1.Name = "ldPanel1";
+            this.ldPanel1.Size = new System.Drawing.Size(508, 89);
+            this.ldPanel1.TabIndex = 46;
+            this.ldPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.ldPanel1_Paint);
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEditar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEditar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEditar.BorderRadius = 20;
+            this.btnEditar.BorderSize = 0;
+            this.btnEditar.FlatAppearance.BorderSize = 0;
+            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditar.ForeColor = System.Drawing.Color.White;
+            this.btnEditar.Location = new System.Drawing.Point(259, 14);
+            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(225, 62);
+            this.btnEditar.TabIndex = 4;
+            this.btnEditar.Text = "Modificar Turno";
+            this.btnEditar.TextColor = System.Drawing.Color.White;
+            this.btnEditar.UseVisualStyleBackColor = false;
+            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
+            // 
+            // btnGuardar
+            // 
+            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnGuardar.BorderRadius = 20;
+            this.btnGuardar.BorderSize = 0;
+            this.btnGuardar.FlatAppearance.BorderSize = 0;
+            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnGuardar.ForeColor = System.Drawing.Color.White;
+            this.btnGuardar.Location = new System.Drawing.Point(21, 14);
+            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Name = "btnGuardar";
+            this.btnGuardar.Size = new System.Drawing.Size(225, 62);
+            this.btnGuardar.TabIndex = 3;
+            this.btnGuardar.Text = "Guardar Turno";
+            this.btnGuardar.TextColor = System.Drawing.Color.White;
+            this.btnGuardar.UseVisualStyleBackColor = false;
+            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
             // 
             // txtFecha
             // 
@@ -252,114 +347,37 @@
             this.btnBuscarPaciente.UseVisualStyleBackColor = false;
             this.btnBuscarPaciente.Click += new System.EventHandler(this.btnBuscarPaciente_Click);
             // 
-            // btnEliminar
+            // ldPanel3
             // 
-            this.btnEliminar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnEliminar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnEliminar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEliminar.BorderRadius = 20;
-            this.btnEliminar.BorderSize = 0;
-            this.btnEliminar.FlatAppearance.BorderSize = 0;
-            this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(18, 14);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(225, 62);
-            this.btnEliminar.TabIndex = 5;
-            this.btnEliminar.Text = "Eliminar Turno";
-            this.btnEliminar.TextColor = System.Drawing.Color.White;
-            this.btnEliminar.UseVisualStyleBackColor = false;
-            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
+            this.ldPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ldPanel3.BorderRadius = 30;
+            this.ldPanel3.Controls.Add(this.Calendario);
+            this.ldPanel3.ForeColor = System.Drawing.Color.Black;
+            this.ldPanel3.GradientAngle = 90F;
+            this.ldPanel3.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.ldPanel3.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.ldPanel3.Location = new System.Drawing.Point(859, 58);
+            this.ldPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel3.Name = "ldPanel3";
+            this.ldPanel3.Size = new System.Drawing.Size(758, 506);
+            this.ldPanel3.TabIndex = 48;
             // 
-            // btnEditar
+            // Calendario
             // 
-            this.btnEditar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnEditar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnEditar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnEditar.BorderRadius = 20;
-            this.btnEditar.BorderSize = 0;
-            this.btnEditar.FlatAppearance.BorderSize = 0;
-            this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(259, 14);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(225, 62);
-            this.btnEditar.TabIndex = 4;
-            this.btnEditar.Text = "Modificar Turno";
-            this.btnEditar.TextColor = System.Drawing.Color.White;
-            this.btnEditar.UseVisualStyleBackColor = false;
-            this.btnEditar.Click += new System.EventHandler(this.btnEditar_Click);
-            // 
-            // btnGuardar
-            // 
-            this.btnGuardar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnGuardar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.btnGuardar.BorderColor = System.Drawing.Color.PaleVioletRed;
-            this.btnGuardar.BorderRadius = 20;
-            this.btnGuardar.BorderSize = 0;
-            this.btnGuardar.FlatAppearance.BorderSize = 0;
-            this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(21, 14);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(225, 62);
-            this.btnGuardar.TabIndex = 3;
-            this.btnGuardar.Text = "Guardar Turno";
-            this.btnGuardar.TextColor = System.Drawing.Color.White;
-            this.btnGuardar.UseVisualStyleBackColor = false;
-            this.btnGuardar.Click += new System.EventHandler(this.btnGuardar_Click);
-            // 
-            // label11
-            // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(13, 9);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(208, 70);
-            this.label11.TabIndex = 44;
-            this.label11.Text = "Agenda";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ldPanel1
-            // 
-            this.ldPanel1.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ldPanel1.BorderRadius = 30;
-            this.ldPanel1.Controls.Add(this.btnEditar);
-            this.ldPanel1.Controls.Add(this.btnGuardar);
-            this.ldPanel1.ForeColor = System.Drawing.Color.Black;
-            this.ldPanel1.GradientAngle = 90F;
-            this.ldPanel1.GradientBottomColor = System.Drawing.Color.White;
-            this.ldPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel1.Location = new System.Drawing.Point(44, 431);
-            this.ldPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ldPanel1.Name = "ldPanel1";
-            this.ldPanel1.Size = new System.Drawing.Size(508, 89);
-            this.ldPanel1.TabIndex = 46;
-            this.ldPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.ldPanel1_Paint);
-            // 
-            // ldPanel2
-            // 
-            this.ldPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.ldPanel2.BorderRadius = 30;
-            this.ldPanel2.Controls.Add(this.btnLimpiar);
-            this.ldPanel2.Controls.Add(this.btnEliminar);
-            this.ldPanel2.ForeColor = System.Drawing.Color.Black;
-            this.ldPanel2.GradientAngle = 90F;
-            this.ldPanel2.GradientBottomColor = System.Drawing.Color.White;
-            this.ldPanel2.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel2.Location = new System.Drawing.Point(44, 542);
-            this.ldPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.ldPanel2.Name = "ldPanel2";
-            this.ldPanel2.Size = new System.Drawing.Size(508, 89);
-            this.ldPanel2.TabIndex = 47;
+            this.Calendario.CalendarDimensions = new System.Drawing.Size(2, 2);
+            this.Calendario.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.Calendario.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
+            this.Calendario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Calendario.ForeColor = System.Drawing.Color.Black;
+            this.Calendario.Location = new System.Drawing.Point(34, 17);
+            this.Calendario.Margin = new System.Windows.Forms.Padding(14);
+            this.Calendario.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
+            this.Calendario.Name = "Calendario";
+            this.Calendario.TabIndex = 0;
+            this.Calendario.TitleBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.Calendario.TitleForeColor = System.Drawing.Color.Black;
+            this.Calendario.TrailingForeColor = System.Drawing.Color.Purple;
+            this.Calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateChanged);
             // 
             // FAgenda
             // 
@@ -380,15 +398,16 @@
             this.Controls.Add(this.btnBuscarPaciente);
             this.Controls.Add(this.dgvAgenda);
             this.Controls.Add(this.dtHora);
-            this.Controls.Add(this.Calendario);
+            this.Controls.Add(this.ldPanel3);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FAgenda";
             this.Text = "FAgenda";
             this.Load += new System.EventHandler(this.FAgenda_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).EndInit();
-            this.ldPanel1.ResumeLayout(false);
             this.ldPanel2.ResumeLayout(false);
+            this.ldPanel1.ResumeLayout(false);
+            this.ldPanel3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,5 +433,6 @@
         private System.Windows.Forms.Label label11;
         private LDControles.LDPanel ldPanel1;
         private LDControles.LDPanel ldPanel2;
+        private LDControles.LDPanel ldPanel3;
     }
 }

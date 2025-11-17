@@ -73,7 +73,7 @@
             this.pnlContenedor.Location = new System.Drawing.Point(471, 14);
             this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(832, 542);
+            this.pnlContenedor.Size = new System.Drawing.Size(818, 542);
             this.pnlContenedor.TabIndex = 34;
             // 
             // btnVolver
@@ -133,21 +133,21 @@
             // txtContraseña
             // 
             this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.txtContraseña.BorderColor = System.Drawing.Color.Gray;
+            this.txtContraseña.BorderColor = System.Drawing.Color.DimGray;
             this.txtContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtContraseña.BorderRadius = 0;
             this.txtContraseña.BorderSize = 2;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraseña.Location = new System.Drawing.Point(429, 200);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(6);
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.txtContraseña.PasswordChar = false;
             this.txtContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtContraseña.PlaceholderText = "";
-            this.txtContraseña.Size = new System.Drawing.Size(362, 55);
+            this.txtContraseña.Size = new System.Drawing.Size(362, 61);
             this.txtContraseña.TabIndex = 39;
             this.txtContraseña.Texts = "";
             this.txtContraseña.UnderlinedStyle = true;
@@ -179,21 +179,21 @@
             // txtUsuario
             // 
             this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.txtUsuario.BorderColor = System.Drawing.Color.Gray;
+            this.txtUsuario.BorderColor = System.Drawing.Color.DimGray;
             this.txtUsuario.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtUsuario.BorderRadius = 0;
             this.txtUsuario.BorderSize = 2;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.Location = new System.Drawing.Point(42, 200);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6);
             this.txtUsuario.Multiline = false;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.txtUsuario.PasswordChar = false;
             this.txtUsuario.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUsuario.PlaceholderText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(362, 55);
+            this.txtUsuario.Size = new System.Drawing.Size(362, 61);
             this.txtUsuario.TabIndex = 34;
             this.txtUsuario.Texts = "";
             this.txtUsuario.UnderlinedStyle = true;
@@ -201,21 +201,21 @@
             // txtGmail
             // 
             this.txtGmail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.txtGmail.BorderColor = System.Drawing.Color.Gray;
+            this.txtGmail.BorderColor = System.Drawing.Color.DimGray;
             this.txtGmail.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.txtGmail.BorderRadius = 0;
             this.txtGmail.BorderSize = 2;
-            this.txtGmail.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtGmail.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtGmail.ForeColor = System.Drawing.Color.DimGray;
             this.txtGmail.Location = new System.Drawing.Point(42, 334);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(6);
             this.txtGmail.Multiline = false;
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
             this.txtGmail.PasswordChar = false;
             this.txtGmail.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtGmail.PlaceholderText = "";
-            this.txtGmail.Size = new System.Drawing.Size(514, 55);
+            this.txtGmail.Size = new System.Drawing.Size(514, 61);
             this.txtGmail.TabIndex = 33;
             this.txtGmail.Texts = "";
             this.txtGmail.UnderlinedStyle = true;
@@ -237,7 +237,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1317, 571);
+            this.ClientSize = new System.Drawing.Size(1315, 571);
             this.Controls.Add(this.pnlContenedor);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;

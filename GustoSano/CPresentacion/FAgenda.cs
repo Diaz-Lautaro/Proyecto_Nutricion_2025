@@ -16,6 +16,7 @@ namespace GustoSano.CPresentacion
         public FAgenda()
         {
             InitializeComponent();
+            Calendario.CalendarDimensions = new Size(2,2);
         }
 
         public string nombrePaciente { get; set; }

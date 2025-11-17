@@ -37,9 +37,11 @@
             // dgvBuscarPaciente
             // 
             this.dgvBuscarPaciente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBuscarPaciente.Location = new System.Drawing.Point(12, 12);
+            this.dgvBuscarPaciente.Location = new System.Drawing.Point(18, 18);
+            this.dgvBuscarPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvBuscarPaciente.Name = "dgvBuscarPaciente";
-            this.dgvBuscarPaciente.Size = new System.Drawing.Size(850, 262);
+            this.dgvBuscarPaciente.RowHeadersWidth = 62;
+            this.dgvBuscarPaciente.Size = new System.Drawing.Size(1275, 403);
             this.dgvBuscarPaciente.TabIndex = 0;
             // 
             // btnCargarPaciente
@@ -52,9 +54,10 @@
             this.btnCargarPaciente.FlatAppearance.BorderSize = 0;
             this.btnCargarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCargarPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnCargarPaciente.Location = new System.Drawing.Point(12, 280);
+            this.btnCargarPaciente.Location = new System.Drawing.Point(18, 431);
+            this.btnCargarPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCargarPaciente.Name = "btnCargarPaciente";
-            this.btnCargarPaciente.Size = new System.Drawing.Size(150, 40);
+            this.btnCargarPaciente.Size = new System.Drawing.Size(225, 62);
             this.btnCargarPaciente.TabIndex = 1;
             this.btnCargarPaciente.Text = "Cargar ";
             this.btnCargarPaciente.TextColor = System.Drawing.Color.White;
@@ -71,9 +74,10 @@
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(168, 280);
+            this.btnCancelar.Location = new System.Drawing.Point(252, 431);
+            this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
-            this.btnCancelar.Size = new System.Drawing.Size(150, 40);
+            this.btnCancelar.Size = new System.Drawing.Size(225, 62);
             this.btnCancelar.TabIndex = 2;
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.TextColor = System.Drawing.Color.White;
@@ -82,14 +86,15 @@
             // 
             // FBuscarPaciente
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(874, 332);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(230)))), ((int)(((byte)(99)))));
+            this.ClientSize = new System.Drawing.Size(1311, 511);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCargarPaciente);
             this.Controls.Add(this.dgvBuscarPaciente);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FBuscarPaciente";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FBuscarPaciente";
