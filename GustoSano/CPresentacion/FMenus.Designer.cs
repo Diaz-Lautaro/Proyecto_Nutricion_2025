@@ -36,6 +36,9 @@
             this.cmbTipoComidaReceta = new System.Windows.Forms.ComboBox();
             this.cmbAlergiaReceta = new System.Windows.Forms.ComboBox();
             this.dgvRecetasMenu = new System.Windows.Forms.DataGridView();
+            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TipoComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dgvRecetas = new System.Windows.Forms.DataGridView();
             this.label5 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
@@ -46,9 +49,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.id = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TipoComida = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ldPanel3 = new GustoSano.LDControles.LDPanel();
             this.btnBuscarPaciente = new GustoSano.LDControles.LDButton();
             this.btnQuitarPaciente = new GustoSano.LDControles.LDButton();
@@ -63,6 +63,8 @@
             this.txtObjetivoPaciente = new GustoSano.LDControles.LDTextBox();
             this.txtNombreYApellido = new GustoSano.LDControles.LDTextBox();
             this.txtNombreMenu = new GustoSano.LDControles.LDTextBox();
+            this.ldPanel4 = new GustoSano.LDControles.LDPanel();
+            this.ldPanel5 = new GustoSano.LDControles.LDPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvMenus)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecetasMenu)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRecetas)).BeginInit();
@@ -100,7 +102,7 @@
             // dgvMenus
             // 
             this.dgvMenus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvMenus.Location = new System.Drawing.Point(14, 673);
+            this.dgvMenus.Location = new System.Drawing.Point(15, 677);
             this.dgvMenus.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvMenus.Name = "dgvMenus";
             this.dgvMenus.RowHeadersWidth = 62;
@@ -113,7 +115,7 @@
             this.label1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(14, 93);
+            this.label1.Location = new System.Drawing.Point(15, 105);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(217, 32);
@@ -127,7 +129,7 @@
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label6.ForeColor = System.Drawing.Color.DimGray;
-            this.label6.Location = new System.Drawing.Point(14, 194);
+            this.label6.Location = new System.Drawing.Point(15, 206);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(313, 32);
@@ -169,13 +171,38 @@
             this.id,
             this.TipoComida,
             this.Descripcion});
-            this.dgvRecetasMenu.Location = new System.Drawing.Point(14, 232);
+            this.dgvRecetasMenu.Location = new System.Drawing.Point(15, 244);
             this.dgvRecetasMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.dgvRecetasMenu.Name = "dgvRecetasMenu";
             this.dgvRecetasMenu.RowHeadersWidth = 62;
             this.dgvRecetasMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRecetasMenu.Size = new System.Drawing.Size(697, 303);
             this.dgvRecetasMenu.TabIndex = 24;
+            // 
+            // id
+            // 
+            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.id.FillWeight = 170.4545F;
+            this.id.HeaderText = "Id";
+            this.id.MinimumWidth = 8;
+            this.id.Name = "id";
+            this.id.Width = 150;
+            // 
+            // TipoComida
+            // 
+            this.TipoComida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
+            this.TipoComida.FillWeight = 115.9091F;
+            this.TipoComida.HeaderText = "Tipo comida";
+            this.TipoComida.MinimumWidth = 8;
+            this.TipoComida.Name = "TipoComida";
+            this.TipoComida.Width = 170;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.FillWeight = 13.63637F;
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.MinimumWidth = 8;
+            this.Descripcion.Name = "Descripcion";
             // 
             // dgvRecetas
             // 
@@ -303,30 +330,6 @@
             this.label9.Text = "Alergía:";
             this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // id
-            // 
-            this.id.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.id.FillWeight = 170.4545F;
-            this.id.HeaderText = "Id";
-            this.id.MinimumWidth = 8;
-            this.id.Name = "id";
-            // 
-            // TipoComida
-            // 
-            this.TipoComida.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.None;
-            this.TipoComida.FillWeight = 115.9091F;
-            this.TipoComida.HeaderText = "Tipo comida";
-            this.TipoComida.MinimumWidth = 8;
-            this.TipoComida.Name = "TipoComida";
-            this.TipoComida.Width = 170;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.FillWeight = 13.63637F;
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.MinimumWidth = 8;
-            this.Descripcion.Name = "Descripcion";
-            // 
             // ldPanel3
             // 
             this.ldPanel3.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -395,7 +398,7 @@
             this.ldPanel1.GradientAngle = 90F;
             this.ldPanel1.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel1.Location = new System.Drawing.Point(742, 545);
+            this.ldPanel1.Location = new System.Drawing.Point(733, 571);
             this.ldPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ldPanel1.Name = "ldPanel1";
             this.ldPanel1.Size = new System.Drawing.Size(477, 89);
@@ -453,7 +456,7 @@
             this.ldPanel2.GradientAngle = 90F;
             this.ldPanel2.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel2.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel2.Location = new System.Drawing.Point(14, 545);
+            this.ldPanel2.Location = new System.Drawing.Point(4, 578);
             this.ldPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ldPanel2.Name = "ldPanel2";
             this.ldPanel2.Size = new System.Drawing.Size(431, 89);
@@ -600,7 +603,7 @@
             this.txtNombreMenu.BorderSize = 2;
             this.txtNombreMenu.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreMenu.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreMenu.Location = new System.Drawing.Point(14, 129);
+            this.txtNombreMenu.Location = new System.Drawing.Point(15, 141);
             this.txtNombreMenu.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombreMenu.Multiline = false;
             this.txtNombreMenu.Name = "txtNombreMenu";
@@ -612,6 +615,34 @@
             this.txtNombreMenu.TabIndex = 0;
             this.txtNombreMenu.Texts = "";
             this.txtNombreMenu.UnderlinedStyle = false;
+            // 
+            // ldPanel4
+            // 
+            this.ldPanel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ldPanel4.BorderRadius = 30;
+            this.ldPanel4.ForeColor = System.Drawing.Color.Black;
+            this.ldPanel4.GradientAngle = 90F;
+            this.ldPanel4.GradientBottomColor = System.Drawing.Color.White;
+            this.ldPanel4.GradientTopColor = System.Drawing.Color.White;
+            this.ldPanel4.Location = new System.Drawing.Point(4, 91);
+            this.ldPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel4.Name = "ldPanel4";
+            this.ldPanel4.Size = new System.Drawing.Size(721, 470);
+            this.ldPanel4.TabIndex = 54;
+            // 
+            // ldPanel5
+            // 
+            this.ldPanel5.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ldPanel5.BorderRadius = 30;
+            this.ldPanel5.ForeColor = System.Drawing.Color.Black;
+            this.ldPanel5.GradientAngle = 90F;
+            this.ldPanel5.GradientBottomColor = System.Drawing.Color.White;
+            this.ldPanel5.GradientTopColor = System.Drawing.Color.White;
+            this.ldPanel5.Location = new System.Drawing.Point(733, 215);
+            this.ldPanel5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel5.Name = "ldPanel5";
+            this.ldPanel5.Size = new System.Drawing.Size(922, 346);
+            this.ldPanel5.TabIndex = 55;
             // 
             // FMenus
             // 
@@ -645,6 +676,8 @@
             this.Controls.Add(this.cmbPatologiaReceta);
             this.Controls.Add(this.cmbObjetivoReceta);
             this.Controls.Add(this.txtNombreMenu);
+            this.Controls.Add(this.ldPanel4);
+            this.Controls.Add(this.ldPanel5);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FMenus";
@@ -698,5 +731,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn id;
         private System.Windows.Forms.DataGridViewTextBoxColumn TipoComida;
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
+        private LDControles.LDPanel ldPanel4;
+        private LDControles.LDPanel ldPanel5;
     }
 }

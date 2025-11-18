@@ -47,6 +47,7 @@
             this.btnBuscarPaciente = new GustoSano.LDControles.LDButton();
             this.ldPanel3 = new GustoSano.LDControles.LDPanel();
             this.Calendario = new System.Windows.Forms.MonthCalendar();
+            this.ldPanel4 = new GustoSano.LDControles.LDPanel();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAgenda)).BeginInit();
             this.ldPanel2.SuspendLayout();
             this.ldPanel1.SuspendLayout();
@@ -379,6 +380,20 @@
             this.Calendario.TrailingForeColor = System.Drawing.Color.Purple;
             this.Calendario.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.Calendario_DateChanged);
             // 
+            // ldPanel4
+            // 
+            this.ldPanel4.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ldPanel4.BorderRadius = 30;
+            this.ldPanel4.ForeColor = System.Drawing.Color.Black;
+            this.ldPanel4.GradientAngle = 90F;
+            this.ldPanel4.GradientBottomColor = System.Drawing.Color.White;
+            this.ldPanel4.GradientTopColor = System.Drawing.Color.White;
+            this.ldPanel4.Location = new System.Drawing.Point(25, 101);
+            this.ldPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel4.Name = "ldPanel4";
+            this.ldPanel4.Size = new System.Drawing.Size(755, 320);
+            this.ldPanel4.TabIndex = 54;
+            // 
             // FAgenda
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -399,6 +414,7 @@
             this.Controls.Add(this.dgvAgenda);
             this.Controls.Add(this.dtHora);
             this.Controls.Add(this.ldPanel3);
+            this.Controls.Add(this.ldPanel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FAgenda";
@@ -434,5 +450,6 @@
         private LDControles.LDPanel ldPanel1;
         private LDControles.LDPanel ldPanel2;
         private LDControles.LDPanel ldPanel3;
+        private LDControles.LDPanel ldPanel4;
     }
 }
