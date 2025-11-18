@@ -29,11 +29,13 @@
         private void InitializeComponent()
         {
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.txtNombreMenu = new GustoSano.LDControles.LDTextBox();
             this.btnBuscarMenu = new GustoSano.LDControles.LDButton();
             this.dgvTurnos = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.label2 = new System.Windows.Forms.Label();
             this.txtPaciente = new GustoSano.LDControles.LDTextBox();
             this.btnBuscarPaciente = new GustoSano.LDControles.LDButton();
             this.label1 = new System.Windows.Forms.Label();
@@ -41,8 +43,6 @@
             this.btnExcel = new GustoSano.LDControles.LDButton();
             this.btnPdf = new GustoSano.LDControles.LDButton();
             this.label11 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvTurnos)).BeginInit();
             this.groupBox1.SuspendLayout();
@@ -66,6 +66,19 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Menú del Paciente";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.Location = new System.Drawing.Point(61, 76);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(82, 32);
+            this.label3.TabIndex = 41;
+            this.label3.Text = "Menú:";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtNombreMenu
             // 
             this.txtNombreMenu.BackColor = System.Drawing.SystemColors.Window;
@@ -76,7 +89,7 @@
             this.txtNombreMenu.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtNombreMenu.ForeColor = System.Drawing.Color.Black;
             this.txtNombreMenu.Location = new System.Drawing.Point(147, 66);
-            this.txtNombreMenu.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtNombreMenu.Margin = new System.Windows.Forms.Padding(6);
             this.txtNombreMenu.Multiline = false;
             this.txtNombreMenu.Name = "txtNombreMenu";
             this.txtNombreMenu.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
@@ -149,6 +162,19 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Menú del Paciente";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.Location = new System.Drawing.Point(35, 65);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(108, 32);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Paciente:";
+            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // txtPaciente
             // 
             this.txtPaciente.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -159,7 +185,7 @@
             this.txtPaciente.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtPaciente.ForeColor = System.Drawing.Color.Black;
             this.txtPaciente.Location = new System.Drawing.Point(147, 55);
-            this.txtPaciente.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            this.txtPaciente.Margin = new System.Windows.Forms.Padding(6);
             this.txtPaciente.Multiline = false;
             this.txtPaciente.Name = "txtPaciente";
             this.txtPaciente.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
@@ -274,32 +300,6 @@
             this.label11.TabIndex = 46;
             this.label11.Text = "Reporte de Pacientes";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(35, 65);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(108, 32);
-            this.label2.TabIndex = 11;
-            this.label2.Text = "Paciente:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(61, 76);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(82, 32);
-            this.label3.TabIndex = 41;
-            this.label3.Text = "Menú:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // FReportes
             // 
