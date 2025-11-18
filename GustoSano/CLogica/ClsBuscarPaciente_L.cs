@@ -21,5 +21,10 @@ namespace GustoSano.CLogica
         {
             return datos.mostrarPacientesAgenda_D();
         }
+
+        public DataTable mostrarPacientesReportes_L()
+        {
+            return datos.mostrarPacientesReportes_D();
+        }
     }
 }

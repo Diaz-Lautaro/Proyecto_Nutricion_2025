@@ -15,6 +15,7 @@ namespace GustoSano.CPresentacion
     {
         private FMenus _formMenus;
         private FAgenda _formAgendas;
+        private FReportes _formReportes;
         private string _funcionBtn;
 
         public FBuscarPaciente(FMenus fMenus, string funcionBtn)
@@ -31,6 +32,13 @@ namespace GustoSano.CPresentacion
             _funcionBtn = funcionBtn;
         }
 
+        public FBuscarPaciente(FReportes freporte, string funcionBtn)
+        {
+            InitializeComponent();
+            _formReportes = freporte;
+            _funcionBtn = funcionBtn;
+        }
+
         ClsBuscarPaciente_L logica = new ClsBuscarPaciente_L();
 
         private void FBuscarPaciente_Load(object sender, EventArgs e)
@@ -44,9 +52,13 @@ namespace GustoSano.CPresentacion
             {
                 dgvBuscarPaciente.DataSource = logica.mostrarPacientesAgenda_L();
             }
-            else
+            else if (_funcionBtn == "fmenu")
             {
                 dgvBuscarPaciente.DataSource = logica.mostrarPacientesMenus_L();
+            }
+            else
+            {
+                dgvBuscarPaciente.DataSource = logica.mostrarPacientesReportes_L();
             }
 
             dgvBuscarPaciente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
@@ -73,10 +85,16 @@ namespace GustoSano.CPresentacion
                     _formMenus.fPatologia = fila.Cells["Patologia"].Value.ToString();
                     _formMenus.fAlergia = fila.Cells["Alergia"].Value.ToString();
                 }
-                else
+                else if (_funcionBtn == "fmenu")
                 {
                     _formAgendas.nombrePaciente = fila.Cells["nombrePaciente"].Value.ToString();
                     _formAgendas.apellidoPaciente = fila.Cells["apellidoPaciente"].Value.ToString();
+                }
+                else
+                {
+                    _formReportes.idPaciente = Convert.ToInt32(fila.Cells["idPaciente"].Value.ToString());
+                    _formReportes.nombrePaciente = fila.Cells["nombrePaciente"].Value.ToString();
+                    _formReportes.apellidoPaciente = fila.Cells["apellidoPaciente"].Value.ToString();
                 }
 
                 this.DialogResult = DialogResult.OK;
