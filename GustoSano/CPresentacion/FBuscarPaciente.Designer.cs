@@ -46,13 +46,14 @@
             // 
             // btnCargarPaciente
             // 
-            this.btnCargarPaciente.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnCargarPaciente.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCargarPaciente.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnCargarPaciente.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.btnCargarPaciente.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnCargarPaciente.BorderRadius = 20;
             this.btnCargarPaciente.BorderSize = 0;
             this.btnCargarPaciente.FlatAppearance.BorderSize = 0;
             this.btnCargarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCargarPaciente.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnCargarPaciente.ForeColor = System.Drawing.Color.White;
             this.btnCargarPaciente.Location = new System.Drawing.Point(18, 431);
             this.btnCargarPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
@@ -66,15 +67,16 @@
             // 
             // btnCancelar
             // 
-            this.btnCancelar.BackColor = System.Drawing.Color.MediumSlateBlue;
-            this.btnCancelar.BackgroundColor = System.Drawing.Color.MediumSlateBlue;
+            this.btnCancelar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnCancelar.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.btnCancelar.BorderColor = System.Drawing.Color.PaleVioletRed;
             this.btnCancelar.BorderRadius = 20;
             this.btnCancelar.BorderSize = 0;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnCancelar.ForeColor = System.Drawing.Color.White;
-            this.btnCancelar.Location = new System.Drawing.Point(252, 431);
+            this.btnCancelar.Location = new System.Drawing.Point(274, 431);
             this.btnCancelar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(225, 62);
@@ -88,7 +90,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(147)))), ((int)(((byte)(230)))), ((int)(((byte)(99)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(95)))), ((int)(((byte)(80)))), ((int)(((byte)(97)))));
             this.ClientSize = new System.Drawing.Size(1311, 511);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnCargarPaciente);
