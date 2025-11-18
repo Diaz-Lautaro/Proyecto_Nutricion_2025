@@ -75,5 +75,32 @@ namespace GustoSano.CDatos
 
             return tabla;
         }
+
+        public DataTable mostrarPacientesReportes_D()
+        {
+            DataTable tabla = new DataTable();
+
+            string consulta = "SELECT idPaciente, nombrePaciente ,apellidoPaciente FROM DatosPacientes";
+
+            try
+            {
+                using (SqlConnection conexion = new SqlConnection(cadenaDeConexion))
+                {
+                    conexion.Open();
+                    using (SqlCommand comando = new SqlCommand(consulta, conexion))
+                    {
+                        SqlDataAdapter da = new SqlDataAdapter(comando);
+                        da.Fill(tabla);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al cargar pacientes: " + ex.Message,
+                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+            return tabla;
+        }
     }
 }

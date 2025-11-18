@@ -21,12 +21,11 @@ namespace GustoSano
         }
 
         List<Button> botonesMenu;
-        private int cambiarbtn;
         private void FMain_Load(object sender, EventArgs e)
         {
             btnPacientes.BackColor = Color.FromArgb(62, 39, 66);
             btnPacientes.Image = Properties.Resources.Paciente2;
-            cambiarbtn = 1;
+            //cambiarbtn = 1;
             FPacientes fPacientes = new FPacientes();
             abrirFormularioEnPanel(fPacientes);
 
