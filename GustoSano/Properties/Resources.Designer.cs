@@ -83,6 +83,16 @@ namespace GustoSano.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap cap {
+            get {
+                object obj = ResourceManager.GetObject("cap", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Comida1 {
             get {
                 object obj = ResourceManager.GetObject("Comida1", resourceCulture);
@@ -126,6 +136,16 @@ namespace GustoSano.Properties {
         internal static System.Drawing.Bitmap CruzSalir {
             get {
                 object obj = ResourceManager.GetObject("CruzSalir", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap fondoInicio {
+            get {
+                object obj = ResourceManager.GetObject("fondoInicio", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

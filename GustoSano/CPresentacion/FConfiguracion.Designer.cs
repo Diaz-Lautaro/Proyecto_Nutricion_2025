@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FConfiguracion));
             this.label4 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -195,7 +194,7 @@
             this.btnEliminarCuenta.FlatAppearance.BorderSize = 0;
             this.btnEliminarCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminarCuenta.ForeColor = System.Drawing.Color.White;
-            this.btnEliminarCuenta.Location = new System.Drawing.Point(302, 51);
+            this.btnEliminarCuenta.Location = new System.Drawing.Point(421, 51);
             this.btnEliminarCuenta.Name = "btnEliminarCuenta";
             this.btnEliminarCuenta.Size = new System.Drawing.Size(150, 40);
             this.btnEliminarCuenta.TabIndex = 55;
@@ -354,6 +353,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.LightGray;
             this.groupBox1.Controls.Add(this.btnCambiarContraseña);
             this.groupBox1.Controls.Add(this.txtContraseñaActual);
             this.groupBox1.Controls.Add(this.label4);
@@ -361,7 +361,8 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.txtConfirmarContraseña);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Location = new System.Drawing.Point(135, 108);
+            this.groupBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(188, 123);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.groupBox1.Size = new System.Drawing.Size(295, 333);
@@ -371,6 +372,7 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.BackColor = System.Drawing.Color.LightGray;
             this.groupBox2.Controls.Add(this.txtContraseñaUsuario);
             this.groupBox2.Controls.Add(this.txtNombreUsuarioNuevo);
             this.groupBox2.Controls.Add(this.label3);
@@ -378,7 +380,8 @@
             this.groupBox2.Controls.Add(this.btnCambiarNomUsuario);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.lblNombreUsuario);
-            this.groupBox2.Location = new System.Drawing.Point(591, 108);
+            this.groupBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox2.Location = new System.Drawing.Point(601, 123);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(310, 333);
             this.groupBox2.TabIndex = 60;
@@ -387,12 +390,14 @@
             // 
             // groupBox3
             // 
+            this.groupBox3.BackColor = System.Drawing.Color.LightGray;
             this.groupBox3.Controls.Add(this.btnEliminarCuenta);
             this.groupBox3.Controls.Add(this.txtContraseñaEliminar);
             this.groupBox3.Controls.Add(this.label8);
-            this.groupBox3.Location = new System.Drawing.Point(286, 492);
+            this.groupBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox3.Location = new System.Drawing.Point(227, 498);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(483, 113);
+            this.groupBox3.Size = new System.Drawing.Size(626, 113);
             this.groupBox3.TabIndex = 61;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "Eliminar cuenta";
@@ -401,8 +406,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1112, 660);
             this.Controls.Add(this.groupBox3);

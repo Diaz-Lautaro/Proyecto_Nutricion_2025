@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAgenda));
             this.dtHora = new System.Windows.Forms.DateTimePicker();
             this.dgvAgenda = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -81,8 +80,9 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.White;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.DimGray;
+            this.label1.ForeColor = System.Drawing.Color.Black;
             this.label1.Location = new System.Drawing.Point(129, 148);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 21);
@@ -93,8 +93,9 @@
             // label2
             // 
             this.label2.AutoSize = true;
+            this.label2.BackColor = System.Drawing.Color.White;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.DimGray;
+            this.label2.ForeColor = System.Drawing.Color.Black;
             this.label2.Location = new System.Drawing.Point(136, 188);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(47, 21);
@@ -116,8 +117,9 @@
             // label3
             // 
             this.label3.AutoSize = true;
+            this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.DimGray;
+            this.label3.ForeColor = System.Drawing.Color.Black;
             this.label3.Location = new System.Drawing.Point(119, 227);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(62, 21);
@@ -258,7 +260,7 @@
             this.txtFecha.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
             this.txtFecha.Location = new System.Drawing.Point(189, 140);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4);
             this.txtFecha.Multiline = false;
             this.txtFecha.Name = "txtFecha";
             this.txtFecha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -280,7 +282,7 @@
             this.txtNombreYApellido.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtNombreYApellido.ForeColor = System.Drawing.Color.Black;
             this.txtNombreYApellido.Location = new System.Drawing.Point(189, 90);
-            this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreYApellido.Multiline = false;
             this.txtNombreYApellido.Name = "txtNombreYApellido";
             this.txtNombreYApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -302,7 +304,7 @@
             this.txtBuscarAgenda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarAgenda.ForeColor = System.Drawing.Color.Black;
             this.txtBuscarAgenda.Location = new System.Drawing.Point(694, 395);
-            this.txtBuscarAgenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtBuscarAgenda.Margin = new System.Windows.Forms.Padding(4);
             this.txtBuscarAgenda.Multiline = false;
             this.txtBuscarAgenda.Name = "txtBuscarAgenda";
             this.txtBuscarAgenda.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -383,7 +385,6 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1112, 660);
             this.Controls.Add(this.ldPanel2);
