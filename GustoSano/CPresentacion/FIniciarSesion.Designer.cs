@@ -31,13 +31,13 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FIniciarSesion));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlContenedor = new GustoSano.LDControles.LDPanel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.txtContraseña = new GustoSano.LDControles.LDTextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.txtUsuario = new GustoSano.LDControles.LDTextBox();
             this.pbCerrarForm = new System.Windows.Forms.PictureBox();
             this.btnCrearCuenta = new GustoSano.LDControles.LDButton();
             this.btnIniciarSesion = new GustoSano.LDControles.LDButton();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.txtUsuario = new GustoSano.LDControles.LDTextBox();
-            this.txtContraseña = new GustoSano.LDControles.LDTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.pnlContenedor.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbCerrarForm)).BeginInit();
@@ -52,7 +52,7 @@
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(462, 600);
+            this.panel1.Size = new System.Drawing.Size(308, 371);
             this.panel1.TabIndex = 22;
             // 
             // pnlContenedor
@@ -60,30 +60,96 @@
             this.pnlContenedor.BackColor = System.Drawing.Color.White;
             this.pnlContenedor.BorderRadius = 30;
             this.pnlContenedor.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pnlContenedor.Controls.Add(this.label8);
+            this.pnlContenedor.Controls.Add(this.txtContraseña);
+            this.pnlContenedor.Controls.Add(this.label5);
+            this.pnlContenedor.Controls.Add(this.txtUsuario);
             this.pnlContenedor.Controls.Add(this.pbCerrarForm);
             this.pnlContenedor.Controls.Add(this.btnCrearCuenta);
             this.pnlContenedor.Controls.Add(this.btnIniciarSesion);
-            this.pnlContenedor.Controls.Add(this.label2);
-            this.pnlContenedor.Controls.Add(this.label3);
-            this.pnlContenedor.Controls.Add(this.txtUsuario);
-            this.pnlContenedor.Controls.Add(this.txtContraseña);
             this.pnlContenedor.Controls.Add(this.label1);
             this.pnlContenedor.ForeColor = System.Drawing.Color.Black;
             this.pnlContenedor.GradientAngle = 90F;
             this.pnlContenedor.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.pnlContenedor.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.pnlContenedor.Location = new System.Drawing.Point(470, 15);
+            this.pnlContenedor.Location = new System.Drawing.Point(314, 9);
             this.pnlContenedor.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pnlContenedor.Name = "pnlContenedor";
-            this.pnlContenedor.Size = new System.Drawing.Size(702, 569);
+            this.pnlContenedor.Size = new System.Drawing.Size(546, 353);
             this.pnlContenedor.TabIndex = 33;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(28, 190);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(110, 28);
+            this.label8.TabIndex = 43;
+            this.label8.Text = "Contraseña";
+            // 
+            // txtContraseña
+            // 
+            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
+            this.txtContraseña.BorderColor = System.Drawing.Color.DimGray;
+            this.txtContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.txtContraseña.BorderRadius = 0;
+            this.txtContraseña.BorderSize = 2;
+            this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
+            this.txtContraseña.Location = new System.Drawing.Point(28, 217);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
+            this.txtContraseña.Multiline = false;
+            this.txtContraseña.Name = "txtContraseña";
+            this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtContraseña.PasswordChar = false;
+            this.txtContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtContraseña.PlaceholderText = "";
+            this.txtContraseña.Size = new System.Drawing.Size(310, 40);
+            this.txtContraseña.TabIndex = 44;
+            this.txtContraseña.Texts = "";
+            this.txtContraseña.UnderlinedStyle = true;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(28, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(79, 28);
+            this.label5.TabIndex = 41;
+            this.label5.Text = "Usuario";
+            // 
+            // txtUsuario
+            // 
+            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
+            this.txtUsuario.BorderColor = System.Drawing.Color.DimGray;
+            this.txtUsuario.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.txtUsuario.BorderRadius = 0;
+            this.txtUsuario.BorderSize = 2;
+            this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 14F);
+            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
+            this.txtUsuario.Location = new System.Drawing.Point(28, 130);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
+            this.txtUsuario.Multiline = false;
+            this.txtUsuario.Name = "txtUsuario";
+            this.txtUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
+            this.txtUsuario.PasswordChar = false;
+            this.txtUsuario.PlaceholderColor = System.Drawing.Color.DarkGray;
+            this.txtUsuario.PlaceholderText = "";
+            this.txtUsuario.Size = new System.Drawing.Size(310, 40);
+            this.txtUsuario.TabIndex = 42;
+            this.txtUsuario.Texts = "";
+            this.txtUsuario.UnderlinedStyle = true;
             // 
             // pbCerrarForm
             // 
             this.pbCerrarForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.pbCerrarForm.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pbCerrarForm.Image = ((System.Drawing.Image)(resources.GetObject("pbCerrarForm.Image")));
-            this.pbCerrarForm.Location = new System.Drawing.Point(658, 12);
+            this.pbCerrarForm.Location = new System.Drawing.Point(510, 5);
             this.pbCerrarForm.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.pbCerrarForm.Name = "pbCerrarForm";
             this.pbCerrarForm.Size = new System.Drawing.Size(32, 31);
@@ -105,10 +171,10 @@
             this.btnCrearCuenta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnCrearCuenta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCrearCuenta.ForeColor = System.Drawing.Color.White;
-            this.btnCrearCuenta.Location = new System.Drawing.Point(357, 460);
+            this.btnCrearCuenta.Location = new System.Drawing.Point(188, 285);
             this.btnCrearCuenta.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnCrearCuenta.Name = "btnCrearCuenta";
-            this.btnCrearCuenta.Size = new System.Drawing.Size(225, 65);
+            this.btnCrearCuenta.Size = new System.Drawing.Size(150, 40);
             this.btnCrearCuenta.TabIndex = 36;
             this.btnCrearCuenta.Text = "Crear cuenta";
             this.btnCrearCuenta.TextColor = System.Drawing.Color.White;
@@ -126,90 +192,22 @@
             this.btnIniciarSesion.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnIniciarSesion.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnIniciarSesion.ForeColor = System.Drawing.Color.White;
-            this.btnIniciarSesion.Location = new System.Drawing.Point(123, 460);
+            this.btnIniciarSesion.Location = new System.Drawing.Point(32, 285);
             this.btnIniciarSesion.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.btnIniciarSesion.Name = "btnIniciarSesion";
-            this.btnIniciarSesion.Size = new System.Drawing.Size(225, 65);
+            this.btnIniciarSesion.Size = new System.Drawing.Size(150, 40);
             this.btnIniciarSesion.TabIndex = 35;
             this.btnIniciarSesion.Text = "Iniciar Sesión";
             this.btnIniciarSesion.TextColor = System.Drawing.Color.White;
             this.btnIniciarSesion.UseVisualStyleBackColor = false;
             this.btnIniciarSesion.Click += new System.EventHandler(this.btnInicarSesion_Click);
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(166, 173);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(79, 28);
-            this.label2.TabIndex = 25;
-            this.label2.Text = "Usuario";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(166, 307);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(110, 28);
-            this.label3.TabIndex = 26;
-            this.label3.Text = "Contraseña";
-            // 
-            // txtUsuario
-            // 
-            this.txtUsuario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.txtUsuario.BorderColor = System.Drawing.Color.Gray;
-            this.txtUsuario.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.txtUsuario.BorderRadius = 0;
-            this.txtUsuario.BorderSize = 2;
-            this.txtUsuario.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
-            this.txtUsuario.Location = new System.Drawing.Point(166, 210);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(6);
-            this.txtUsuario.Multiline = false;
-            this.txtUsuario.Name = "txtUsuario";
-            this.txtUsuario.Padding = new System.Windows.Forms.Padding(15, 12, 15, 12);
-            this.txtUsuario.PasswordChar = false;
-            this.txtUsuario.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtUsuario.PlaceholderText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(362, 49);
-            this.txtUsuario.TabIndex = 34;
-            this.txtUsuario.Texts = "";
-            this.txtUsuario.UnderlinedStyle = true;
-            // 
-            // txtContraseña
-            // 
-            this.txtContraseña.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.txtContraseña.BorderColor = System.Drawing.Color.Gray;
-            this.txtContraseña.BorderFocusColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.txtContraseña.BorderRadius = 0;
-            this.txtContraseña.BorderSize = 2;
-            this.txtContraseña.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
-            this.txtContraseña.Location = new System.Drawing.Point(166, 351);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(6);
-            this.txtContraseña.Multiline = false;
-            this.txtContraseña.Name = "txtContraseña";
-            this.txtContraseña.Padding = new System.Windows.Forms.Padding(15, 12, 15, 12);
-            this.txtContraseña.PasswordChar = false;
-            this.txtContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
-            this.txtContraseña.PlaceholderText = "";
-            this.txtContraseña.Size = new System.Drawing.Size(362, 49);
-            this.txtContraseña.TabIndex = 33;
-            this.txtContraseña.Texts = "";
-            this.txtContraseña.UnderlinedStyle = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(162, 61);
+            this.label1.Location = new System.Drawing.Point(25, 33);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(211, 46);
@@ -221,7 +219,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
-            this.ClientSize = new System.Drawing.Size(1190, 600);
+            this.ClientSize = new System.Drawing.Size(877, 371);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pnlContenedor);
             this.Font = new System.Drawing.Font("Segoe UI", 8F);
@@ -241,14 +239,14 @@
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private LDControles.LDPanel pnlContenedor;
-        private LDControles.LDTextBox txtContraseña;
-        private LDControles.LDTextBox txtUsuario;
         private LDControles.LDButton btnIniciarSesion;
         private LDControles.LDButton btnCrearCuenta;
         private System.Windows.Forms.PictureBox pbCerrarForm;
+        private System.Windows.Forms.Label label8;
+        private LDControles.LDTextBox txtContraseña;
+        private System.Windows.Forms.Label label5;
+        private LDControles.LDTextBox txtUsuario;
     }
 }

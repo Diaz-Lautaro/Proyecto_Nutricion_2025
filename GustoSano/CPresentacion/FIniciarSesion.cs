@@ -59,20 +59,6 @@ namespace GustoSano.CPresentacion
         private void pbCerrarForm_Click(object sender, EventArgs e)
         {
             Application.Exit();
-
-            /*private void btnSalir_Click(object sender, EventArgs e)
-            {
-                DialogResult resultado = MessageBox.Show(
-                    "¿Seguro que querés salir?", 
-                    "Confirmar salida", 
-                    MessageBoxButtons.YesNo, 
-                    MessageBoxIcon.Question
-                );
-
-                if (resultado == DialogResult.Yes)
-                    Application.Exit();
-            }
-            */
         }
 
         private void pbCerrarForm_MouseEnter(object sender, EventArgs e)
