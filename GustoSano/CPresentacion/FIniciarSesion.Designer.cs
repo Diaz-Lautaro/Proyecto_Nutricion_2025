@@ -144,7 +144,7 @@
             this.label2.Location = new System.Drawing.Point(166, 173);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(119, 41);
+            this.label2.Size = new System.Drawing.Size(79, 28);
             this.label2.TabIndex = 25;
             this.label2.Text = "Usuario";
             // 
@@ -156,7 +156,7 @@
             this.label3.Location = new System.Drawing.Point(166, 307);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(168, 41);
+            this.label3.Size = new System.Drawing.Size(110, 28);
             this.label3.TabIndex = 26;
             this.label3.Text = "Contraseña";
             // 
@@ -177,7 +177,7 @@
             this.txtUsuario.PasswordChar = false;
             this.txtUsuario.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtUsuario.PlaceholderText = "";
-            this.txtUsuario.Size = new System.Drawing.Size(362, 57);
+            this.txtUsuario.Size = new System.Drawing.Size(362, 49);
             this.txtUsuario.TabIndex = 34;
             this.txtUsuario.Texts = "";
             this.txtUsuario.UnderlinedStyle = true;
@@ -199,7 +199,7 @@
             this.txtContraseña.PasswordChar = false;
             this.txtContraseña.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtContraseña.PlaceholderText = "";
-            this.txtContraseña.Size = new System.Drawing.Size(362, 57);
+            this.txtContraseña.Size = new System.Drawing.Size(362, 49);
             this.txtContraseña.TabIndex = 33;
             this.txtContraseña.Texts = "";
             this.txtContraseña.UnderlinedStyle = true;
@@ -212,13 +212,13 @@
             this.label1.Location = new System.Drawing.Point(162, 61);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(310, 67);
+            this.label1.Size = new System.Drawing.Size(211, 46);
             this.label1.TabIndex = 24;
             this.label1.Text = "Iniciar sesión";
             // 
             // FIniciarSesion
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 21F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(253)))));
             this.ClientSize = new System.Drawing.Size(1190, 600);

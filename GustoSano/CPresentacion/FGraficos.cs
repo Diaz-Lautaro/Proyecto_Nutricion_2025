@@ -40,19 +40,22 @@ namespace GustoSano.CPresentacion
 
             chGraficoSexos.ChartAreas.Add(new ChartArea("AreaPrincipal"));
 
-            Series serie = new Series("Pacientes por sexo");
-            serie.ChartType = SeriesChartType.Pie; 
+            Series serie = new Series("Femenino");
+            Series serie2 = new Series("Masculino");
+            serie.ChartType = SeriesChartType.Column; 
             serie.XValueMember = "Sexo";
             serie.YValueMembers = "Cantidad";
             serie.IsValueShownAsLabel = true;
+            serie.Palette = ChartColorPalette.Pastel;
 
             chGraficoSexos.DataSource = tabla;
             chGraficoSexos.Series.Add(serie);
-            chGraficoSexos.Titles.Add("Distribución de pacientes por sexo");
+            chGraficoSexos.Series.Add(serie2);
+            //chGraficoSexos.Titles.Add("Distribución de pacientes por sexo");
             chGraficoSexos.DataBind();
 
-            serie.Points[0].Color = Color.SteelBlue;   // Masculino
-            serie.Points[1].Color = Color.LightPink;   // Femenino
+            //serie.Points[0].Color = Color.SteelBlue;   // Masculino
+            //serie.Points[1].Color = Color.LightPink;   // Femenino
         }
 
         private void cargarGraficoTurnosPorMotivo()
@@ -73,7 +76,7 @@ namespace GustoSano.CPresentacion
 
             chGraficoMotivos.DataSource = tabla;
             chGraficoMotivos.Series.Add(serie);
-            chGraficoMotivos.Titles.Add("Motivos más frecuentes de consulta");
+            //chGraficoMotivos.Titles.Add("Motivos más frecuentes de consulta");
             chGraficoMotivos.DataBind();
 
             // Opcional: mejorar visibilidad
@@ -96,10 +99,11 @@ namespace GustoSano.CPresentacion
             serie.XValueMember = "Semana";
             serie.YValueMembers = "Cantidad";
             serie.IsValueShownAsLabel = true;
+            serie.Palette = ChartColorPalette.SeaGreen;
 
             chGraficoTurnos.DataSource = tabla;
             chGraficoTurnos.Series.Add(serie);
-            chGraficoTurnos.Titles.Add("Cantidad de turnos por semana");
+            //chGraficoTurnos.Titles.Add("Cantidad de turnos por semana");
             chGraficoTurnos.DataBind();
 
             chGraficoTurnos.ChartAreas[0].AxisX.Title = "Semana del mes";
