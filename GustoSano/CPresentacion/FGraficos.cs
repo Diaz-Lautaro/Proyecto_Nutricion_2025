@@ -39,10 +39,22 @@ namespace GustoSano.CPresentacion
             chGraficoSexos.Titles.Clear();
 
             chGraficoSexos.ChartAreas.Add(new ChartArea("AreaPrincipal"));
+            var area = chGraficoSexos.ChartAreas["AreaPrincipal"];
+
+            // Quitar líneas de fondo
+            area.AxisX.MajorGrid.Enabled = false;
+            area.AxisX.MinorGrid.Enabled = false;
+            //area.AxisY.MajorGrid.Enabled = false;
+            area.AxisY.MinorGrid.Enabled = false;
+
+            // Opcional: quitar líneas de los ejes
+            //area.AxisX.LineWidth = 0;
+            //area.AxisY.LineWidth = 0;
 
             Series serie = new Series("Femenino");
             Series serie2 = new Series("Masculino");
-            serie.ChartType = SeriesChartType.Column; 
+
+            serie.ChartType = SeriesChartType.Column;
             serie.XValueMember = "Sexo";
             serie.YValueMembers = "Cantidad";
             serie.IsValueShownAsLabel = true;
@@ -51,12 +63,10 @@ namespace GustoSano.CPresentacion
             chGraficoSexos.DataSource = tabla;
             chGraficoSexos.Series.Add(serie);
             chGraficoSexos.Series.Add(serie2);
-            //chGraficoSexos.Titles.Add("Distribución de pacientes por sexo");
-            chGraficoSexos.DataBind();
 
-            //serie.Points[0].Color = Color.SteelBlue;   // Masculino
-            //serie.Points[1].Color = Color.LightPink;   // Femenino
+            chGraficoSexos.DataBind();
         }
+
 
         private void cargarGraficoTurnosPorMotivo()
         {
@@ -67,6 +77,7 @@ namespace GustoSano.CPresentacion
             chGraficoMotivos.Titles.Clear();
 
             chGraficoMotivos.ChartAreas.Add(new ChartArea("AreaMotivos"));
+
 
             Series serie = new Series("Turnos por motivo");
             serie.ChartType = SeriesChartType.Doughnut;
@@ -93,9 +104,20 @@ namespace GustoSano.CPresentacion
             chGraficoTurnos.Titles.Clear();
 
             chGraficoTurnos.ChartAreas.Add(new ChartArea("AreaSemanas"));
+            var area = chGraficoTurnos.ChartAreas["AreaSemanas"];
+
+            // Quitar líneas del fondo
+            area.AxisX.MajorGrid.Enabled = false;
+            area.AxisX.MinorGrid.Enabled = false;
+           // area.AxisY.MajorGrid.Enabled = false;
+            area.AxisY.MinorGrid.Enabled = false;
+
+            // Opcional: eliminar las líneas del eje propio
+            //area.AxisX.LineWidth = 0;
+            //area.AxisY.LineWidth = 0;
 
             Series serie = new Series("Turnos por semana");
-            serie.ChartType = SeriesChartType.RangeColumn; 
+            serie.ChartType = SeriesChartType.RangeColumn;
             serie.XValueMember = "Semana";
             serie.YValueMembers = "Cantidad";
             serie.IsValueShownAsLabel = true;
@@ -103,12 +125,12 @@ namespace GustoSano.CPresentacion
 
             chGraficoTurnos.DataSource = tabla;
             chGraficoTurnos.Series.Add(serie);
-            //chGraficoTurnos.Titles.Add("Cantidad de turnos por semana");
             chGraficoTurnos.DataBind();
 
-            chGraficoTurnos.ChartAreas[0].AxisX.Title = "Semana del mes";
-            chGraficoTurnos.ChartAreas[0].AxisY.Title = "Cantidad de turnos";
+            area.AxisX.Title = "Semana del mes";
+            area.AxisY.Title = "Cantidad de turnos";
         }
+
 
 
         private void cargarComboBox()
@@ -169,5 +191,9 @@ namespace GustoSano.CPresentacion
             chGraficoTurnos.ChartAreas[0].AxisY.Title = "Cantidad de turnos";
         }
 
+        private void chGraficoTurnos_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
