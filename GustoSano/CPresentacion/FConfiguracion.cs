@@ -162,6 +162,5 @@ namespace GustoSano.CPresentacion
             // Cierra el Main
             main.Close();
         }
-
     }
 }
