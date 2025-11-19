@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FAgenda));
             this.dtHora = new System.Windows.Forms.DateTimePicker();
             this.dgvAgenda = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
@@ -62,20 +63,18 @@
             this.dtHora.CalendarTitleForeColor = System.Drawing.Color.Black;
             this.dtHora.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dtHora.Format = System.Windows.Forms.DateTimePickerFormat.Time;
-            this.dtHora.Location = new System.Drawing.Point(283, 289);
-            this.dtHora.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dtHora.Location = new System.Drawing.Point(189, 188);
             this.dtHora.Name = "dtHora";
-            this.dtHora.Size = new System.Drawing.Size(159, 37);
+            this.dtHora.Size = new System.Drawing.Size(107, 27);
             this.dtHora.TabIndex = 1;
             // 
             // dgvAgenda
             // 
             this.dgvAgenda.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvAgenda.Location = new System.Drawing.Point(14, 674);
-            this.dgvAgenda.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.dgvAgenda.Location = new System.Drawing.Point(9, 438);
             this.dgvAgenda.Name = "dgvAgenda";
             this.dgvAgenda.RowHeadersWidth = 62;
-            this.dgvAgenda.Size = new System.Drawing.Size(1636, 325);
+            this.dgvAgenda.Size = new System.Drawing.Size(1091, 211);
             this.dgvAgenda.TabIndex = 2;
             this.dgvAgenda.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvAgenda_CellClick);
             // 
@@ -84,10 +83,9 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.DimGray;
-            this.label1.Location = new System.Drawing.Point(193, 227);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Location = new System.Drawing.Point(129, 148);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(81, 32);
+            this.label1.Size = new System.Drawing.Size(53, 21);
             this.label1.TabIndex = 10;
             this.label1.Text = "Fecha:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -97,10 +95,9 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.DimGray;
-            this.label2.Location = new System.Drawing.Point(204, 289);
-            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Location = new System.Drawing.Point(136, 188);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(70, 32);
+            this.label2.Size = new System.Drawing.Size(47, 21);
             this.label2.TabIndex = 12;
             this.label2.Text = "Hora:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -111,10 +108,9 @@
             this.cmbMotivo.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cmbMotivo.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbMotivo.FormattingEnabled = true;
-            this.cmbMotivo.Location = new System.Drawing.Point(283, 350);
-            this.cmbMotivo.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cmbMotivo.Location = new System.Drawing.Point(189, 227);
             this.cmbMotivo.Name = "cmbMotivo";
-            this.cmbMotivo.Size = new System.Drawing.Size(457, 40);
+            this.cmbMotivo.Size = new System.Drawing.Size(306, 29);
             this.cmbMotivo.TabIndex = 13;
             // 
             // label3
@@ -122,10 +118,9 @@
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.DimGray;
-            this.label3.Location = new System.Drawing.Point(179, 350);
-            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Location = new System.Drawing.Point(119, 227);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(95, 32);
+            this.label3.Size = new System.Drawing.Size(62, 21);
             this.label3.TabIndex = 14;
             this.label3.Text = "Motivo:";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
@@ -135,10 +130,9 @@
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.DimGray;
-            this.label11.Location = new System.Drawing.Point(13, 9);
-            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Location = new System.Drawing.Point(9, 6);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(208, 70);
+            this.label11.Size = new System.Drawing.Size(141, 47);
             this.label11.TabIndex = 44;
             this.label11.Text = "Agenda";
             this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -153,10 +147,9 @@
             this.ldPanel2.GradientAngle = 90F;
             this.ldPanel2.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel2.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel2.Location = new System.Drawing.Point(44, 542);
-            this.ldPanel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel2.Location = new System.Drawing.Point(29, 352);
             this.ldPanel2.Name = "ldPanel2";
-            this.ldPanel2.Size = new System.Drawing.Size(508, 89);
+            this.ldPanel2.Size = new System.Drawing.Size(339, 58);
             this.ldPanel2.TabIndex = 47;
             // 
             // btnLimpiar
@@ -170,10 +163,9 @@
             this.btnLimpiar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnLimpiar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnLimpiar.ForeColor = System.Drawing.Color.White;
-            this.btnLimpiar.Location = new System.Drawing.Point(267, 14);
-            this.btnLimpiar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnLimpiar.Location = new System.Drawing.Point(178, 9);
             this.btnLimpiar.Name = "btnLimpiar";
-            this.btnLimpiar.Size = new System.Drawing.Size(225, 62);
+            this.btnLimpiar.Size = new System.Drawing.Size(150, 40);
             this.btnLimpiar.TabIndex = 15;
             this.btnLimpiar.Text = "Limpiar Turno";
             this.btnLimpiar.TextColor = System.Drawing.Color.White;
@@ -191,10 +183,9 @@
             this.btnEliminar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEliminar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.Color.White;
-            this.btnEliminar.Location = new System.Drawing.Point(18, 14);
-            this.btnEliminar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEliminar.Location = new System.Drawing.Point(12, 9);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(225, 62);
+            this.btnEliminar.Size = new System.Drawing.Size(150, 40);
             this.btnEliminar.TabIndex = 5;
             this.btnEliminar.Text = "Eliminar Turno";
             this.btnEliminar.TextColor = System.Drawing.Color.White;
@@ -211,10 +202,9 @@
             this.ldPanel1.GradientAngle = 90F;
             this.ldPanel1.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel1.Location = new System.Drawing.Point(44, 431);
-            this.ldPanel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel1.Location = new System.Drawing.Point(29, 280);
             this.ldPanel1.Name = "ldPanel1";
-            this.ldPanel1.Size = new System.Drawing.Size(508, 89);
+            this.ldPanel1.Size = new System.Drawing.Size(339, 58);
             this.ldPanel1.TabIndex = 46;
             this.ldPanel1.Paint += new System.Windows.Forms.PaintEventHandler(this.ldPanel1_Paint);
             // 
@@ -229,10 +219,9 @@
             this.btnEditar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEditar.ForeColor = System.Drawing.Color.White;
-            this.btnEditar.Location = new System.Drawing.Point(259, 14);
-            this.btnEditar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnEditar.Location = new System.Drawing.Point(173, 9);
             this.btnEditar.Name = "btnEditar";
-            this.btnEditar.Size = new System.Drawing.Size(225, 62);
+            this.btnEditar.Size = new System.Drawing.Size(150, 40);
             this.btnEditar.TabIndex = 4;
             this.btnEditar.Text = "Modificar Turno";
             this.btnEditar.TextColor = System.Drawing.Color.White;
@@ -250,10 +239,9 @@
             this.btnGuardar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardar.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardar.ForeColor = System.Drawing.Color.White;
-            this.btnGuardar.Location = new System.Drawing.Point(21, 14);
-            this.btnGuardar.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnGuardar.Location = new System.Drawing.Point(14, 9);
             this.btnGuardar.Name = "btnGuardar";
-            this.btnGuardar.Size = new System.Drawing.Size(225, 62);
+            this.btnGuardar.Size = new System.Drawing.Size(150, 40);
             this.btnGuardar.TabIndex = 3;
             this.btnGuardar.Text = "Guardar Turno";
             this.btnGuardar.TextColor = System.Drawing.Color.White;
@@ -269,15 +257,15 @@
             this.txtFecha.BorderSize = 2;
             this.txtFecha.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtFecha.ForeColor = System.Drawing.Color.Black;
-            this.txtFecha.Location = new System.Drawing.Point(283, 216);
-            this.txtFecha.Margin = new System.Windows.Forms.Padding(6);
+            this.txtFecha.Location = new System.Drawing.Point(189, 140);
+            this.txtFecha.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFecha.Multiline = false;
             this.txtFecha.Name = "txtFecha";
-            this.txtFecha.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.txtFecha.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtFecha.PasswordChar = false;
             this.txtFecha.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtFecha.PlaceholderText = "";
-            this.txtFecha.Size = new System.Drawing.Size(159, 53);
+            this.txtFecha.Size = new System.Drawing.Size(106, 35);
             this.txtFecha.TabIndex = 9;
             this.txtFecha.Texts = "";
             this.txtFecha.UnderlinedStyle = false;
@@ -291,15 +279,15 @@
             this.txtNombreYApellido.BorderSize = 2;
             this.txtNombreYApellido.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtNombreYApellido.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreYApellido.Location = new System.Drawing.Point(283, 139);
-            this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(6);
+            this.txtNombreYApellido.Location = new System.Drawing.Point(189, 90);
+            this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtNombreYApellido.Multiline = false;
             this.txtNombreYApellido.Name = "txtNombreYApellido";
-            this.txtNombreYApellido.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.txtNombreYApellido.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtNombreYApellido.PasswordChar = false;
             this.txtNombreYApellido.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtNombreYApellido.PlaceholderText = "";
-            this.txtNombreYApellido.Size = new System.Drawing.Size(457, 53);
+            this.txtNombreYApellido.Size = new System.Drawing.Size(305, 35);
             this.txtNombreYApellido.TabIndex = 8;
             this.txtNombreYApellido.Texts = "";
             this.txtNombreYApellido.UnderlinedStyle = false;
@@ -313,15 +301,15 @@
             this.txtBuscarAgenda.BorderSize = 2;
             this.txtBuscarAgenda.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscarAgenda.ForeColor = System.Drawing.Color.Black;
-            this.txtBuscarAgenda.Location = new System.Drawing.Point(1041, 608);
-            this.txtBuscarAgenda.Margin = new System.Windows.Forms.Padding(6);
+            this.txtBuscarAgenda.Location = new System.Drawing.Point(694, 395);
+            this.txtBuscarAgenda.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtBuscarAgenda.Multiline = false;
             this.txtBuscarAgenda.Name = "txtBuscarAgenda";
-            this.txtBuscarAgenda.Padding = new System.Windows.Forms.Padding(15, 11, 15, 11);
+            this.txtBuscarAgenda.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
             this.txtBuscarAgenda.PasswordChar = false;
             this.txtBuscarAgenda.PlaceholderColor = System.Drawing.Color.DarkGray;
             this.txtBuscarAgenda.PlaceholderText = "Buscar Turno por ID";
-            this.txtBuscarAgenda.Size = new System.Drawing.Size(609, 55);
+            this.txtBuscarAgenda.Size = new System.Drawing.Size(406, 36);
             this.txtBuscarAgenda.TabIndex = 7;
             this.txtBuscarAgenda.Texts = "";
             this.txtBuscarAgenda.UnderlinedStyle = false;
@@ -338,10 +326,9 @@
             this.btnBuscarPaciente.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnBuscarPaciente.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnBuscarPaciente.ForeColor = System.Drawing.Color.White;
-            this.btnBuscarPaciente.Location = new System.Drawing.Point(44, 133);
-            this.btnBuscarPaciente.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.btnBuscarPaciente.Location = new System.Drawing.Point(29, 86);
             this.btnBuscarPaciente.Name = "btnBuscarPaciente";
-            this.btnBuscarPaciente.Size = new System.Drawing.Size(225, 62);
+            this.btnBuscarPaciente.Size = new System.Drawing.Size(150, 40);
             this.btnBuscarPaciente.TabIndex = 6;
             this.btnBuscarPaciente.Text = "Buscar Paciente";
             this.btnBuscarPaciente.TextColor = System.Drawing.Color.White;
@@ -357,10 +344,9 @@
             this.ldPanel3.GradientAngle = 90F;
             this.ldPanel3.GradientBottomColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
             this.ldPanel3.GradientTopColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
-            this.ldPanel3.Location = new System.Drawing.Point(859, 58);
-            this.ldPanel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel3.Location = new System.Drawing.Point(573, 38);
             this.ldPanel3.Name = "ldPanel3";
-            this.ldPanel3.Size = new System.Drawing.Size(758, 506);
+            this.ldPanel3.Size = new System.Drawing.Size(505, 329);
             this.ldPanel3.TabIndex = 48;
             // 
             // Calendario
@@ -370,8 +356,7 @@
             this.Calendario.FirstDayOfWeek = System.Windows.Forms.Day.Monday;
             this.Calendario.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Calendario.ForeColor = System.Drawing.Color.Black;
-            this.Calendario.Location = new System.Drawing.Point(34, 17);
-            this.Calendario.Margin = new System.Windows.Forms.Padding(14);
+            this.Calendario.Location = new System.Drawing.Point(23, 11);
             this.Calendario.MinDate = new System.DateTime(1900, 1, 1, 0, 0, 0, 0);
             this.Calendario.Name = "Calendario";
             this.Calendario.TabIndex = 0;
@@ -388,18 +373,19 @@
             this.ldPanel4.GradientAngle = 90F;
             this.ldPanel4.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel4.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel4.Location = new System.Drawing.Point(25, 101);
-            this.ldPanel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ldPanel4.Location = new System.Drawing.Point(17, 66);
             this.ldPanel4.Name = "ldPanel4";
-            this.ldPanel4.Size = new System.Drawing.Size(755, 320);
+            this.ldPanel4.Size = new System.Drawing.Size(503, 208);
             this.ldPanel4.TabIndex = 54;
             // 
             // FAgenda
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
-            this.ClientSize = new System.Drawing.Size(1668, 1015);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(1112, 660);
             this.Controls.Add(this.ldPanel2);
             this.Controls.Add(this.ldPanel1);
             this.Controls.Add(this.label11);
@@ -416,7 +402,6 @@
             this.Controls.Add(this.ldPanel3);
             this.Controls.Add(this.ldPanel4);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "FAgenda";
             this.Text = "FAgenda";
             this.Load += new System.EventHandler(this.FAgenda_Load);

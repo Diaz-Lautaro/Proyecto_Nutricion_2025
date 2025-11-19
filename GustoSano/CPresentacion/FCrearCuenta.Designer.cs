@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FCrearCuenta));
             this.panel1 = new System.Windows.Forms.Panel();
             this.pnlContenedor = new GustoSano.LDControles.LDPanel();
             this.btnVolver = new GustoSano.LDControles.LDButton();
@@ -45,6 +46,8 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
+            this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
@@ -135,7 +138,7 @@
             this.txtContraseña.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtContraseña.ForeColor = System.Drawing.Color.DimGray;
             this.txtContraseña.Location = new System.Drawing.Point(286, 130);
-            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtContraseña.Margin = new System.Windows.Forms.Padding(4);
             this.txtContraseña.Multiline = false;
             this.txtContraseña.Name = "txtContraseña";
             this.txtContraseña.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -179,7 +182,7 @@
             this.txtUsuario.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtUsuario.ForeColor = System.Drawing.Color.DimGray;
             this.txtUsuario.Location = new System.Drawing.Point(28, 130);
-            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtUsuario.Margin = new System.Windows.Forms.Padding(4);
             this.txtUsuario.Multiline = false;
             this.txtUsuario.Name = "txtUsuario";
             this.txtUsuario.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
@@ -201,7 +204,7 @@
             this.txtGmail.Font = new System.Drawing.Font("Segoe UI", 14F);
             this.txtGmail.ForeColor = System.Drawing.Color.DimGray;
             this.txtGmail.Location = new System.Drawing.Point(28, 217);
-            this.txtGmail.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtGmail.Margin = new System.Windows.Forms.Padding(4);
             this.txtGmail.Multiline = false;
             this.txtGmail.Name = "txtGmail";
             this.txtGmail.Padding = new System.Windows.Forms.Padding(10, 7, 10, 7);
