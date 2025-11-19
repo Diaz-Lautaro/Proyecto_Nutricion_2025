@@ -33,6 +33,7 @@ namespace GustoSano.CDatos
                         {
                             if (leer.HasRows)
                             {
+                                ClsConfig_L.usuarioActivo = logica.nombreUsuario;
                                 return true;
                             }
                             else

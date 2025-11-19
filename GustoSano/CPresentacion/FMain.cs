@@ -141,6 +141,8 @@ namespace GustoSano
         private void btnConfiguracion_Click(object sender, EventArgs e)
         {
             CambiarColorBtn(btnConfiguracion);
+            FConfiguracion fConfiguracion = new FConfiguracion();
+            abrirFormularioEnPanel(fConfiguracion);
         }
 
         private void btnSalir_Click(object sender, EventArgs e)
