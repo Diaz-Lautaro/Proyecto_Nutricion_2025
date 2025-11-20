@@ -85,7 +85,7 @@ namespace GustoSano.CPresentacion
                     _formMenus.fPatologia = fila.Cells["Patologia"].Value.ToString();
                     _formMenus.fAlergia = fila.Cells["Alergia"].Value.ToString();
                 }
-                else if (_funcionBtn == "fmenu")
+                else if (_funcionBtn == "fagenda")
                 {
                     _formAgendas.nombrePaciente = fila.Cells["nombrePaciente"].Value.ToString();
                     _formAgendas.apellidoPaciente = fila.Cells["apellidoPaciente"].Value.ToString();
