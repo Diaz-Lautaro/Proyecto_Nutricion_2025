@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.cmbObjetivoReceta = new System.Windows.Forms.ComboBox();
             this.cmbPatologiaReceta = new System.Windows.Forms.ComboBox();
             this.dgvMenus = new System.Windows.Forms.DataGridView();
@@ -56,6 +58,7 @@
             this.btnQuitarFiltros = new GustoSano.LDControles.LDButton();
             this.btnAgregarAlMenu = new GustoSano.LDControles.LDButton();
             this.ldPanel2 = new GustoSano.LDControles.LDPanel();
+            this.btnEliminarRecetaMenus = new GustoSano.LDControles.LDButton();
             this.btnGuardarMenu = new GustoSano.LDControles.LDButton();
             this.btnQuitarReceta = new GustoSano.LDControles.LDButton();
             this.txtAlergiaPaciente = new GustoSano.LDControles.LDTextBox();
@@ -79,7 +82,7 @@
             this.cmbObjetivoReceta.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbObjetivoReceta.ForeColor = System.Drawing.Color.Black;
             this.cmbObjetivoReceta.FormattingEnabled = true;
-            this.cmbObjetivoReceta.Location = new System.Drawing.Point(965, 169);
+            this.cmbObjetivoReceta.Location = new System.Drawing.Point(967, 169);
             this.cmbObjetivoReceta.Name = "cmbObjetivoReceta";
             this.cmbObjetivoReceta.Size = new System.Drawing.Size(135, 28);
             this.cmbObjetivoReceta.TabIndex = 2;
@@ -91,7 +94,7 @@
             this.cmbPatologiaReceta.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbPatologiaReceta.ForeColor = System.Drawing.Color.Black;
             this.cmbPatologiaReceta.FormattingEnabled = true;
-            this.cmbPatologiaReceta.Location = new System.Drawing.Point(965, 220);
+            this.cmbPatologiaReceta.Location = new System.Drawing.Point(967, 220);
             this.cmbPatologiaReceta.Name = "cmbPatologiaReceta";
             this.cmbPatologiaReceta.Size = new System.Drawing.Size(135, 28);
             this.cmbPatologiaReceta.TabIndex = 3;
@@ -99,10 +102,39 @@
             // 
             // dgvMenus
             // 
+            this.dgvMenus.AllowUserToAddRows = false;
+            this.dgvMenus.AllowUserToDeleteRows = false;
+            this.dgvMenus.AllowUserToResizeColumns = false;
+            this.dgvMenus.AllowUserToResizeRows = false;
+            this.dgvMenus.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvMenus.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvMenus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.dgvMenus.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvMenus.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvMenus.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvMenus.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvMenus.EnableHeadersVisualStyles = false;
+            this.dgvMenus.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.dgvMenus.Location = new System.Drawing.Point(10, 440);
+            this.dgvMenus.MultiSelect = false;
             this.dgvMenus.Name = "dgvMenus";
+            this.dgvMenus.ReadOnly = true;
+            this.dgvMenus.RowHeadersVisible = false;
             this.dgvMenus.RowHeadersWidth = 62;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(150)))), ((int)(((byte)(120)))), ((int)(((byte)(160)))));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
+            this.dgvMenus.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvMenus.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvMenus.Size = new System.Drawing.Size(1093, 211);
             this.dgvMenus.TabIndex = 8;
             // 
@@ -118,7 +150,6 @@
             this.label1.TabIndex = 11;
             this.label1.Text = "Nombre del Menú:";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label6
             // 
@@ -139,7 +170,7 @@
             this.cmbTipoComidaReceta.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbTipoComidaReceta.ForeColor = System.Drawing.Color.Black;
             this.cmbTipoComidaReceta.FormattingEnabled = true;
-            this.cmbTipoComidaReceta.Location = new System.Drawing.Point(965, 322);
+            this.cmbTipoComidaReceta.Location = new System.Drawing.Point(967, 322);
             this.cmbTipoComidaReceta.Name = "cmbTipoComidaReceta";
             this.cmbTipoComidaReceta.Size = new System.Drawing.Size(135, 28);
             this.cmbTipoComidaReceta.TabIndex = 17;
@@ -151,7 +182,7 @@
             this.cmbAlergiaReceta.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cmbAlergiaReceta.ForeColor = System.Drawing.Color.Black;
             this.cmbAlergiaReceta.FormattingEnabled = true;
-            this.cmbAlergiaReceta.Location = new System.Drawing.Point(965, 272);
+            this.cmbAlergiaReceta.Location = new System.Drawing.Point(967, 272);
             this.cmbAlergiaReceta.Name = "cmbAlergiaReceta";
             this.cmbAlergiaReceta.Size = new System.Drawing.Size(135, 28);
             this.cmbAlergiaReceta.TabIndex = 22;
@@ -159,15 +190,30 @@
             // 
             // dgvRecetasMenu
             // 
+            this.dgvRecetasMenu.AllowUserToAddRows = false;
+            this.dgvRecetasMenu.AllowUserToDeleteRows = false;
+            this.dgvRecetasMenu.AllowUserToResizeColumns = false;
+            this.dgvRecetasMenu.AllowUserToResizeRows = false;
             this.dgvRecetasMenu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecetasMenu.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvRecetasMenu.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.dgvRecetasMenu.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRecetasMenu.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvRecetasMenu.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRecetasMenu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRecetasMenu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.id,
             this.TipoComida,
             this.Descripcion});
+            this.dgvRecetasMenu.EnableHeadersVisualStyles = false;
+            this.dgvRecetasMenu.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
             this.dgvRecetasMenu.Location = new System.Drawing.Point(10, 159);
+            this.dgvRecetasMenu.MultiSelect = false;
             this.dgvRecetasMenu.Name = "dgvRecetasMenu";
+            this.dgvRecetasMenu.ReadOnly = true;
+            this.dgvRecetasMenu.RowHeadersVisible = false;
             this.dgvRecetasMenu.RowHeadersWidth = 62;
+            this.dgvRecetasMenu.RowsDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRecetasMenu.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRecetasMenu.Size = new System.Drawing.Size(465, 197);
             this.dgvRecetasMenu.TabIndex = 24;
@@ -179,6 +225,7 @@
             this.id.HeaderText = "Id";
             this.id.MinimumWidth = 8;
             this.id.Name = "id";
+            this.id.ReadOnly = true;
             this.id.Width = 150;
             // 
             // TipoComida
@@ -188,6 +235,7 @@
             this.TipoComida.HeaderText = "Tipo comida";
             this.TipoComida.MinimumWidth = 8;
             this.TipoComida.Name = "TipoComida";
+            this.TipoComida.ReadOnly = true;
             this.TipoComida.Width = 170;
             // 
             // Descripcion
@@ -196,14 +244,31 @@
             this.Descripcion.HeaderText = "Descripcion";
             this.Descripcion.MinimumWidth = 8;
             this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
             // 
             // dgvRecetas
             // 
+            this.dgvRecetas.AllowUserToAddRows = false;
+            this.dgvRecetas.AllowUserToDeleteRows = false;
+            this.dgvRecetas.AllowUserToResizeColumns = false;
+            this.dgvRecetas.AllowUserToResizeRows = false;
             this.dgvRecetas.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvRecetas.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dgvRecetas.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.dgvRecetas.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dgvRecetas.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dgvRecetas.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRecetas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvRecetas.Location = new System.Drawing.Point(495, 151);
+            this.dgvRecetas.EnableHeadersVisualStyles = false;
+            this.dgvRecetas.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(110)))), ((int)(((byte)(80)))), ((int)(((byte)(120)))));
+            this.dgvRecetas.Location = new System.Drawing.Point(497, 151);
+            this.dgvRecetas.MultiSelect = false;
             this.dgvRecetas.Name = "dgvRecetas";
+            this.dgvRecetas.ReadOnly = true;
+            this.dgvRecetas.RowHeadersVisible = false;
             this.dgvRecetas.RowHeadersWidth = 62;
+            this.dgvRecetas.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            this.dgvRecetas.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRecetas.Size = new System.Drawing.Size(465, 197);
             this.dgvRecetas.TabIndex = 30;
             // 
@@ -213,7 +278,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.label5.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label5.ForeColor = System.Drawing.Color.Black;
-            this.label5.Location = new System.Drawing.Point(495, 15);
+            this.label5.Location = new System.Drawing.Point(497, 15);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(157, 21);
             this.label5.TabIndex = 33;
@@ -223,9 +288,9 @@
             // label11
             // 
             this.label11.AutoSize = true;
-            this.label11.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
+            this.label11.BackColor = System.Drawing.Color.Transparent;
             this.label11.Font = new System.Drawing.Font("Segoe UI", 26F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.DimGray;
+            this.label11.ForeColor = System.Drawing.Color.White;
             this.label11.Location = new System.Drawing.Point(9, 6);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(124, 47);
@@ -239,12 +304,11 @@
             this.label12.BackColor = System.Drawing.Color.White;
             this.label12.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.label12.ForeColor = System.Drawing.Color.Black;
-            this.label12.Location = new System.Drawing.Point(965, 145);
+            this.label12.Location = new System.Drawing.Point(967, 145);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(69, 20);
             this.label12.TabIndex = 46;
             this.label12.Text = "Objetivo:";
-            this.label12.Click += new System.EventHandler(this.label12_Click);
             // 
             // label3
             // 
@@ -252,7 +316,7 @@
             this.label3.BackColor = System.Drawing.Color.White;
             this.label3.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(965, 198);
+            this.label3.Location = new System.Drawing.Point(967, 198);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(75, 20);
             this.label3.TabIndex = 47;
@@ -264,12 +328,11 @@
             this.label4.BackColor = System.Drawing.Color.White;
             this.label4.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.label4.ForeColor = System.Drawing.Color.Black;
-            this.label4.Location = new System.Drawing.Point(965, 248);
+            this.label4.Location = new System.Drawing.Point(967, 248);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(60, 20);
             this.label4.TabIndex = 48;
             this.label4.Text = "Alergía:";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label7
             // 
@@ -277,7 +340,7 @@
             this.label7.BackColor = System.Drawing.Color.White;
             this.label7.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.label7.ForeColor = System.Drawing.Color.Black;
-            this.label7.Location = new System.Drawing.Point(965, 300);
+            this.label7.Location = new System.Drawing.Point(967, 300);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(117, 20);
             this.label7.TabIndex = 49;
@@ -289,7 +352,7 @@
             this.label2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(775, 15);
+            this.label2.Location = new System.Drawing.Point(777, 15);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(72, 21);
             this.label2.TabIndex = 50;
@@ -302,7 +365,7 @@
             this.label8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.label8.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label8.ForeColor = System.Drawing.Color.Black;
-            this.label8.Location = new System.Drawing.Point(495, 79);
+            this.label8.Location = new System.Drawing.Point(497, 79);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(77, 21);
             this.label8.TabIndex = 51;
@@ -315,7 +378,7 @@
             this.label9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
             this.label9.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.label9.ForeColor = System.Drawing.Color.Black;
-            this.label9.Location = new System.Drawing.Point(775, 79);
+            this.label9.Location = new System.Drawing.Point(777, 79);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(62, 21);
             this.label9.TabIndex = 52;
@@ -332,7 +395,7 @@
             this.ldPanel3.GradientAngle = 90F;
             this.ldPanel3.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel3.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel3.Location = new System.Drawing.Point(969, 31);
+            this.ldPanel3.Location = new System.Drawing.Point(971, 31);
             this.ldPanel3.Name = "ldPanel3";
             this.ldPanel3.Size = new System.Drawing.Size(135, 103);
             this.ldPanel3.TabIndex = 53;
@@ -387,9 +450,9 @@
             this.ldPanel1.GradientAngle = 90F;
             this.ldPanel1.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel1.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel1.Location = new System.Drawing.Point(489, 371);
+            this.ldPanel1.Location = new System.Drawing.Point(489, 376);
             this.ldPanel1.Name = "ldPanel1";
-            this.ldPanel1.Size = new System.Drawing.Size(318, 58);
+            this.ldPanel1.Size = new System.Drawing.Size(300, 58);
             this.ldPanel1.TabIndex = 45;
             // 
             // btnQuitarFiltros
@@ -403,7 +466,7 @@
             this.btnQuitarFiltros.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitarFiltros.Font = new System.Drawing.Font("Segoe UI", 12F);
             this.btnQuitarFiltros.ForeColor = System.Drawing.Color.White;
-            this.btnQuitarFiltros.Location = new System.Drawing.Point(14, 9);
+            this.btnQuitarFiltros.Location = new System.Drawing.Point(154, 9);
             this.btnQuitarFiltros.Name = "btnQuitarFiltros";
             this.btnQuitarFiltros.Size = new System.Drawing.Size(140, 40);
             this.btnQuitarFiltros.TabIndex = 32;
@@ -423,7 +486,7 @@
             this.btnAgregarAlMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAgregarAlMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAgregarAlMenu.ForeColor = System.Drawing.Color.White;
-            this.btnAgregarAlMenu.Location = new System.Drawing.Point(164, 9);
+            this.btnAgregarAlMenu.Location = new System.Drawing.Point(8, 9);
             this.btnAgregarAlMenu.Name = "btnAgregarAlMenu";
             this.btnAgregarAlMenu.Size = new System.Drawing.Size(140, 40);
             this.btnAgregarAlMenu.TabIndex = 19;
@@ -436,6 +499,7 @@
             // 
             this.ldPanel2.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ldPanel2.BorderRadius = 30;
+            this.ldPanel2.Controls.Add(this.btnEliminarRecetaMenus);
             this.ldPanel2.Controls.Add(this.btnGuardarMenu);
             this.ldPanel2.Controls.Add(this.btnQuitarReceta);
             this.ldPanel2.ForeColor = System.Drawing.Color.Black;
@@ -444,9 +508,28 @@
             this.ldPanel2.GradientTopColor = System.Drawing.Color.White;
             this.ldPanel2.Location = new System.Drawing.Point(3, 376);
             this.ldPanel2.Name = "ldPanel2";
-            this.ldPanel2.Size = new System.Drawing.Size(287, 58);
+            this.ldPanel2.Size = new System.Drawing.Size(481, 58);
             this.ldPanel2.TabIndex = 44;
-            this.ldPanel2.Paint += new System.Windows.Forms.PaintEventHandler(this.ldPanel2_Paint);
+            // 
+            // btnEliminarRecetaMenus
+            // 
+            this.btnEliminarRecetaMenus.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEliminarRecetaMenus.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(62)))), ((int)(((byte)(39)))), ((int)(((byte)(66)))));
+            this.btnEliminarRecetaMenus.BorderColor = System.Drawing.Color.PaleVioletRed;
+            this.btnEliminarRecetaMenus.BorderRadius = 20;
+            this.btnEliminarRecetaMenus.BorderSize = 0;
+            this.btnEliminarRecetaMenus.FlatAppearance.BorderSize = 0;
+            this.btnEliminarRecetaMenus.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEliminarRecetaMenus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEliminarRecetaMenus.ForeColor = System.Drawing.Color.White;
+            this.btnEliminarRecetaMenus.Location = new System.Drawing.Point(349, 9);
+            this.btnEliminarRecetaMenus.Name = "btnEliminarRecetaMenus";
+            this.btnEliminarRecetaMenus.Size = new System.Drawing.Size(124, 40);
+            this.btnEliminarRecetaMenus.TabIndex = 22;
+            this.btnEliminarRecetaMenus.Text = "Eliminar receta";
+            this.btnEliminarRecetaMenus.TextColor = System.Drawing.Color.White;
+            this.btnEliminarRecetaMenus.UseVisualStyleBackColor = false;
+            this.btnEliminarRecetaMenus.Click += new System.EventHandler(this.btnEliminarRecetaMenus_Click);
             // 
             // btnGuardarMenu
             // 
@@ -459,7 +542,7 @@
             this.btnGuardarMenu.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnGuardarMenu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnGuardarMenu.ForeColor = System.Drawing.Color.White;
-            this.btnGuardarMenu.Location = new System.Drawing.Point(14, 9);
+            this.btnGuardarMenu.Location = new System.Drawing.Point(5, 9);
             this.btnGuardarMenu.Name = "btnGuardarMenu";
             this.btnGuardarMenu.Size = new System.Drawing.Size(124, 40);
             this.btnGuardarMenu.TabIndex = 20;
@@ -479,7 +562,7 @@
             this.btnQuitarReceta.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnQuitarReceta.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnQuitarReceta.ForeColor = System.Drawing.Color.White;
-            this.btnQuitarReceta.Location = new System.Drawing.Point(147, 9);
+            this.btnQuitarReceta.Location = new System.Drawing.Point(135, 9);
             this.btnQuitarReceta.Name = "btnQuitarReceta";
             this.btnQuitarReceta.Size = new System.Drawing.Size(124, 40);
             this.btnQuitarReceta.TabIndex = 21;
@@ -497,7 +580,7 @@
             this.txtAlergiaPaciente.BorderSize = 2;
             this.txtAlergiaPaciente.Font = new System.Drawing.Font("Segoe UI", 11F);
             this.txtAlergiaPaciente.ForeColor = System.Drawing.Color.Black;
-            this.txtAlergiaPaciente.Location = new System.Drawing.Point(778, 101);
+            this.txtAlergiaPaciente.Location = new System.Drawing.Point(780, 101);
             this.txtAlergiaPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtAlergiaPaciente.Multiline = false;
             this.txtAlergiaPaciente.Name = "txtAlergiaPaciente";
@@ -519,7 +602,7 @@
             this.txtPatologiaPaciente.BorderSize = 2;
             this.txtPatologiaPaciente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPatologiaPaciente.ForeColor = System.Drawing.Color.Black;
-            this.txtPatologiaPaciente.Location = new System.Drawing.Point(495, 103);
+            this.txtPatologiaPaciente.Location = new System.Drawing.Point(497, 103);
             this.txtPatologiaPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtPatologiaPaciente.Multiline = false;
             this.txtPatologiaPaciente.Name = "txtPatologiaPaciente";
@@ -531,7 +614,6 @@
             this.txtPatologiaPaciente.TabIndex = 28;
             this.txtPatologiaPaciente.Texts = "";
             this.txtPatologiaPaciente.UnderlinedStyle = false;
-            this.txtPatologiaPaciente._TextChanged += new System.EventHandler(this.txtPatologiaPaciente__TextChanged);
             // 
             // txtObjetivoPaciente
             // 
@@ -542,7 +624,7 @@
             this.txtObjetivoPaciente.BorderSize = 2;
             this.txtObjetivoPaciente.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtObjetivoPaciente.ForeColor = System.Drawing.Color.Black;
-            this.txtObjetivoPaciente.Location = new System.Drawing.Point(776, 39);
+            this.txtObjetivoPaciente.Location = new System.Drawing.Point(778, 39);
             this.txtObjetivoPaciente.Margin = new System.Windows.Forms.Padding(4);
             this.txtObjetivoPaciente.Multiline = false;
             this.txtObjetivoPaciente.Name = "txtObjetivoPaciente";
@@ -564,7 +646,7 @@
             this.txtNombreYApellido.BorderSize = 2;
             this.txtNombreYApellido.Font = new System.Drawing.Font("Segoe UI", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtNombreYApellido.ForeColor = System.Drawing.Color.Black;
-            this.txtNombreYApellido.Location = new System.Drawing.Point(495, 39);
+            this.txtNombreYApellido.Location = new System.Drawing.Point(497, 39);
             this.txtNombreYApellido.Margin = new System.Windows.Forms.Padding(4);
             this.txtNombreYApellido.Multiline = false;
             this.txtNombreYApellido.Name = "txtNombreYApellido";
@@ -607,7 +689,7 @@
             this.ldPanel4.GradientAngle = 90F;
             this.ldPanel4.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel4.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel4.Location = new System.Drawing.Point(3, 59);
+            this.ldPanel4.Location = new System.Drawing.Point(5, 59);
             this.ldPanel4.Name = "ldPanel4";
             this.ldPanel4.Size = new System.Drawing.Size(481, 306);
             this.ldPanel4.TabIndex = 54;
@@ -620,7 +702,7 @@
             this.ldPanel5.GradientAngle = 90F;
             this.ldPanel5.GradientBottomColor = System.Drawing.Color.White;
             this.ldPanel5.GradientTopColor = System.Drawing.Color.White;
-            this.ldPanel5.Location = new System.Drawing.Point(489, 140);
+            this.ldPanel5.Location = new System.Drawing.Point(491, 140);
             this.ldPanel5.Name = "ldPanel5";
             this.ldPanel5.Size = new System.Drawing.Size(615, 225);
             this.ldPanel5.TabIndex = 55;
@@ -630,6 +712,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(226)))), ((int)(((byte)(224)))));
+            this.BackgroundImage = global::GustoSano.Properties.Resources.ImgFondo_min;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1112, 660);
             this.Controls.Add(this.ldPanel3);
@@ -714,5 +797,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Descripcion;
         private LDControles.LDPanel ldPanel4;
         private LDControles.LDPanel ldPanel5;
+        private LDControles.LDButton btnEliminarRecetaMenus;
     }
 }

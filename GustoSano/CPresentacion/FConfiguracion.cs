@@ -18,6 +18,9 @@ namespace GustoSano.CPresentacion
         {
             InitializeComponent();
 
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
             lblNombreUsuario.Text = ClsConfig_L.usuarioActivo;
         }
 
@@ -161,6 +164,42 @@ namespace GustoSano.CPresentacion
 
             // Cierra el Main
             main.Close();
+        }
+
+        private void btnCambiarNomUsuario_Click_1(object sender, EventArgs e)
+        {
+            string nuevo = txtNombreUsuarioNuevo.Texts.Trim();
+            string actualPass = txtContraseñaUsuario.Texts.Trim();
+
+            // Validar campos vacíos
+            if (string.IsNullOrWhiteSpace(nuevo) || string.IsNullOrWhiteSpace(actualPass))
+            {
+                MessageBox.Show("Complete todos los campos.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Verificar contraseña actual
+            if (!logica.verificarContraseñaActual_L(actualPass))
+            {
+                MessageBox.Show("La contraseña actual es incorrecta.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                return;
+            }
+
+            // Cambiar nombre de usuario
+            if (logica.cambiarNombreUsuario_L(lblNombreUsuario.Text, nuevo))
+            {
+                MessageBox.Show("Nombre de usuario actualizado correctamente.", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                txtNombreUsuarioNuevo.Clear();
+                txtContraseñaUsuario.Clear();
+
+                // Actualizar variable global si la usas en lblNombreUsuario
+                ClsConfig_L.usuarioActivo = nuevo;
+                lblNombreUsuario.Text = nuevo;
+            }
+            else
+            {
+                MessageBox.Show("No se pudo actualizar el nombre de usuario.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }

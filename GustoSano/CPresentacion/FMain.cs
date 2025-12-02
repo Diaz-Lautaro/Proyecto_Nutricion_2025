@@ -18,6 +18,9 @@ namespace GustoSano
         public FMain()
         {
             InitializeComponent();
+
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         List<Button> botonesMenu;
@@ -29,6 +32,9 @@ namespace GustoSano
             FPacientes fPacientes = new FPacientes();
             abrirFormularioEnPanel(fPacientes);
 
+            btnAbrirMenu.BackColor = Color.FromArgb(62, 39, 66);
+            btnAbrirMenu.Image = Properties.Resources.Menu1;
+
             botonesMenu = new List<Button> { btnAbrirMenu, btnPacientes, btnHisClinica, btnReceta, btnComida, btnAgenda, btnGrafico, btnReporte, btnConfiguracion, btnSalir };
         }
 
@@ -39,9 +45,9 @@ namespace GustoSano
                 if (btn == btnActivo)
                 {
                     btn.BackColor = Color.FromArgb(62, 39, 66);
-                    if (btn.Name == "btnAbrirMenu")
-                        btn.Image = Properties.Resources.Menu1;
-                    else if (btn.Name == "btnPacientes")
+                    //if (btn.Name == "btnAbrirMenu")
+                    //    btn.Image = Properties.Resources.Menu1;
+                    if (btn.Name == "btnPacientes")
                         btn.Image = Properties.Resources.Paciente2;
                     else if (btn.Name == "btnHisClinica")
                         btn.Image = Properties.Resources.HistClinica1;
@@ -61,9 +67,9 @@ namespace GustoSano
                 else
                 {
                     btn.BackColor = Color.FromArgb(220, 226, 224);
-                    if (btn.Name == "btnAbrirMenu")
-                        btn.Image = Properties.Resources.Menu2;
-                    else if (btn.Name == "btnPacientes")
+                    //if (btn.Name == "btnAbrirMenu")
+                    //    btn.Image = Properties.Resources.Menu2;
+                     if (btn.Name == "btnPacientes")
                         btn.Image = Properties.Resources.Paciente1;
                     else if (btn.Name == "btnHisClinica")
                         btn.Image = Properties.Resources.HistClinica2;
@@ -80,13 +86,17 @@ namespace GustoSano
                     else if (btn.Name == "btnConfiguracion")
                         btn.Image = Properties.Resources.Config2;
                 }
+
+                btnAbrirMenu.BackColor = Color.FromArgb(62, 39, 66);
+                btnAbrirMenu.Image = Properties.Resources.Menu1;
             }
         }
 
 
         private void btnAbrirMenu_Click(object sender, EventArgs e)
         {
-            CambiarColorBtn(btnAbrirMenu);
+            tmrPanel.Start();
+            //CambiarColorBtn(btnAbrirMenu);
         }
 
         private void btnPacientes_Click(object sender, EventArgs e)
@@ -165,6 +175,31 @@ namespace GustoSano
             pnlContenedor.Tag = formHijo;
 
             formHijo.Show();
+        }
+
+        private bool ExpandirMenu = true;
+
+        private void tmrPanel_Tick(object sender, EventArgs e)
+        {
+            if (ExpandirMenu)
+            {
+                panel1.Width += 10;
+                if (panel1.Width >= panel1.MaximumSize.Width)
+                {
+                    ExpandirMenu = false;
+                    tmrPanel.Stop();
+                }
+            }
+            else
+            {
+                
+                panel1.Width -= 20;
+                if (panel1.Width <= panel1.MinimumSize.Width)
+                {
+                    ExpandirMenu = true;
+                    tmrPanel.Stop();
+                }
+            }
         }
 
     }

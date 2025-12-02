@@ -14,6 +14,7 @@ using System.Xml.Linq;
 using iTextSharp.text;
 using iTextSharp.text.pdf;
 using Font = iTextSharp.text.Font;
+using System.Runtime.CompilerServices;
 
 
 
@@ -25,6 +26,9 @@ namespace GustoSano.CPresentacion
         {
             InitializeComponent();
             label1.ForeColor = Color.Silver;
+
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         // Cuando abro el buscar paciente
@@ -89,12 +93,20 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void mostrarTurnos()
+        private async void mostrarTurnos()
         {
-            dgvTurnos.DataSource = logica.buscarProximosTurnos_L(txtPaciente.Texts);
-            dgvTurnos.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTurnos.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTurnos.ReadOnly = true;
+            DataTable tabla = await buscarProximosTurnosAsync(txtPaciente.Texts);
+            dgvTurnos.DataSource = tabla;
+
+            foreach (DataGridViewColumn col in dgvTurnos.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+        }
+
+        private async Task<DataTable> buscarProximosTurnosAsync(string paciente)
+        {
+            return await Task.Run(() => logica.buscarProximosTurnos_L(paciente));
         }
 
         private void limpiarCampos()

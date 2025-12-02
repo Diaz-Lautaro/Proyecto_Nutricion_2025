@@ -2,6 +2,7 @@
 using GustoSano.CPresentacion;
 using System;
 using System.Data;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace GustoSano
@@ -17,15 +18,38 @@ namespace GustoSano
         public FMenus()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         ClsMenus_L logica = new ClsMenus_L();
 
-        private void FMenus_Load(object sender, EventArgs e)
+        private async void FMenus_Load(object sender, EventArgs e)
         {
+            dgvMenus.DataSource = await obtenerMenusAsync();
+            foreach (DataGridViewColumn col in dgvMenus.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            
+            dgvMenus.ClearSelection();
+
             cargarComboBox();
-            mostrarRecetas();
-            mostrarMenus();
+        }
+
+        private async Task<DataTable> obtenerRecetasAsync()
+        {
+            return await Task.Run(() => logica.mostrarRecetas_L());
+        }
+
+        private async Task<DataTable> obtenerMenusAsync()
+        {
+            return await Task.Run(() => logica.mostrarMenus_L());
+        }
+
+        private async Task<DataTable> FiltrarRecetaLogica(ClsMenus_L logica)
+        {
+            return await Task.Run(() => logica.filtrarReceta_L(logica));
         }
 
         #region --> ComboBox datos
@@ -82,20 +106,13 @@ namespace GustoSano
 
         #region --> Filtros comboBox
 
-        private void mostrarRecetas()
+        private async void mostrarMenus()
         {
-            dgvRecetas.DataSource = logica.mostrarRecetas_L();
-            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRecetas.ReadOnly = true;
-        }
-
-        private void mostrarMenus()
-        {
-            dgvMenus.DataSource = logica.mostrarMenus_L();
-            dgvMenus.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvMenus.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMenus.ReadOnly = true;
+            dgvMenus.DataSource = await obtenerMenusAsync();
+            foreach (DataGridViewColumn col in dgvMenus.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         private void cmbObjetivoReceta_SelectedIndexChanged(object sender, EventArgs e)
@@ -115,43 +132,58 @@ namespace GustoSano
 
         private void cmbTipoComidaReceta_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(string.IsNullOrEmpty(txtNombreYApellido.Texts)) 
-                FiltrarRecetas();
-
-            logica.objetivo = txtObjetivoPaciente.Texts;
-            logica.patologiaAsociada = txtPatologiaPaciente.Texts;
-            logica.alergia = txtAlergiaPaciente.Texts;
-            logica.tipoComida = cmbTipoComidaReceta.Text;
+            
+            FiltrarRecetas();
+            
         }
 
-        private void FiltrarRecetas()
+        private async void FiltrarRecetas()
         {
-            logica.objetivo = cmbObjetivoReceta.Text != "-" ? cmbObjetivoReceta.Text : string.Empty;
-            logica.patologiaAsociada = cmbPatologiaReceta.Text != "-" ? cmbPatologiaReceta.Text : string.Empty;
-            logica.alergia = cmbAlergiaReceta.Text != "-" ? cmbAlergiaReceta.Text : string.Empty;
-            logica.tipoComida = cmbTipoComidaReceta.Text != "-" ? cmbTipoComidaReceta.Text : string.Empty;
+            if (string.IsNullOrEmpty(txtNombreYApellido.Texts))
+            {
+                logica.objetivo = cmbObjetivoReceta.Text != "-" ? cmbObjetivoReceta.Text : string.Empty;
+                logica.patologiaAsociada = cmbPatologiaReceta.Text != "-" ? cmbPatologiaReceta.Text : string.Empty;
+                logica.alergia = cmbAlergiaReceta.Text != "-" ? cmbAlergiaReceta.Text : string.Empty;
+                logica.tipoComida = cmbTipoComidaReceta.Text != "-" ? cmbTipoComidaReceta.Text : string.Empty;
 
-            if (string.IsNullOrEmpty(logica.objetivo) &&
+                if (string.IsNullOrEmpty(logica.objetivo) &&
                 string.IsNullOrEmpty(logica.patologiaAsociada) &&
                 string.IsNullOrEmpty(logica.alergia) &&
                 string.IsNullOrEmpty(logica.tipoComida))
-            {
-                dgvRecetas.DataSource = logica.mostrarRecetas_L();
+                {
+                    DataTable tabla = await obtenerRecetasAsync(); 
+                    dgvRecetas.DataSource = tabla; 
+                }
+                else
+                {
+                    DataTable tabla = await FiltrarRecetaLogica(logica); 
+                    dgvRecetas.DataSource = tabla;  
+                }
             }
             else
             {
-                dgvRecetas.DataSource = logica.filtrarReceta_L(logica);
+                logica.objetivo = txtObjetivoPaciente.Texts;
+                logica.patologiaAsociada = txtPatologiaPaciente.Texts;
+                logica.alergia = txtAlergiaPaciente.Texts;
+                logica.tipoComida = cmbTipoComidaReceta.Text;
+
+                DataTable tabla = await FiltrarRecetaLogica(logica); 
+                dgvRecetas.DataSource = tabla; 
+
             }
 
-            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRecetas.ReadOnly = true;
+            foreach (DataGridViewColumn col in dgvRecetas.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+           dgvRecetas.ClearSelection();
         }
         #endregion
 
         #region --> Botones
 
-        private void btnBuscarPaciente_Click(object sender, EventArgs e)
+        private async void btnBuscarPaciente_Click(object sender, EventArgs e)
         {
             FBuscarPaciente FBuscarPaciente = new FBuscarPaciente(this, "fmenu");
 
@@ -163,10 +195,14 @@ namespace GustoSano
                 logica.patologiaAsociada = txtPatologiaPaciente.Texts = fPatologia;
                 logica.alergia = txtAlergiaPaciente.Texts = fAlergia;
 
-                dgvRecetas.DataSource = logica.filtrarReceta_L(logica);
-                dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvRecetas.ReadOnly = true;
+                DataTable tabla = await FiltrarRecetaLogica(logica);
+                dgvRecetas.DataSource = tabla;
+
+                foreach (DataGridViewColumn col in dgvRecetas.Columns)
+                {
+                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+                dgvRecetas.ClearSelection();
             }
         }
 
@@ -179,9 +215,11 @@ namespace GustoSano
             cmbTipoComidaReceta.SelectedIndex = 0;
 
             dgvRecetas.DataSource = logica.mostrarRecetas_L();
-            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRecetas.ReadOnly = true;
+            foreach (DataGridViewColumn col in dgvRecetas.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvRecetas.ClearSelection() ;
         }
 
         private void btnQuitarFiltros_Click(object sender, EventArgs e)
@@ -206,6 +244,14 @@ namespace GustoSano
             {
                 MessageBox.Show("Seleccione un paciente de la lista.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            foreach (DataGridViewColumn col in dgvRecetasMenu.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            dgvRecetasMenu.ClearSelection();
+            dgvRecetas.ClearSelection();
         }
 
         private void btnQuitarReceta_Click(object sender, EventArgs e)
@@ -251,32 +297,27 @@ namespace GustoSano
             {
                 MessageBox.Show("Seleccione un paciente de la lista.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+
+            dgvMenus.ClearSelection();
+            limp();
         }
         #endregion
 
-        private void label12_Click(object sender, EventArgs e)
+        private void limp()
         {
+            cmbTipoComidaReceta.SelectedIndex = 0;
+            txtAlergiaPaciente.Texts = string.Empty;
+            txtPatologiaPaciente.Texts = string.Empty;
+            txtObjetivoPaciente.Texts = string.Empty;
+            txtNombreYApellido.Texts = string.Empty;
+            txtNombreMenu.Texts = string.Empty;
 
+            FiltrarRecetas();
         }
 
-        private void label4_Click(object sender, EventArgs e)
+        private void btnEliminarRecetaMenus_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ldPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void txtPatologiaPaciente__TextChanged(object sender, EventArgs e)
-        {
-
+            dgvRecetasMenu.Rows.Clear();
         }
     }
 }

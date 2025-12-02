@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using GustoSano.CDatos;
 using GustoSano.CLogica;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace GustoSano.CPresentacion
 {
@@ -17,15 +18,35 @@ namespace GustoSano.CPresentacion
         public FRecetas()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         ClsRecetas_L logica = new ClsRecetas_L();
 
 
-        private void FRecetas_Load(object sender, EventArgs e)
+        private async void FRecetas_Load(object sender, EventArgs e)
         {
-            mostrarRecetas();
+            DataTable tabla = await mostrarRecetasAsync();  
+            dgvRecetas.DataSource = tabla;   
+            foreach (DataGridViewColumn col in dgvRecetas.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvRecetas.ClearSelection();
+
+
             cargarComboBox();
+        }
+
+        private async Task<DataTable> mostrarRecetasAsync()
+        {
+            return await Task.Run(() => logica.mostrarReceta_L());
+        }
+
+        private async Task<DataTable> buscarRecetaAsync(int idReceta)
+        {
+            return await Task.Run(() => logica.buscarReceta_L(idReceta));
         }
 
         #region --> Método limpiar
@@ -137,6 +158,7 @@ namespace GustoSano.CPresentacion
 
                 mostrarRecetas();
             }
+            limpiarCampos();
         }
 
         private void btnLimpiar_Click(object sender, EventArgs e)
@@ -145,12 +167,15 @@ namespace GustoSano.CPresentacion
         }
         #endregion
 
-        public void mostrarRecetas()
+        public async void mostrarRecetas()
         {
-            dgvRecetas.DataSource = logica.mostrarReceta_L();
-            dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRecetas.ReadOnly = true;
+            DataTable tabla = await mostrarRecetasAsync();
+            dgvRecetas.DataSource = tabla;
+
+            foreach (DataGridViewColumn col in dgvRecetas.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
         }
 
         private void dgvRecetas_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -168,44 +193,25 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void txtBuscarReceta__TextChanged(object sender, EventArgs e)
+        private async void txtBuscarReceta__TextChanged(object sender, EventArgs e)
         {
+            DataTable tabla;
+
             if (string.IsNullOrWhiteSpace(txtBuscarReceta.Texts))
             {
-                dgvRecetas.DataSource = logica.mostrarReceta_L();
+                tabla = await mostrarRecetasAsync();
             }
             else
             {
-                dgvRecetas.DataSource = logica.buscarReceta_L(Convert.ToInt32(txtBuscarReceta.Texts));
-                dgvRecetas.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvRecetas.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvRecetas.ReadOnly = true;
+                tabla = await buscarRecetaAsync(Convert.ToInt32(txtBuscarReceta.Texts));
             }
-        }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDescripcion__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ldPanel2_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void cmbObjetivo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
+            dgvRecetas.DataSource = tabla;
+            foreach (DataGridViewColumn col in dgvRecetas.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvRecetas.ClearSelection();
         }
     }
 }

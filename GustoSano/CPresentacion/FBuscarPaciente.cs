@@ -16,6 +16,7 @@ namespace GustoSano.CPresentacion
         private FMenus _formMenus;
         private FAgenda _formAgendas;
         private FReportes _formReportes;
+        private FHistClinica _formHistClinica;
         private string _funcionBtn;
 
         public FBuscarPaciente(FMenus fMenus, string funcionBtn)
@@ -36,6 +37,13 @@ namespace GustoSano.CPresentacion
         {
             InitializeComponent();
             _formReportes = freporte;
+            _funcionBtn = funcionBtn;
+        }
+
+        public FBuscarPaciente(FHistClinica fHistClinica, string funcionBtn)
+        {
+            InitializeComponent();
+            _formHistClinica = fHistClinica;
             _funcionBtn = funcionBtn;
         }
 
@@ -61,9 +69,11 @@ namespace GustoSano.CPresentacion
                 dgvBuscarPaciente.DataSource = logica.mostrarPacientesReportes_L();
             }
 
-            dgvBuscarPaciente.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvBuscarPaciente.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvBuscarPaciente.ReadOnly = true;
+            foreach (DataGridViewColumn col in dgvBuscarPaciente.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvBuscarPaciente.ClearSelection();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -90,6 +100,10 @@ namespace GustoSano.CPresentacion
                     _formAgendas.nombrePaciente = fila.Cells["nombrePaciente"].Value.ToString();
                     _formAgendas.apellidoPaciente = fila.Cells["apellidoPaciente"].Value.ToString();
                 }
+                else if (_funcionBtn == "fhistclinica")
+                {
+                    _formHistClinica.idPaciente = Convert.ToInt32(fila.Cells["idPaciente"].Value.ToString());
+                }
                 else
                 {
                     _formReportes.idPaciente = Convert.ToInt32(fila.Cells["idPaciente"].Value.ToString());
@@ -104,6 +118,56 @@ namespace GustoSano.CPresentacion
             {
                 MessageBox.Show("Seleccione un paciente de la lista.", "Atención", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private async Task<DataTable> buscarPacienteMenusAsync(string nombrePaciente)
+        {
+            return await Task.Run(() => logica.buscarPacienteMenus_L(nombrePaciente));
+        }
+
+        private async Task<DataTable> buscarPacienteAgendaAsync(string nombrePaciente)
+        {
+            return await Task.Run(() => logica.buscarPacienteAgenda_L(nombrePaciente));
+        }
+
+        private async Task<DataTable> buscarPacienteReporteAsync(string nombrePaciente)
+        {
+            return await Task.Run(() => logica.buscarPacienteReportes_L(nombrePaciente));
+        }
+
+        private async void txtBuscarPaciente__TextChanged(object sender, EventArgs e)
+        {
+
+            if (!string.IsNullOrEmpty(txtBuscarPaciente.Texts))
+            {
+                DataTable tabla;
+
+                if (_funcionBtn == "fmenu")
+                {
+                    tabla = await buscarPacienteMenusAsync(txtBuscarPaciente.Texts);
+                    dgvBuscarPaciente.DataSource = tabla;
+                }
+                else if (_funcionBtn == "fagenda")
+                {
+                    tabla = await buscarPacienteAgendaAsync(txtBuscarPaciente.Texts);
+                    dgvBuscarPaciente.DataSource = tabla;
+                }
+                else
+                {
+                    tabla = await buscarPacienteReporteAsync(txtBuscarPaciente.Texts);
+                    dgvBuscarPaciente.DataSource = tabla;
+                }
+
+                foreach (DataGridViewColumn col in dgvBuscarPaciente.Columns)
+                {
+                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+                dgvBuscarPaciente.ClearSelection();
+
+                return;
+            }
+
+            mostrarPacientes();
         }
     }
 }

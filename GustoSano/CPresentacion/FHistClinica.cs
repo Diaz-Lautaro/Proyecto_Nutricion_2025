@@ -16,15 +16,29 @@ namespace GustoSano.CPresentacion
         public FHistClinica()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
+
         }
 
         ClsHisClinica_L logica = new ClsHisClinica_L();
         ClsPacientes_L logicaPaciente = new ClsPacientes_L();
+        ClsBuscarPaciente_L logicaBuscarPaciente = new ClsBuscarPaciente_L();
 
-        private void FHistClinica_Load(object sender, EventArgs e)
+        public int idPaciente { get; set; }
+
+
+        private async void FHistClinica_Load(object sender, EventArgs e)
         {
-            MostrarHistoriasClinicas();
-            mostrarPacientes();
+            dgvHisClinica.DataSource = await MostrarHistClinicasAsync();
+
+            foreach (DataGridViewColumn col in dgvHisClinica.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            dgvHisClinica.ClearSelection();
+
             CargarComboBox();
         }
 
@@ -82,21 +96,20 @@ namespace GustoSano.CPresentacion
         }
         #endregion
 
-        #region --> Mostrar tablas
-        private void mostrarPacientes()
+        #region --> Metodos cargar tablas
+        private async Task<DataTable> MostrarHistClinicasAsync()
         {
-            dgvPacientes.DataSource = logica.cargarPacientes_L();
-            dgvPacientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPacientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPacientes.ReadOnly = true;
+            return await Task.Run(() => logica.mostrarHistoriasClinicas_L());
         }
 
-        private void MostrarHistoriasClinicas()
+        private async Task agregarHistoriaClinicaAsync(ClsHisClinica_L logica)
         {
-            dgvHisClinica.DataSource = logica.mostrarHistoriasClinicas_L();
-            dgvHisClinica.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvHisClinica.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvHisClinica.ReadOnly = true;
+            await Task.Run(() => logica.agregarHistoriaClinica_L(logica));
+        }
+
+        private async Task modificarHistoriaClinicaAsync(ClsHisClinica_L logica)
+        {
+            await Task.Run(() => logica.modificarHistoriaClinica_L(logica));
         }
         #endregion
 
@@ -121,7 +134,7 @@ namespace GustoSano.CPresentacion
         #endregion
 
         #region -- Botones
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private async void btnGuardar_Click(object sender, EventArgs e)
         {
             logica.idPaciente = Convert.ToInt32(txtIdPaciente.Texts);
             logica.peso = Convert.ToDecimal(txtPeso.Texts);
@@ -137,13 +150,14 @@ namespace GustoSano.CPresentacion
             logica.objetivo = cmbObjetivo.SelectedItem.ToString();
             logica.actividadFisica = txtActividad.Texts;
 
-            logica.agregarHistoriaClinica_L(logica);
-            MostrarHistoriasClinicas();
+            await agregarHistoriaClinicaAsync(logica);
+            dgvHisClinica.DataSource = await MostrarHistClinicasAsync();
 
+            dgvHisClinica.ClearSelection();
             LimpiarCampos();
         }
 
-        private void btnModificar_Click(object sender, EventArgs e)
+        private async void btnModificar_Click(object sender, EventArgs e)
         {
             try
             {
@@ -161,13 +175,15 @@ namespace GustoSano.CPresentacion
                 logica.objetivo = cmbObjetivo.Text;
                 logica.actividadFisica = txtActividad.Texts;
 
-                logica.modificarHistoriaClinica_L(logica);
-                MostrarHistoriasClinicas();
+                await modificarHistoriaClinicaAsync(logica);
+                dgvHisClinica.DataSource = MostrarHistClinicasAsync();
             }
             catch (Exception ex)
             {
                 MessageBox.Show("Error al modificar: " + ex.Message);
             }
+
+            LimpiarCampos();
         }
 
         private void btnLimipiar_Click(object sender, EventArgs e)
@@ -177,15 +193,6 @@ namespace GustoSano.CPresentacion
 
         #endregion
 
-        private void dgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.RowIndex >= 0)
-            {
-                DataGridViewRow fila = dgvPacientes.Rows[e.RowIndex];
-
-                txtIdPaciente.Texts = fila.Cells["idPaciente"].Value.ToString();
-            }
-        }
 
         private void dgvHisClinica_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -219,78 +226,34 @@ namespace GustoSano.CPresentacion
 
         private void txtBuscarHistClinica__TextChanged(object sender, EventArgs e)
         {
+            DataTable tabla;
             if (int.TryParse(txtBuscarHistoria.Texts, out int idPaciente))
             {
-                DataTable tabla = logica.BuscarHistoriaPorID_L(idPaciente);
+                tabla = logica.BuscarHistoriaPorID_L(idPaciente);
                 dgvHisClinica.DataSource = tabla;
             }
             else if (string.IsNullOrWhiteSpace(txtBuscarHistoria.Texts))
             {
-                MostrarHistoriasClinicas();
+                dgvHisClinica.DataSource = MostrarHistClinicasAsync();
             }
-        }
 
-        private void txtBuscarPaciente__TextChanged(object sender, EventArgs e)
-        {
-            if (int.TryParse(txtBuscarPaciente.Texts, out int idPaciente))
+            foreach (DataGridViewColumn col in dgvHisClinica.Columns)
             {
-                DataTable tabla = logicaPaciente.buscarPacientePorID_L(idPaciente);
-                dgvPacientes.DataSource = tabla;
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
             }
-            else if (string.IsNullOrWhiteSpace(txtBuscarPaciente.Texts))
+            dgvHisClinica.ClearSelection();
+        }
+
+
+        private void btnBuscarpaciente_Click(object sender, EventArgs e)
+        {
+            FBuscarPaciente fBuscarPaciente = new FBuscarPaciente(this, "fhistclinica");
+
+            if (fBuscarPaciente.ShowDialog() == DialogResult.OK)
             {
-                mostrarPacientes();
+                txtIdPaciente.Texts = idPaciente.ToString();
+
             }
-        }
-
-        private void label9_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label11_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void cmbObjetivo_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void ldPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void dgvHisClinica_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void cmbPatologia_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtAgua__TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label14_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

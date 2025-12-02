@@ -16,15 +16,34 @@ namespace GustoSano.CPresentacion
         public FPacientes()
         {
             InitializeComponent();
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         ClsPacientes_L logica = new ClsPacientes_L();
         private int idPacienteSeleccionado = 0;
 
-        private void FPacientes_Load(object sender, EventArgs e)
+        private async void FPacientes_Load(object sender, EventArgs e)
         {
-            mostrarPacientes();
+            dgvPacientes.DataSource = await CargarPacientesAsync();
+
+            foreach (DataGridViewColumn col in dgvPacientes.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvPacientes.ClearSelection();
         }
+
+        private async Task<DataTable> CargarPacientesAsync()
+        {
+            return await Task.Run(() => logica.cargarPacientes_L());
+        }
+
+        private async Task<DataTable> busacrPacientePorIdAsync(int id)
+        {
+            return await Task.Run(() => logica.buscarPacientePorID_L(id));
+        }
+
 
         #region --> Método Limpiar
         private void LimpiarCampos()
@@ -109,13 +128,17 @@ namespace GustoSano.CPresentacion
         }
         #endregion
 
-        private void mostrarPacientes()
+        private async void mostrarPacientes()
         {
-            dgvPacientes.DataSource = logica.cargarPacientes_L();
-            dgvPacientes.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvPacientes.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPacientes.ReadOnly = true;
+            dgvPacientes.DataSource = await CargarPacientesAsync();
+
+            foreach (DataGridViewColumn col in dgvPacientes.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvPacientes.ClearSelection();
         }
+
 
         private void dgvPacientes_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -133,12 +156,18 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void txtBuscarPaciente__TextChanged(object sender, EventArgs e)
+        private async void txtBuscarPaciente__TextChanged(object sender, EventArgs e)
         {
             if (int.TryParse(txtBuscarPaciente.Texts, out int idPaciente))
             {
-                DataTable tabla = logica.buscarPacientePorID_L(idPaciente);
+                DataTable tabla = await busacrPacientePorIdAsync(idPaciente);
                 dgvPacientes.DataSource = tabla;
+               
+                foreach (DataGridViewColumn col in dgvPacientes.Columns)
+                {
+                    col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                }
+                dgvPacientes.ClearSelection();
             }
             else if (string.IsNullOrWhiteSpace(txtBuscarPaciente.Texts))
             {

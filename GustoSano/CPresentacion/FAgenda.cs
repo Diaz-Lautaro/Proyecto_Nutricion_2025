@@ -16,7 +16,10 @@ namespace GustoSano.CPresentacion
         public FAgenda()
         {
             InitializeComponent();
-            Calendario.CalendarDimensions = new Size(2,2);
+            Calendario.CalendarDimensions = new Size(2, 2);
+
+            this.DoubleBuffered = true;
+            this.SetStyle(ControlStyles.OptimizedDoubleBuffer, true);
         }
 
         public string nombrePaciente { get; set; }
@@ -24,18 +27,45 @@ namespace GustoSano.CPresentacion
 
         ClsAgenda_L logica = new ClsAgenda_L();
 
-        private void FAgenda_Load(object sender, EventArgs e)
+        private async void FAgenda_Load(object sender, EventArgs e)
         {
-            cargarMotivo();
             mostrarTurnos();
+
+            cargarMotivo();
+            await cargarFechasAsync();
 
             dtHora.Format = DateTimePickerFormat.Custom;
             dtHora.CustomFormat = "HH:mm";
             dtHora.ShowUpDown = true;
+        }
 
-            List<DateTime> fechas = logica.obtenerFechasConTurnos_L();
+        private async Task<DataTable> cargarTurnosAsync()
+        {
+            return await Task.Run(() => logica.mostrarTurnos_L());
+        }
 
+        private async Task<DataTable> buscarTurnosAsync(int id)
+        {
+            return await Task.Run(() => logica.buscarTurnoPorId_L(id));
+        }
+
+        private async Task cargarFechasAsync()
+        {
+            // Esto se ejecuta en un hilo aparte (NO UI)
+            List<DateTime> fechas = await Task.Run(() => logica.obtenerFechasConTurnos_L());
+
+            // Esto vuelve a la UI
             Calendario.BoldedDates = fechas.ToArray();
+        }
+
+        private async void mostrarTurnos()
+        {
+            dgvAgenda.DataSource = await cargarTurnosAsync();
+            foreach (DataGridViewColumn col in dgvAgenda.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvAgenda.ClearSelection();
         }
 
         private void cargarMotivo()
@@ -59,14 +89,6 @@ namespace GustoSano.CPresentacion
             cmbMotivo.SelectedIndex = 0;
         }
 
-        private void mostrarTurnos()
-        {
-            dgvAgenda.DataSource = logica.mostrarTurnos_L();
-            dgvAgenda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvAgenda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAgenda.ReadOnly = true;
-        }
-
         private void limpiarCampos()
         {
             txtNombreYApellido.Texts = string.Empty;
@@ -86,7 +108,7 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void btnGuardar_Click(object sender, EventArgs e)
+        private async void btnGuardar_Click(object sender, EventArgs e)
         {
             if (DateTime.TryParse(txtFecha.Texts, out DateTime fechaSeleccionada))
             {
@@ -96,11 +118,14 @@ namespace GustoSano.CPresentacion
                 logica.hora = dtHora.Value.ToString("HH:mm");
                 logica.guardarTurno_L(logica);
 
-                List<DateTime> fechas = logica.obtenerFechasConTurnos_L();
-                Calendario.BoldedDates = fechas.ToArray();
+                //List<DateTime> fechas = logica.obtenerFechasConTurnos_L();
+                //Calendario.BoldedDates = fechas.ToArray();
+
+                await cargarFechasAsync();
                 Calendario.UpdateBoldedDates();
 
                 mostrarTurnos();
+                dgvAgenda.ClearSelection();
                 limpiarCampos();
 
                 MessageBox.Show("Turno guardado correctamente.", "Turno agendado", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -111,7 +136,7 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void btnEditar_Click(object sender, EventArgs e)
+        private async void btnEditar_Click(object sender, EventArgs e)
         {
             if (dgvAgenda.SelectedRows.Count > 0)
             {
@@ -128,11 +153,13 @@ namespace GustoSano.CPresentacion
 
                 logica.editarTurno_L(logica);
 
-                List<DateTime> fechas = logica.obtenerFechasConTurnos_L();
-                Calendario.BoldedDates = fechas.ToArray();
+                //List<DateTime> fechas = logica.obtenerFechasConTurnos_L();
+                //Calendario.BoldedDates = fechas.ToArray();
+                await cargarFechasAsync();
                 Calendario.UpdateBoldedDates();
 
                 mostrarTurnos();
+                dgvAgenda.ClearSelection();
                 limpiarCampos();
             }
             else
@@ -141,7 +168,7 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void btnEliminar_Click(object sender, EventArgs e)
+        private async void btnEliminar_Click(object sender, EventArgs e)
         {
             if (dgvAgenda.SelectedRows.Count > 0)
             {
@@ -152,11 +179,17 @@ namespace GustoSano.CPresentacion
                 {
                     logica.eliminarTurno_L(idTurno);
 
-                    List<DateTime> fechas = logica.obtenerFechasConTurnos_L();
-                    Calendario.BoldedDates = fechas.ToArray();
+                    //List<DateTime> fechas = logica.obtenerFechasConTurnos_L();
+                    //Calendario.BoldedDates = fechas.ToArray();
+
+                    dgvAgenda.DataSource = await cargarTurnosAsync();
                     Calendario.UpdateBoldedDates();
 
-                    mostrarTurnos();
+                    foreach (DataGridViewColumn col in dgvAgenda.Columns)
+                    {
+                        col.SortMode = DataGridViewColumnSortMode.NotSortable;
+                    }
+                    dgvAgenda.ClearSelection();
                     limpiarCampos();
                 }
             }
@@ -192,24 +225,17 @@ namespace GustoSano.CPresentacion
             }
         }
 
-        private void txtBuscarAgenda__TextChanged(object sender, EventArgs e)
+        private async void txtBuscarAgenda__TextChanged(object sender, EventArgs e)
         {
             if (int.TryParse(txtBuscarAgenda.Texts, out int idTurno))
             {
-                dgvAgenda.DataSource = logica.buscarTurnoPorId_L(idTurno);
-                dgvAgenda.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-                dgvAgenda.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-                dgvAgenda.ReadOnly = true;
+                DataTable tabla = await buscarTurnosAsync(idTurno);
+                dgvAgenda.DataSource = tabla;
             }
             else
             {
                 mostrarTurnos();
-            }            
-        }
-
-        private void ldPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
+            }
         }
     }
 }

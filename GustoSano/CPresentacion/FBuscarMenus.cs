@@ -31,9 +31,13 @@ namespace GustoSano.CPresentacion
         private void mostrarMenu()
         {
             dgvBuscarMenu.DataSource = logica.mostrarMenu_L();
-            dgvBuscarMenu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvBuscarMenu.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvBuscarMenu.ReadOnly = true;
+
+            foreach (DataGridViewColumn col in dgvBuscarMenu.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+
+            dgvBuscarMenu.ClearSelection();
         }
 
         private void btnCancelar_Click(object sender, EventArgs e)
@@ -43,10 +47,13 @@ namespace GustoSano.CPresentacion
 
         private void txtBuscarMenu__TextChanged(object sender, EventArgs e)
         {
-            dgvBuscarMenu.DataSource = logica.buscarMenu_L(txtBuscarMenu.Texts);
-            dgvBuscarMenu.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvBuscarMenu.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvBuscarMenu.ReadOnly = true;
+            DataTable tabla = logica.buscarMenu_L(txtBuscarMenu.Texts);
+            dgvBuscarMenu.DataSource = tabla;
+            foreach (DataGridViewColumn col in dgvBuscarMenu.Columns)
+            {
+                col.SortMode = DataGridViewColumnSortMode.NotSortable;
+            }
+            dgvBuscarMenu.ClearSelection() ;
         }
 
 
